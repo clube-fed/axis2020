@@ -1,0 +1,30 @@
+.quicklinks-1{
+	h2{ // Welcome Heading
+		margin-bottom: 20px;
+		color: #fff;
+		font-family:$sansSerif;
+	}
+	ul li a{
+		display: block;
+		padding: 18px 10px;
+		//background-image: url(FED_Private_Templates_css/images/right-angle.png);
+		background-repeat: no-repeat;
+		//background-position: 92% 50%;
+		background-color: transparent;
+		border: 2px solid rgba(255, 255, 255, 1);
+		//👀
+		font-weight:900;
+		//font-family: $serif;
+		@include rem-size(13);
+		letter-spacing: 2.7px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #FFF;
+		transition: .3s;
+		&:hover, &:active{
+			color: #FFF;
+			background-color: $green;
+		}
+	}
+}

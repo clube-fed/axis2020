@@ -1,0 +1,73 @@
+//offcanvas settings
+$nav-sm-offcanvas-width: 300;
+$nav-sm-offcanvas-bg: $blue;
+$nav-sm-offcanvas-text-align: left;
+$breakpoint: $breakpoint-header;
+//close btn
+$close-btn-left-pos:20px;
+$close-btn-top-pos:20px;
+$close-btn-right-pos:36px;
+$close-btn-color:#fff;
+$close-btn-font-size: 40;
+$close-btn-color-hover: rgba(255,255,255,.8);
+//[mobile] nav level1 > li + > a
+$nav-sm-level1-border-color: #fff;
+$nav-sm-level1-font-weight:700;
+$nav-sm-level1-font-size:16;
+$nav-sm-level1-margin: 0;
+$nav-sm-level1-padding:17px 50px 17px 25px;
+$nav-sm-level1-color: #fff;
+$nav-sm-level1-color-hover: #fff;
+$nav-sm-level1-color-selected: #fff;
+$nav-sm-level1-bg-color: $blue;
+$nav-sm-level1-bg-color-hover: $navy;
+$nav-sm-level1-bg-color-selected: $navy;
+//[mobile] dropdown
+$nav-sm-dropdown-bg-color:#fff;
+$nav-sm-dropdown-font-size:16;
+$nav-sm-dropdown-padding:20px 0;
+//[mobile] dropdown > li +  > a
+$nav-sm-dropdown-font-weight:400;
+$nav-sm-dropdown-link-padding:10px 25px;
+$nav-sm-dropdown-text-align:left;
+$nav-sm-dropdown-link-color: #fff;
+$nav-sm-dropdown-link-color-hover: #fff;
+$nav-sm-dropdown-link-color-selected: #fff;
+$nav-sm-dropdown-link-bg-color: transparent;
+$nav-sm-dropdown-link-bg-color-hover: transparent;
+$nav-sm-dropdown-link-bg-color-selected: transparent;
+//[wide] nav offcanvas settings
+$nav-lg-offcanvas-bg:transparent;
+$nav-lg-offcanvas-width: auto;
+$nav-lg-offcanvas-top-pos: 20px;
+$nav-lg-offcanvas-text-align: center;
+//[wide] level1 > a
+$nav-lg-level1-font-size:16;
+$nav-lg-level1-padding:20px 0 20px;
+$nav-lg-level1-margin: 0 50px;
+$nav-lg-level1-color: $blue;
+$nav-lg-level1-color-hover: $navy;
+$nav-lg-level1-color-selected: $navy;
+$nav-lg-level1-bg-color: transparent;
+$nav-lg-level1-bg-color-hover: transparent;
+$nav-lg-level1-bg-color-selected: transparent;
+//[wide] dropdown
+$nav-lg-dropdown-bg-color:rgba(1, 48, 82, 0.95);
+$nav-lg-dropdown-padding:20px 0;
+$nav-lg-dropdown-width:240px;
+$nav-lg-dropdown-text-align:center;
+$nav-lg-dropdown-left-pos: 0;
+$nav-lg-dropdown-pull:0;
+$nav-lg-dropdown-font-size:16;
+//[wide] dropdown > li +  > a
+$nav-lg-dropdown-link-padding:4px 40px;
+$nav-lg-dropdown-link-color: #fff;
+$nav-lg-dropdown-link-color-hover: #fff;
+$nav-lg-dropdown-link-color-selected: #fff;
+$nav-lg-dropdown-link-bg-color: transparent;
+$nav-lg-dropdown-link-bg-color-hover: transparent;
+$nav-lg-dropdown-link-bg-color-selected: transparent;
+
+.nav-offcanvas {
+  
+}

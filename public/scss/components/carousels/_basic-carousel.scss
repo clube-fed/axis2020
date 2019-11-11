@@ -1,0 +1,77 @@
+$carouselImgHeightSm: 400px;
+$carouselImgHeight:580px;
+$carouselArrowColor: #fff;
+$carouselArrowColorHover: #fff;
+$carouselArrowSize: 25;
+$carouselArrowBGHover: $greenDark;
+
+.scroll-album {
+  margin-top:30px;
+  & > table .plgHeaderBar {
+    padding-right:15px;
+  }
+  & [id*="photoPluginWrapper"] {
+    height:$carouselImgHeightSm !important;
+    @media screen and (min-width:768px) {
+      height:$carouselImgHeight !important;
+    }
+    & > div {
+      height:100%;
+    }
+  }
+  & .palb-wrap {
+    height:100%;
+    position:relative;
+    & a[class*="nextImg"],
+    & a[class*="prevImg"] {
+      position:absolute;
+      width:80px;
+      height:100%;
+      top:0;
+      text-align: center;
+      color:$carouselArrowColor;
+      @include rem-size($carouselArrowSize);
+      & > em {
+        position:absolute;
+        display:block;
+        width:40px;
+        height:40px;
+        border:1px solid #fff;
+        background-color:transparent;
+        transition: all .3s ease-out;
+        top:50%;
+        left:50%;
+        margin-left:-20px;
+        margin-right:-20px;
+        line-height:40px;
+      }
+      &:hover {
+        color:$carouselArrowColorHover;
+        & > em {
+          background-color:$carouselArrowBGHover;
+          //border-color:$blue;
+        }
+      }
+      @media screen and (min-width:768px) {
+        width:120px;
+      }
+    }
+    & a[class*="nextImg"] {
+      right:0;
+      background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+      background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+      background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+      background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+      background-repeat: repeat-x;
+    }
+    & a[class*="prevImg"] {
+      left:0;
+      background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+      background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
+      background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+      background-repeat: repeat-x;
+    }
+  }
+}

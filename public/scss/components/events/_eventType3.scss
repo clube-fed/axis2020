@@ -1,0 +1,129 @@
+.events-3{
+	overflow: auto;
+	h1{
+		float: left;
+		color: $smoke;
+	}
+	.view-calendar{ float: right; }
+	@media(max-width: 991px){
+		.view-calendar{ float: none; }
+	}
+	.cal-img{
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 150px;
+		background-color: #fff;
+		background-image: $bg-image;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		background-size: 40%;
+	}
+	.cal-img:before{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		background: $color1;
+		opacity: .5;
+		z-index: 2;
+		-webkit-transition: 0.3s;
+		-o-transition: 0.3s;
+		transition: 0.3s
+	}
+	a:hover .cal-img:before{
+		bottom: 100%
+	}
+	.cal-title{
+		position: relative;
+		text-align: left;
+		padding: 0;
+		height: 90px;
+		vertical-align: middle;
+		color: #fff;
+		width: 100%;
+		@include rem-size(18);
+		font-weight:400;
+		font-family: $serif;
+		z-index: 5;
+		color: $smoke;
+		overflow: hidden;
+		padding:10px 0;
+	}
+	.cal-title span{
+		// position: absolute;
+		// width: 100%;
+		// top: 50%;
+		// -webkit-transform: translateY(-50%);
+		// -ms-transform: translateY(-50%);
+		// transform: translateY(-50%);
+		// line-height: 22px;
+	}
+	.cal-event img.event-img{
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		position: relative;
+		z-index: 1;
+		margin-bottom: 0
+	}
+	.cal-event .cal-date{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		padding: 0 5px;
+		color: #fff;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 10;
+		//text-shadow: 0 3px 3px rgba(0, 0, 0, 0.8)
+	}
+	.cal-date span.calDay{
+		margin-left: 0;
+		@include rem-size(36);
+		font-weight: 700;
+		font-family: $sansSerif;
+		line-height: 1;
+		letter-spacing: 1px;
+	}
+	.cal-date br{
+		display: none
+	}
+	.cal-date span.calMonth{
+		font-family: $sansSerif;
+		text-transform: uppercase;
+		font-weight: 700;
+		display: block;
+		line-height: 1;
+		@include rem-size(14);
+		letter-spacing: 2px;
+		margin-bottom: 5px;
+	}
+	@media (min-width: 1200px){
+		padding-left: 75px;
+		table:first-of-type{
+			margin-bottom: 25px;
+		}
+		[id*=calPlugin]{
+			overflow: hidden;
+		}
+		[id*=EventsWrapper]{
+			overflow: hidden;
+			margin-right: -25px;
+		}
+	}
+	@media (max-width: 991px){
+		text-align: center;
+		margin-top: 50px;
+		h1{
+			float: none;
+			font-size: 27px;
+			margin-bottom: 15px;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+.new-form {
+	text-align:left;
+}
+
+.new-form input,
+.new-form textarea {
+	border:1px solid $silver;
+	width:100%;
+	@include prefix(transition, all .3s ease-in-out, webkit ms moz);
+	&:focus {
+		border-color:$smoke;
+	}
+}
+
+@media screen and (min-width:768px) {
+	.new-form .form-element:nth-of-type(1),
+	.new-form .form-element:nth-of-type(2) {
+		width:50%;
+	}
+}
+
+.new-form label {
+	font-weight:400;
+}
+
+.new-form .form-element {
+	margin-bottom:10px;
+}
+
+.new-form input {
+	height:40px;
+	line-height:40px;
+	text-indent:10px;
+}
+
+.new-form textarea {
+	height:160px;
+}

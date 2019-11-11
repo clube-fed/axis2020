@@ -1,0 +1,62 @@
+$sidemenuLinkColor: #4c4843;
+$sidemenuLinkHoverColor: #4c4843;
+$secondLevelBGColor: #eee;
+
+.side-menu {
+	& ul  {
+	  @extend .ul-basic;
+		text-align:left;
+		& > li {
+		position:relative;
+		//font-weight:300;
+		margin:10px 0;
+		// & > a {
+		// 	color:$sidemenuLinkColor;
+		// 	&:hover {
+		// 		color:$sidemenuLinkHoverColor;
+		// 		font-weight: 400;
+		// 	}
+		// }
+		&.selectedItem {
+			& > a {
+				// color:$sidemenuLinkHoverColor;
+				font-weight: 600;
+			}
+		}
+		// &.open-panel {
+		// 	color:$sidemenuLinkColor;
+		// 	&.opened .submenu-toggle .caret {
+		// 		border-bottom: 4px solid;
+    	// 	border-right: 4px solid transparent;
+    	// 	border-left: 4px solid transparent;
+		// 		border-top:0;
+		// 	}
+		// }
+		// & .submenu-toggle {
+		// 	position: absolute;
+		// 	display: block;
+		// 	width: 23px;
+		// 	height: 23px;
+		// 	top: 0px;
+		// 	line-height: 22px;
+		// 	right: 0;
+		// 	text-align: center;
+		// 	cursor: pointer;
+		// 	}
+		// 	& > ul {
+		// 		display:none;
+		// 		background:$secondLevelBGColor;
+		// 		padding:10px 10px 10px 20px;
+		// 		@include rem-size(14);
+		// 		& > li {
+		// 			text-transform: none;
+		// 			margin-bottom:4px;
+		// 		}
+		// 	}
+		// }
+		}
+	}
+	& ul ul {
+		display:none;
+	}
+}

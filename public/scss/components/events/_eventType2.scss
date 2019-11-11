@@ -1,0 +1,157 @@
+.events-2{
+	//overflow: auto;
+	text-align: center;
+	padding-top:50px;
+	padding-bottom:50px;
+	// @media screen and (min-width:992px) {
+	// 	& [id$="EventsWrapper"] {
+	//     margin:0 -7px;
+	// 	}
+	// }
+	&.content-pad {
+		padding-left:50px;
+		padding-right:50px;
+	}
+	h2{
+		margin-bottom: 0
+	}
+	.cal-event {
+		position:relative;
+	}
+	.cal-img{
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 365px;
+		background-color: #000;
+		background-image: $bg-image;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		//background-size: cover;
+	}
+	.cal-img:before{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		background: #000;
+		opacity: .55;
+		z-index: 2;
+		-webkit-transition: 0.3s;
+		-o-transition: 0.3s;
+		transition: 0.3s
+	}
+	a {
+		margin-bottom:0;
+	}
+	a:hover .cal-img:before{
+		opacity:0;
+	}
+	a:hover{
+		//color: $color1;
+		text-decoration: none;
+		& .cal-title {
+			color:#fff;
+		}
+	}
+	.cal-title{
+		// position:absolute;
+		// bottom:40px;
+		// left:0;
+		width:100%;
+		padding:0 40px;
+		text-align: center;
+		@extend %h4;
+		@include rem-size(25);
+		margin:0;
+		z-index: 9;
+		color:#fff;
+		// background: url(FED_Private_Templates_css/images/dark-right-angle.png);
+		// background-repeat: no-repeat;
+		// background-position: 100% 23px;
+		overflow: hidden;
+		// padding-right: 20px;
+		// line-height: 1.1;
+		// position:relative;
+		// font-family: $serif;
+		// font-weight:700;
+		// color:$coffee;
+		// &:after {
+		// 	content: '\eb02';
+		// 	display: inline-block;
+    // 	font: normal normal normal 32px/1 'Nucleo Glyph';
+		// 	@include rem-size(21);
+		// 	line-height:1;
+    // 	speak: none;
+    // 	text-transform: none;
+    // 	-webkit-font-smoothing: antialiased;
+		// 	position:absolute;
+		// 	right:0;
+		// 	top:28px;
+		// }
+	}
+	.cal-event img {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		position: relative;
+		z-index: 1;
+		margin-bottom: 0;
+		& + img {
+			display:none;
+		}
+	}
+	.cal-event .cal-date{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		padding: 0 5px;
+		color: #fff;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 10;
+		//text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		@include rem-size(20);
+		font-weight:400;
+	}
+	.cal-date span.calDay {
+		margin-left:10px;
+	}
+	.cal-date span.calDaySuffix{
+		display: none;
+	}
+	.cal-date br{
+		display: none
+	}
+	@media (max-width: 1199px){
+		.cal-title{
+			padding:0 20px;
+		}
+		&.content-pad {
+			padding-left:0;
+			padding-right:0;
+		}
+	}
+	@media (max-width: 767px) {
+		a{
+			width: 50%;
+			//margin-bottom:15px;
+		}
+	}
+	@media (max-width: 625px){
+		a{
+			width: 100%;
+		}
+		.cal-title{
+			height: auto;
+		}
+		//padding-top:10px;
+	}
+}

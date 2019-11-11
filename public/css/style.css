@@ -1,0 +1,118 @@
+.ul-basic, .side-menu ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  display: block; }
+  .ul-basic li, .side-menu ul li {
+    margin: 0; }
+
+.ul-hz {
+  text-align: center; }
+  .ul-hz-sm > li {
+    display: inline-block;
+    margin: 0 10px; }
+  @media screen and (min-width: 768px) {
+    .ul-hz > li {
+      display: inline-block;
+      margin: 0 10px; } }
+
+ul, ol {
+  margin-bottom: 30px; }
+
+hr {
+  border-top-color: #f1f1f1; }
+
+#content .mpContent li {
+  margin-left: 15px; }
+
+/* -----------------------------------*/
+/* ---------->>> ANIMATION <<<-----------*/
+/* -----------------------------------*/
+a {
+  -webkit-transition: color 0.3s ease-out;
+  -ms-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out; }
+
+button,
+.abut,
+.abutSecondary,
+.navbar-default .hamburger,
+.login-wrap .advLogPassword,
+.login-wrap .advLogUsername {
+  -webkit-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.side-menu ul {
+  text-align: left; }
+  .side-menu ul > li {
+    position: relative;
+    margin: 10px 0; }
+    .side-menu ul > li.selectedItem > a {
+      font-weight: 600; }
+.side-menu ul ul {
+  display: none; }
+
+.side-menu .CookieTrail_Template {
+  width: 100% !important;
+  margin-bottom: 20px; }
+
+.side-menu .CookieTrail_Template .ctRootGroup, .side-menu .CookieTrail_Template a.ctLink,
+.side-menu .CookieTrail_Template .ctGroup .ctText {
+  background-image: none;
+  background-color: transparent; }
+
+.side-menu .CookieTrail_Template .ctRootGroup {
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: transparent; }
+
+.side-menu .cookieTrail {
+  border: none;
+  background: none; }
+
+.side-menu .CookieTrail_Template {
+  padding: 0; }
+
+.side-menu .CookieTrail_Template a.ctLink {
+  width: 100%;
+  padding: 0;
+  font-size: 1.6rem;
+  color: #3e3d3d;
+  font-family: "agenda", sans-serif;
+  line-height: 1.6875;
+  font-weight: 600;
+  margin-bottom: 0;
+  letter-spacing: 0;
+  text-transform: uppercase; }
+
+.side-menu .CookieTrail_Template .ctItem {
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0; }
+
+.side-menu .CookieTrail_Template a.ctLink {
+  background-position: 0 0; }
+
+.side-menu .CookieTrail_Template a.ctLink:hover,
+.side-menu .CookieTrail_Template a.ctFocused,
+.side-menu .CookieTrail_Template a.ctSelected {
+  background-color: transparent;
+  text-decoration: none; }
+
+.side-menu .CookieTrail_Template .ctText {
+  width: auto;
+  display: inline-block;
+  padding-left: 0px;
+  white-space: pre-wrap;
+  float: none; }
+
+/*# sourceMappingURL=style.css.map */

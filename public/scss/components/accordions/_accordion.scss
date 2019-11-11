@@ -1,0 +1,156 @@
+//accordion
+$accord-bg: $silver;
+$accord-bg-active: $silver;
+$accord-padding:17px 50px 17px 25px;
+$accord-padding-lg:17px 50px;
+$accord-txt-color: $green;
+$accord-txt-color-active: $green;
+$accord-txt-fontsize: 18;
+$accord-txt-fontweight:700;
+$accord-border-color: $silver;
+$accord-border-color-active: $silver;
+$accord-content-bg: #fff;
+$accord-content-border-color:$silver;
+$accord-content-fontsize: 16;
+$accord-content-color: $gray;
+$accord-content-lineheight: 1.7;
+$accord-content-fontweight: 400;
+$accord-content-padding:25px 15px;
+$accord-content-padding-lg: 25px 35px;
+$accord-handler: '\eb00';
+$accord-handler-active: '\eb03';
+$accord-handler-color: $green;
+$accord-handler-color-active: $green;
+
+//outer ul
+#content .RadPanelBar_accordionTemplate .rpRootGroup {
+	BORDER:none;
+	padding-top:30px;
+	padding-bottom:30px;
+
+}
+
+#content .sidebar .RadPanelBar_accordionTemplate .rpRootGroup {
+	padding-top:0;
+}
+
+#content .RadPanelBar_accordionTemplate .rpRootGroup .rpItem {
+	border:0;
+	margin-bottom:10px;
+	position:relative;
+}
+
+//default text
+#content .RadPanelBar_accordionTemplate .rpLink .rpOut,
+#content .RadPanelBar_accordionTemplate .rpFocused .rpOut,
+#content .RadPanelBar_accordionTemplate .rpLink:hover .rpOut,
+#content .RadPanelBar_accordionTemplate .rpSelected .rpOut,
+#content .RadPanelBar_accordionTemplate .rpSelected:hover .rpOut,
+#content .RadPanelBar_accordionTemplate .rpLink.rpExpandable.rpSelected .rpOut,
+#content .RadPanelBar_accordionTemplate .rpExpandable .rpText,
+#content .RadPanelBar_accordionTemplate .rpExpandable .rpText:hover,
+#content .RadPanelBar_accordionTemplate .rpExpanded .rpText:hover
+
+{
+	color:$accord-txt-color;
+	margin:0;
+	font-weight:$accord-txt-fontweight;
+  	@include rem-size($accord-txt-fontsize);
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+
+//default bg
+#content .RadPanelBar_accordionTemplate .rpExpandable .rpText,
+#content .RadPanelBar_accordionTemplate_rtl .rpExpandable .rpText,
+#content .RadPanelBar_accordionTemplate .rpGroup .rpExpandable .rpText,
+#content .RadPanelBar_accordionTemplate_rtl .rpGroup .rpExpandable .rpText,
+#content .RadPanelBar_accordionTemplate .rpExpandable .rpText:hover,
+#content .RadPanelBar_accordionTemplate .rpExpanded .rpText:hover {
+	padding: $accord-padding;
+	line-height:26px;
+	background: $accord-bg;
+	border:1px solid $accord-border-color;
+	@extend %base-animation;
+	@media screen and (min-width:$breakpoint-sm) {
+		padding:$accord-padding-lg;
+	}
+}
+
+//active text
+#content .RadPanelBar_accordionTemplate .rpSelected .rpOut,
+#content .RadPanelBar_accordionTemplate .rpSelected:hover .rpOut,
+#content .RadPanelBar_accordionTemplate .rpLink.rpExpandable.rpSelected.rpExpanded .rpOut,
+#content .RadPanelBar_accordionTemplate .rpExpanded .rpText,
+#content .RadPanelBar_accordionTemplate .rpLink:hover .rpOut,
+#content .RadPanelBar_accordionTemplate .rpExpanded .rpText:hover {
+	color:$accord-txt-color-active;
+}
+
+/*-------------------------------------------
+	BACKGROUND FOR SELECTED STATE
+--------------------------------------------*/
+#content .RadPanelBar_accordionTemplate .rpGroup .rpExpanded .rpText,
+#content .RadPanelBar_accordionTemplate_rtl .rpExpanded .rpText,
+#content .RadPanelBar_accordionTemplate .rpExpanded .rpText,
+#content .RadPanelBar_accordionTemplate .rpExpanded .rpText:hover {
+	line-height:26px;
+	background:$accord-bg-active;
+	border-color:$accord-border-color-active;
+}
+
+//inner content
+#content .RadPanelBar_accordionTemplate .rpGroup .rpItem {
+	margin:0;
+	border:1px solid $accord-content-border-color;
+	border-top:0;
+}
+
+#content .RadPanelBar_accordionTemplate .rpGroup .rpLink,
+#content .RadPanelBar_accordionTemplate .rpGroup .rpTemplate {
+	text-transform:none;
+	font-variant:none;
+	padding: $accord-content-padding;
+	margin: 0;
+	font-family:$sansSerif;
+	@include rem-size($accord-content-fontsize);
+	color: $accord-content-color;
+	line-height: $accord-content-lineheight;
+	font-weight:$accord-content-fontweight;
+	border:0;
+	background:$accord-content-bg;
+	@media screen and (min-width:768px) {
+		padding: $accord-content-padding-lg;
+	}
+}
+
+#content .RadPanelBar_accordionTemplate .rpGroup .rpTemplate .mpContent ul {
+list-style-type: disc;
+}
+
+#content .RadPanelBar_accordionTemplate .rpExpandable .rpExpandHandle,
+#content .RadPanelBar_accordionTemplate .rpExpanded .rpExpandHandle {
+	background: none;
+  position: absolute;
+  right: 0;
+	top:0;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: inline-block;
+  font: normal normal normal 16px/60px 'Nucleo Glyph';
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	}
+
+	#content .RadPanelBar_accordionTemplate .rpExpandable .rpExpandHandle:before {
+	  content: $accord-handler;
+	  color: $accord-handler-color; }
+
+	#content .RadPanelBar_accordionTemplate .rpExpanded .rpExpandHandle:before {
+	  content: $accord-handler-active;
+		color:$accord-handler-color-active;
+	  }

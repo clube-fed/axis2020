@@ -1,0 +1,25 @@
+.quicklinks-3{
+	//border-right: 1px solid rgba(0,0,0,0.2);
+	h2{
+		margin-bottom: 25px;
+		@include rem-size(30);
+	}
+	ul li a {
+		display: block;
+		padding: 5px 0;
+		font-family: $sansSerif;
+		@include rem-size(13);
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+		color:$blue;
+		&:hover, &:focus {
+			color:$orange;
+		}
+	}
+	@media (max-width: 991px) {
+		text-align: center;
+		border: none;
+	}
+}

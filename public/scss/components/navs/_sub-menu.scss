@@ -1,0 +1,63 @@
+$submenuLinkColor: $greenDark;
+$submenuLinkHoverColor: $green;
+$submenu-bar-color: $greenDark;
+
+.sub-menu {
+	background:$silver;
+	position: relative;
+	padding:0 15px;
+	& ul.ulMenu {
+		@extend .ul-basic;
+		text-align: center;
+		font-weight:400;
+		& > li {
+			margin:0;
+			padding:0;
+			position:relative;
+			& > ul {
+				display:none;
+			}
+			@media screen and (min-width:$breakpoint-md) {
+				display:inline-block;
+				margin:0 15px;
+			}
+			&  > a {
+				color:$submenuLinkColor;
+				display:block;
+				padding:10px 0;
+				margin:0;
+				background:transparent;
+				@extend %base-animation;
+				position: relative;
+				&:after {
+					content:'';
+					display:block;
+					width:100%;
+					height:2px;
+					position:absolute;
+					bottom:0;
+					background: $submenu-bar-color;
+					@extend %base-animation;
+					@include prefix(transform, scaleY(0), webkit moz ms);
+					transform-origin: bottom;
+				}
+				&:hover {
+					color:$submenuLinkHoverColor;
+					&:after {
+						@include prefix(transform, scaleY(1), webkit moz ms);
+					}
+				}
+				@media screen and (min-width:$breakpoint-md) {
+					padding:15px 0;
+					margin:0;
+				}
+			}
+			&.selectedItem > a {
+				font-weight:700;
+				&:after {
+					@include prefix(transform, scaleY(1), webkit moz ms);
+				}
+			}
+		}
+	}
+}

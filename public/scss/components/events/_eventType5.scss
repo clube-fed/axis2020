@@ -1,0 +1,68 @@
+.events-5{
+  & .event-box {
+    position:relative;
+  }
+  & .events-wrapper {
+    padding:20px 0;
+  }
+  & .cal-info {
+    transition: .3s ease-in-out;
+  }
+  & .cal-img {
+    height:250px;
+    position:relative;
+
+    & > img {
+      width:100%;
+      height:100%;
+      position:absolute;
+      z-index: 1;
+      left:0;
+      top:0;
+      object-fit: cover;
+    }
+  }
+  & .cal-date {
+    position:absolute;
+    width:70px;
+    height:70px;
+    left:50%;
+    top:50%;
+    margin:-35px 0 0 -35px;
+    background:rgba(10, 57, 110, 0.9);
+    color:#fff;
+    z-index: 2;
+    & span {
+      display:block;
+      text-align: center;
+    }
+    & br {
+      display:none;
+    }
+  }
+  & .calMonth {
+    text-transform: uppercase;
+    font-weight: 800;
+    @include rem-size(14);
+    margin-top:15px;
+  }
+  & .calDay {
+    @include rem-size(36);
+    font-family:$serif;
+    line-height: 20px;
+  }
+  .cal-title {
+    @extend %h3;
+    padding:20px 30px;
+    & em {
+      margin-left:6px;
+    }
+  }
+  & .cal-info:hover {
+    background:rgba(255,255,255,9);
+    box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.4);
+    & .cal-title {
+      color:$royal;
+    }
+  }
+}

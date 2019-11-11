@@ -1,0 +1,62 @@
+//variables
+//filters
+$filterTxtColor: #b1b1b1;
+$filterTxtColorHover: #333;
+$filterTxtColorSelected: #333;
+//listings
+$listingImgHeightSm:250px;
+$listingImgHeightLg: 400px;
+//fonts
+$sansSerif: 'Josefin Sans', sans-serif;
+$serif: 'Quattrocento', serif;
+$primaryColor: #333;
+$offwhite: #f6f5f4;
+$gray: #7a7a7a;
+$grayLight:#b1b1b1;
+
+//overrides
+.ul-basic {
+	margin:0 auto;
+	padding:0;
+	list-style-type:none;
+	display:block;
+	& li {
+		margin:0;
+	}
+}
+
+.ul-hz {
+	text-align:center;
+	&-sm {
+		& > li {
+			display:inline-block;
+			margin:0 10px;
+		}
+	}
+	& > li {
+		@media screen and (min-width:768px) {
+			display: inline-block;
+			margin:0 10px;
+		}
+	}
+}
+
+.real-estate {
+  text-align:left;
+  padding-top:20px;
+  & #relListingsWrapper {
+    margin:0 -15px;
+  }
+}
+
+.real-estate .abut.filter-btn {
+	width:auto !important;
+	@media screen and (min-width:768px) {
+		display:none;
+	}
+}
+
+//not sure why these extra break tags follow the wrapper
+#updatingListings ~ br {
+	display:none;
+}

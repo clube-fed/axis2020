@@ -1,0 +1,91 @@
+/* --------------------------------------*/
+/* ---------->>> WILD CARDS<<<-----------*/
+/* --------------------------------------*/
+//CE DEEP SELECTORS
+
+.CEMenu {
+	margin: 0;
+	padding: 0;
+	}
+
+/* important edit global text boxes - deFault --------- */
+
+.txtbox {
+	background: #FFF;
+	border-style: inset;
+	border-width: 2px;
+	color: #000;
+	font: 11px;
+	margin: 2px 0;
+	}
+
+/* -----------------------------------*/
+/* ---------->>> MISC/ADMIN <<<-----------*/
+/* -----------------------------------*/
+
+.rowNormal {
+	background: #eee;
+	color: #000;
+	font: 400 11px;
+	}
+
+.rowHover {
+	background: #FFF;
+	color: #000;
+	font: 400 11px;
+	 }
+
+.rowAlternate {
+	background: #eee;
+	color: #000;
+	font-weight: 400;
+	}
+
+.rowHeader {
+	background: #555;
+	border: 1px solid #000;
+	color: #FFF;
+	font-weight: 700;
+	 }
+
+.cookieTrail {
+	background: #FFF;
+	border-bottom: 1px solid #FFF;
+	color: #000;
+	display: none;
+	font: 400 11px;
+	padding: 2px;
+	text-decoration: none;
+	 }
+
+a.cookieTrail,
+a.cookieTrail:hover {
+	color: #333;
+	font: 400 11px;
+	text-decoration: none;
+	}
+
+.hideText {
+	display: none;
+	}
+
+/*bootstrap override*/
+
+.clickToEditDiv img.img-responsive,
+.plgHeaderBar img.img-responsive {
+	width:auto!important;
+	}
+
+/* -------------------------------------------*/
+/* ---------->>> DEEP SELECTORS <<<-----------*/
+/* ------------------------------------------*/
+#editorMenuWrapper {text-align:left;}
+/*??*/.rrHandle {display:none !important;}
+#buddyListDiv {position:fixed !important; top:51px !important;}
+#btnKeepAlive, #btnKeepAlive + .abut {width:90% !important; display:block; margin:0 auto; }
+#logoutDiv {height: auto !important;}
+#countdownBox {margin-bottom:10px; display:inline-block;}
+.content-wrap .formQuestionCell, .content-wrap .formControlCell {padding:5px;}
+#adminDashboardMenu {letter-spacing:0;}
+.NETCEDynamicGroups .rtbMid, .NETCEDynamicGroups .rtbMid .rtbIn {vertical-align:top!important}
+.NETCEDynamicGroups .RadToolBar .rtbIn {overflow:visible!important}

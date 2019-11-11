@@ -1,0 +1,94 @@
+/* -----------------------------------*/
+/* ---------->>> LOGIN <<<-----------*/
+/* -----------------------------------*/
+.loginBG {
+	position:relative;
+	background: $green;
+  background-size: cover;
+  background-attachment: fixed;
+  @media screen and (min-width: $breakpoint-sm) {
+    background-image: url(#{$imgpath}/loginBG.jpg);
+	}
+	& .clickToEditDiv {
+		position:absolute;
+		bottom:0;
+		right:0;
+		z-index:2;
+	}
+	& .login-wrap .clickToEditDiv {
+		position:relative;
+		bottom:auto;
+	}
+	// & .overlay {
+	// 	z-index:-1;
+	// }
+}
+
+.login-wrap {
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media screen and (min-width: 450px) {
+    width: 350px;
+    margin: 0 auto;
+	}
+	@media screen and (min-width:$breakpoint-sm) {
+		@include centerer(true,true);
+	}
+}
+
+.login-side {
+	padding: 30px 15px;
+  width: 90%;
+  margin: 15px auto;
+  background: #fff;
+  z-index: 2;
+  position: relative;
+	@media screen and (min-width:$breakpoint-sm) {
+		margin: 0;
+		padding: 50px 15px;
+		width: 400px;
+	}
+	@media screen and (min-width:$breakpoint-md) {
+		padding: 50px 90px;
+		width: 500px;
+	}
+	& .logo {
+		position:relative;
+		width: 70px;
+		height: 74px;
+		background:url(#{$imgpath}/logo-login.png) no-repeat;
+		margin:0 auto 15px;
+		background-size:cover;
+		@media screen and (min-width:$breakpoint-sm) {
+			width:141px;
+			height:149px;
+			margin:0 auto 30px;
+		}
+	}
+}
+
+@media screen and (min-width:768px) {
+	.height100,
+  .height100 body,
+  .height100 body.page,
+  .height100 body > form,
+  .height100 form > [id^=masterPageUC_MSTR],
+	.height100 form > [id]
+  .height100 form > #adminDashboard[style*="display: none;"] ~ [id^=masterPageUC_MSTR],
+  .height100 .pbhm,
+  .height100 [id*="masterPageUC_MPCA38"],
+  .height100 #adminDashboard ~ [id^=masterPageUC_MSTR] > div,
+  .height100 #adminDashboard ~ [id^=masterPageUC_MSTR] > div > div,
+  .height100 form > [id^=masterPageUC_MSTR] > div,
+  .height100 form > [id^=masterPageUC_MSTR] > div > div,
+  .height100 form > [id^=masterPageUC_MSTR] > .injectContent > div > div,
+  .height100 .login-side,
+	.height100 body > form > [id*="_dpPlaceholder"],
+	.height100 body > form > [id*="_dpPlaceholder"] > div {
+    height: 100%; }
+
+  .height100 #adminDashboard ~ [id^=masterPageUC_MSTR],
+  .height100 form > #adminDashboard[style*="display: block;"] ~ [id^=masterPageUC_MSTR] {
+    height: calc(100% - 46px); }
+	}

@@ -1,0 +1,36 @@
+//v2: updated label font base
+
+[class*="-cte"] {
+  border:1px solid $silver;
+  padding:10px;
+  text-align: center;
+  margin:10px auto;
+  width:95%;
+  max-width:400px;
+  @include rem-size(11);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  & > div {
+    border:0;
+    margin:0;
+    max-width: none;
+    &.col-xs-3 {
+      width:25%;
+    }
+    &.col-xs-4 {
+      width:33.33333333%;
+    }
+    &.col-xs-6 {
+      width:50%;
+    }
+  }
+  & .clickToEditDiv img {
+    max-width: 100%;
+  }
+  &.cte-0,
+  &.cte-1,
+  &.cte--1 {
+    display:none;
+  }
+}

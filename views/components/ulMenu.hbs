@@ -1,0 +1,14 @@
+<ul id="ulMenu_0" class="ulMenu level0">
+    {{#each navigation}}
+    <li class="ulMenuItem level1" id="ulMenuItem_{{id}}">
+        <a href="{{url}}">{{navText}}</a>
+        {{#if submenu}}
+        <ul class="ulMenu level1">
+            {{#each submenu}}
+                <li class="ulMenuItem level2" id="ulMenuItem_{{id}}"><a target="" href="{{url}}">{{navText}}</a></li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </li>
+    {{/each}}
+</ul>

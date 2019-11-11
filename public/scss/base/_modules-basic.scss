@@ -1,0 +1,274 @@
+
+/* Version 3
+*  Released: 6/24/15
+NOTES:
++ updated/ to accommodate modern doctypes
++ globalized to be easier to maintain
++ MINIFIED for less file size
+*/
+
+
+/*BACKGROUND WHITE */
+.tnavTabON, .tNavTabON, .NETChangeAdminLevel, .modAdmin, .modStatsVisitorBar,.modStatsUserbar, .modReportingDatarowHeading1,.modReportingDataRowHeading1, .modReportingDataRowALTHeading1,.modReportingDataRowALTHeading2, .modReportingDataRow, .modReportingDataRowAlt, .modReportingDataRowHeading5, .modMsgBrdShaded,.modMapShaded,.modSearchShaded,.modSearchShaded2,.rowHighlight, .modChatIndexHeader,.modChatroomList,.modGolfStatsHeader1,.modGolfStatsHeader2,.modGolfStatsDataRow, .modCalDayRowLeftHeader,.modCalDayRow, .modCalWeekDayHeader, .RosterColumnTitle, .modProfileReportRow, .modCrsTourSelectedHole, .modCrsTourTeeboxData, .modCrsTourScorecardDataRow, .modInboxMessageTextArea, .modActUserListDataRow,.modActUserListDataRowALT  {
+	background:#FFF;
+	}
+
+/*ANYTHING SPECIAL*/
+.modAdmin {color:#666;}
+.modPopupHeader {background:#ccc; border-bottom:#000 1px solid; border-top:#333 1px solid; color:#fff; padding:1px;}
+a.modSearchPrintButton {color:red; text-decoration:none;}
+.modSearchResults {background:#eee;}
+.modReportingDatarowHeading1,.modReportingDataRowHeading1, .modReportingDataRowALTHeading1,.modReportingDataRowALTHeading2 {font-weight:700; text-decoration:none;}
+.modReportingDataRowAlt {text-decoration:none;}
+.modReportingHeader {background:#eee; font-weight:700;text-decoration:none;}
+.modReportingDataRowHeading3,.modReportingDataRowAltHeading3,.modReportingDataRowHeading4 {background:#eee; list-style-position:outside; text-align:left; text-decoration:none; text-indent:20px;}
+.modReportingDataRowHeading5 {list-style-position:outside;text-align:left;text-decoration:none;text-indent:40px;}
+.modReportingDatarowAltHeading4 {background:#eee; list-style-position:outside; text-align:left; text-decoration:none; text-indent:30px;
+}
+.modReportingDataRowAltHeading5 {background:#eee;list-style-position:outside;text-align:left;text-decoration:none;text-indent:40px;}
+.modArticlesRowHighlightAlt {background:#ccc;color:#000;}
+a.modArticlesTitle {color:#000;font-weight:700;text-decoration:none;}
+a.modArticlesTitle:hover,a.modArticlesTitle:focus {text-decoration:underline;}
+.modSurveyResultHeader {background:#eee;font-weight:700;font-size:20px;text-decoration:none;}
+.modAltLine,.modSignupForm {background:#eee;}
+.modReportingDataRowHeading2,.modReportingDataRowAltHeading2 {list-style-position:outside;text-align:left;text-indent:10px;}
+/*-----------------------------------
+/////////////////////////////////////
+CALENDAR
+/////////////////////////////////////
+------------------------------------*/
+/*DAY VIEW + WEEK VIEW TABLE CELLS*/
+.modCalWeekRow {padding:10px;}
+.modCalWeekDayHeader {padding:0; line-height:1px;}
+td.modCalWeekDayHeader > a.modCalWeekDayHeader {line-height:30px;}
+.modCalWeekRow,.modCalMonthWeekEndDay {background:#eee;}
+.modCalMonthWeekDayDisabled,.modCalYearCurrentMonthHighlight, .modCalYearCurrentDayHighlight {background:#ccc;}
+.modCalYearCurrentDayHighlight {font-weight:700;}
+.modCalMonthWeekday, .modCalMonthDayOfWeekHeader {background:#fff;text-decoration:none;}
+.modCalMonthDayOfWeekHeader {font-weight:700; text-align:center;}
+.currentDay {background:#eee;}
+/*table cells of calendar*/
+.modCalMonthWeekDay, .modCalMonthWeekEndDay, .tnavTabON.currentDay, .modCalMonthWeekDayOtherMonth {line-height:18px;}
+.modCalMonthWeekDay td, .modCalMonthWeekEndDay td, .tnavTabON.currentDay td, .modCalMonthWeekDayOtherMonth td {padding:5px 0 0;}
+/*GLOBAL MODIFIERS FOR CALENDAR*/
+.calendarEventDateLink, .calendarEventDateLink:hover, .calendarEventDateLink:focus {text-decoration:none;}
+.smallerfont {font-size:medium;}
+/*HIDES BORDER ON MONTH VIEW*/
+.modCalMonth .modCalMonthWeekDay img, .modCalMonth .modCalMonthWeekEndDay img, .modCalMonth .modCalMonthWeekDayDisabled img, .modCalMonth .currentDay img {display:none;}
+/*SHOWS RESERVATION ICONS ON MONTH VIEW*/
+.modCalMonth .modCalMonthWeekDay img.calendarEventIcon, .modCalMonth .modCalMonthWeekEndDay img.calendarEventIcon, .modCalMonth .modCalMonthWeekDayDisabled img.calendarEventIcon, .modCalMonth .currentDay img.calendarEventIcon {display:block;}
+
+/*PAST DATES ON MONTH VIEW*/
+.modCalMonth .modCalMonthWeekDay.calendarEventPastDate a, .modCalMonth .modCalMonthWeekEndDay.calendarEventPastDate a, .modCalMonth .modCalMonthWeekDayDisabled.calendarEventPastDate a {color:#aaa; cursor:default;}
+/*EDIT EVENTS*/
+img#editEventCloseImage {display:inline; width:auto; max-width:none;}
+/*------------------------------------
+//////////////////////////////////////
+--------------------------------------
+= III.C. ROSTER -----
+ present on admin view only (hint: hidden) --------- */
+.RosterRowOn {background: #fefefe;}
+.RosterColDiv {background:#eee;}
+.RosterRowOff td, .RosterRowOn td, .RosterColumnTitle td {padding:5px;}
+.RosterRowOff td.RosterColDiv, .RosterRowOn td.RosterColDiv, .RosterColumnTitle td.RosterColDiv {padding:0;}
+.RosterRowOn a,.RosterRowOff a {text-decoration:none;}
+.RosterRowOn a:hover,.RosterRowOff a:hover, .RosterRowOff a:focus {text-decoration:underline;}
+.RosterLetterOn, .rosterletteron {background: #fefefe;font-weight:700; text-decoration:none;}
+.RosterLetterOn:hover, .rosterletteron:hover {text-decoration:none;}
+.RosterLetterOff, .rosterletteroff, .rosterLetterOff {background: #000; color:#fff; font-weight:700;text-decoration:none;}
+.RosterLetterOff:hover, .rosterletteroff:hover, .rosterLetterOff:hover {text-decoration:none; color:#fff;}
+a.rosterletteroff {display:inline-block; width:100%;}
+.RosterRowOff .RosterRowHidden, .RosterRowOn .RosterRowHidden {color: #840000; text-decoration: none;}
+.RosterRowOff .RosterRowHidden:hover, .RosterRowOff .RosterRowHidden:visited, .RosterRowOff .RosterRowHidden:focus, .RosterRowOn .RosterRowHidden:hover, .RosterRowOn .RosterRowHidden:visited, .RosterRowOn .RosterRowHidden:focus {text-decoration: underline;}
+.modRosterHiliteHiddenField {color:#aaa;}
+#memberPhoto .abut {width:100%; margin-bottom:5px;}
+.modProfileReportRowHeader {background:#ccc;}
+a.RosterRowHidden {color:#840000;}
+.modDirectoryNoEditShade {background:#eee; color:#aaa;}
+.modDirectoryCheckboxShade {background:#ddd;}
+.module-wrap table[id*="MyProfile"] select,
+.modules-wrap table[id*="MyProfile"] select {margin-left:10px;}
+.module-wrap table[id*="MyProfile"] input[type*="text"],
+.modules-wrap table[id*="MyProfile"] input[type*="text"] {height:27px; margin-left:10px; line-height:27px;}
+
+/*----------------------------------
+////////////////////////////////////
+------------------------------------
+= III.D. ARTICLES ----- */
+.modArticlesRowHighlight {padding-top:10px;}
+.modArticlesRowHighlight a {font-weight:700; display:block; text-decoration:none;}
+.modArticlesRowHighlight a:hover {font-weight:700;text-decoration:underline;}
+.modArticlesRowHighlight a.editArticleLink {display:inline;}
+.modArticlesDayHeader {background:#000;padding:10px;color:#fff;font-weight:700;text-decoration:none;}
+table[id*="QuickFilterTable"] td {padding:2px 10px !important;}
+/*----------------------------------
+////////////////////////////////////
+------------------------------------
+= III.E. COURSE TOUR ------ */
+.modCrsTourSelectedTab, .modCrsTourHoleChooser {background:#666;color:#fff;font-weight:700;}
+.modCrsTourUnselectedTab, .modCrsTourTeeboxHeader, .modCrsTourScorecardHeader {background:#eee;}
+.modCrsTourTeeboxData {padding:2px;}
+.modCrsTourScorecardDataRowAlt {background:#ddd;}
+.modCrsTourScorecardHeader:visited,.modCrsTourScorecardHeader:hover, .modCrsTourScorecardHeader:focus {color:#fff;}
+
+/*-------------------------------
+/////////////////////////////////
+---------------------------------
+= III.E. INBOX ----- */
+.modInboxMessageView {background:#eee;}
+[id*="pnlTView"] td {padding:1px; /*text-align:left*/;}
+[id*="pnlTView"] td[bgcolor="#000000"] {background-color:#eee !important;}
+[id*="pnlTView"] .abut, [id*="pnlTView"] .abut:hover {padding-left:5px; padding-right:5px; font-size:14px; margin:0 2px;}
+
+/*THIS FIX UPDATES bootstrap conflicts*/
+.MemberPicker legend {border:0; margin:0;font-size:12px;line-height:normal;}
+.MemberPicker fieldset {border:1px solid #eee;}
+
+/*-------------------------------
+/////////////////////////////////
+---------------------------------
+= III.F. EVENT MANAGER ----- */
+.modEvtMgrHeader {background:#eee;font-weight:700;}
+a.modEvtMgrHeader {color:#fff;font-weight:700;text-decoration:none;}
+.RosterLetterOn[style*="8pt"] {font-size:inherit !important; padding:3px;}
+[id*="cblShowColumns"] label {font-weight:400; margin:0 5px;}
+.RosterLetterOn select[style*="8pt"] {font-size:inherit !important;}
+html body .riSingle .riTextBox[type="text"] {font-size:16px;}
+.EventManager .rosterletteron,
+.EventManager .RosterLetterOn,
+.EventReport .rosterletteron,
+.EventReport .RosterLetterOn,
+.NETEventManager .rosterletteron,
+.NETEventManager .RosterLetterOn,
+body[class^="Event"] .rosterletteron,
+body[class^="Event"] .RosterLetterOn {background:#fff; color:#222;}
+#eventReportWrapperDiv {margin-top:20px;}
+.EventManager #content > script:first-child + table + table {border: 1px solid #222;padding: 20px !important; width:100%; border-collapse:initial; margin:0 0 40px}
+/*------------------------------------
+//////////////////////////////////////
+--------------------------------------
+= Site Stats
+-------------------------------------*/
+#siteStatisticsWrapper td[nowrap], #siteStatisticsWrapper tr[id*="trAdminLevel"] td {vertical-align:top;}
+#siteStatisticsWrapper label[for*="cblAdminLevels"] {display:block; float:left; width:95%; margin:0; padding:0;}
+#siteStatisticsWrapper input[id*="cblAdminLevels"] {display:block; float:left; width:5%; margin:8px 0 0; padding:0;}
+/*-------------------------------
+/////////////////////////////////
+---------------------------------
+= III.G. ACTIVE USER LISTING ----- */
+.modActUserListHeader {background:#eee;}
+.modActUserListHeader:visited,.modActUserListHeader:hover, .modActUserListHeader:focus {color:#fff;}
+a.modEvtMgrHeader:hover,a.modEvtMgrHeader:visited {	color:#fff; font-weight:700;}
+
+/*-----------------------------------
+////////////////////////////////////
+---------------------------------
+= III.I. TABS ----- */
+.tNavTitle {font-weight:700;}
+.tnavBorder {background: #e0e0e0; line-height:1px;}
+.tnavTabON, .tNavTabON, .tNavTabOff, .tNavTabOFF, .tnavTabOFF {line-height:30px;}
+/*TAB -> NEED TO SEPARATE B/C ALSO IS THE CLASS FOR CONTENT WRAP*/
+.tnavTabON .moduleTabText, .tNavTabON .moduleTabText {color:#000; font-weight:700;text-decoration:none;}
+.tnavTabON, .tNavTabON {background:#fff;}
+/* JN => This may not be needed
+a.tnavTabON, a.tNavTabON, a.tnavTabON:visited, a.tNavTabON:visited, a.tnavTabON:focus, a.tNavTabON:focus {background:#ddd;color:#777; color:#fff; font-weight:700; text-decoration:none;}
+a.tnavTabON:hover, a.tNavTabON:hover {background:#fff; color:#333; font-weight:700; text-decoration:none;}
+*/
+.tNavTabOff, .tNavTabOFF, .tnavTabOFF, a.tNavTabOff:visited, a.tNavTabOFF:visited, a.tnavTabOFF:visited { background: #000; color:#fff; font-weight:700; text-decoration:none;}
+a.tNavTabOff:hover, a.tNavTabOFF:hover, a.tnavTabOFF:hover, a.tNavTabOff:focus, a.tNavTabOFF:focus, a.tnavTabOFF:focus {background:none; color:#fff; fpnt-weight:700; text-decoration:none;}
+.tNavTabContent {background:transparent;text-decoration:none;}
+
+/**ADDL CLASSES**/
+.eventMgrPop {font-size:100%;}
+.plgHeaderBar {font-size:26px;}
+#calendarLinkBar {padding-top:20px;}
+.articleHtml {font-weight:normal;}
+td[class*="qFilter"].label {color:#000; display:table-cell; text-align:left;}
+td[class*="qFilter"] input[type="text"] {padding: 0 5px;margin: 0; width:100% !important; }
+#btnQuickFilter {margin-top:10px;}
+.calendarQuickFilterWrap .abut {margin:3px 0;}
+/*calendar*/
+.adminbar td {padding:5px 0;}
+.adminbar .abut {width:auto !important;}
+#btnKeepAlive, #btnKeepAlive + .abut {width:90% !important; display:block; margin:0 auto; }
+#logoutDiv {height: auto !important;}
+#countdownBox {margin-bottom:10px; display:inline-block;}
+#adminDashboardOpen {z-index:9999;}
+.ForgotUsername, .NETForgotPassword, .NETRichDyPageProperties {background:#fff;}
+
+/*MAYBE -> Needs a class to rep the module*/
+input[type=radio], input[type=checkbox] {  margin: 4px 4px 0 0;}
+
+[id*="btnBizGo"].abut {padding:3px 20px; margin-left:10px;}
+[id*="_calstart"].tnavBorder {line-height:30px;}
+#eventHeader {height: auto !important;}
+/*module images --- OVERRIDE FOR IMG RESPONSIVE*/
+#rbm_HelpMEHeaderRow img.img-responsive,
+.tnavTabON img.img-responsive,
+img.calendarEventIcon.img-responsive,
+.formSection img.img-responsive,
+.rbm_All img.img-responsive,
+.NC_All img.img-responsive,
+#eventHeader img.img-responsive,
+#topRegisterNow img.img-responsive,
+#bottomRegisterNow img.img-responsive,
+img[src*="1x1.gif"].img-responsive,
+img[src*="Print.gif"].img-responsive,
+.lightBoxDiv img.img-responsive,
+#catEdit.img-responsive,
+img.itemEditBtn.img-responsive, img.removeFromCartListBtn.img-responsive {display:inline; width:auto; height:auto; max-width:none;}
+/*Lightbox Div isn't playing well with border-box*/
+.lightBoxDiv {-webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;}
+	#datepicker {border: 1px solid #222;padding: 6px;background-color: #fff;}
+	#datepicker > table{border-collapse:separate;}
+	#datepicker .plgHeaderBar {font-size:12px; color:#222;}
+	.NETRichDyPageProperties {text-align:left !important;}
+	/**POSSIBLE GLOBAL**/
+.NETCEDynamicGroups table {font-family:inherit; font-size:inherit;}
+.NETCEDynamicGroups .Dgrp_ToolBoxTitleBar {height:auto; color:#000; background-color:#fafafa; background-image:none;}
+[id*="rosterControl_btnAdd"], [id*="rosterControl_btnUp"], [id*="rosterControl_btnDown"], [id*="rosterControl_btnRemove"] {display:block; margin-bottom:10px !important; width:auto !important;}
+table[id*="rosterControl"] input, table[id*="rosterControl"] select {height:28px; vertical-align:middle; line-height:28px;}
+table[id*="rosterControl"] input.abut {height:auto; line-height:normal;}
+table[id*="rosterControl"] select {margin-right:10px;}
+table[id*="rosterControl"] input[type="submit"], table[id*="rosterControl"] input[type="submit"]:hover {height:auto;line-height: normal;}
+input[id*="rosterControl_btnRunExport"] {width: auto !important;}
+#profilePhoto {text-align:center;}
+#profilePhoto .abut {width:90%; display:block;}
+#profilePhoto .abut[value="Remove"] {position:relative; top:-20px;}
+/**LEGACY ISSUES**/
+.calendarQuickFilterWrap label {margin-right:10px;}
+.RadCalendarMonthView_Silk .rcButtons input {padding:0 !important;}
+/***MY PROFILE REDUX***/
+table[id*="rosterControl_tblProfilePage"] {border-spacing:1px; border-collapse:initial;}
+#datepicker .page {background:#fff;}
+#NewGrpSploderHeaderRow td {height:auto !important;padding: 5px !important;line-height:normal;background: #e0e0e0 !important;}
+#NewGrpSploderPinLink {right: 54px;}
+#NewGrpSploderMinMaxLink {right: 18px;position: absolute;width: 39px;display: block;text-align: left;}
+#NewGrpSploderMinMaxLink img {position:relative !important; display:inline-block; margin-left:5px;}
+.Dgrp_ToolBoxTitleBar {height:auto !important; background:#fefefe;}
+.GroupNameBox_SaveBtn {padding-left:5px !important; padding-right:5px !important; font-size:13px !important;}
+form[action*="FirstImpression"] input#ctl00_txtName, form[action*="FirstImpression"] textarea#ctl00_txtDescription {width:95% !Important;}
+#masterPageUC_MPCA19_rosterControl_btnUp, #masterPageUC_MPCA19_rosterControl_btnDown, #masterPageUC_MPCA19_rosterControl_btnRemove {width: auto !important;}
+.RosterLetterOff, .RosterLetterOn, .grdheader, .grdheader th {color:#fff;}
+.formBaseForm .rosterletteroff:hover {background:#000;}
+.NETDGrp_Export > form {height:100%;}
+
+/**INBOX > GROUPS > IMPORT TELERIK FIX*/
+#GiMain {
+	& .RadUpload .ruFileWrap {
+		height:auto;
+	}
+	& .RadUpload input {
+	    background:#fff;
+			border:1px solid #eee;
+	    padding:10px;
+	    width:auto;
+	    line-height:normal;
+	    height:auto;
+	    margin:0;
+	    display:inline-block;
+	    font-size: 10px;
+		}
+}

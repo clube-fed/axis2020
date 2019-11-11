@@ -1,0 +1,205 @@
+$font1: $sansSerif;
+$font2: $serif;
+$color1: #000;
+$color1-light:#EEE;
+$color1-dark: #000;
+$color2: $smoke;
+$color2-light: $smoke;
+$color2-dark: $smoke;
+$bg-gray: $silver;
+$bg-gray-dark: #EDEDED;
+$bg-image: url(#{$imgpath}/logo.png);
+$font-size: 16px;
+
+// Private Home Section Titles
+.prv-inline-title{
+  overflow: auto;
+  //margin-bottom:40px;
+  h1{
+    float: left;
+    //margin-bottom: 35px;
+    margin-bottom:0;
+    //text-transform: none;
+    //color:$smoke;
+    //font-weight:500;
+    // text-transform: none;
+    // font-weight:400;
+    // @include rem-size(38);
+  }
+  .view-button{
+    float: right;
+    //margin-top:18px;
+    // padding:15px 0;
+    // font-weight:300;
+    // font-size:12px;
+    //padding-top:16px;
+    // margin-top:15px;
+    margin-top:26px;
+    & em {margin-right:10px;}
+  }
+  @media (max-width: 991px){
+    text-align: center;
+    h1{
+      float: none;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+    .view-button{ margin: 0 0 20px;
+      float: none;
+      //padding:0;
+    }
+  }
+}
+.prv-centered-title{
+  text-align: center;
+  .view-button{
+    margin-bottom: 50px;
+    float:none;
+  }
+  & h1 {
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight:400;
+    font-family:$serif;
+  }
+  @media (max-width: 991px){
+    h1{
+      font-size: 30px;
+    }
+    .view-button {
+      margin:0 0 20px;
+      float:none;
+    }
+  }
+}
+
+.prv-max-width {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+//Archive/Calendar Button
+.view-button{
+  @include rem-size(12);
+  display: inline-block;
+  //jn: not sure these font sizes should be declared here
+  // font-family: sans-serif;
+  // font-size: 12px;
+  // font-weight: 400;
+  text-decoration: none;
+  // font-weight:300;
+  // text-transform: uppercase;
+  // letter-spacing: 2px;
+  font-family:$sansSerif;
+  -webkit-transition: .3s ease-out;
+  -o-transition: .3s ease-out;
+  transition: .3s ease-out;
+  //color:$burgandyMedLight;
+  // Default BG For Colored Buttons (Gray)
+  &.has-bg{
+    color: $color2;
+    background-color: $bg-gray;
+    padding: 13px 40px;
+    &:hover, &:active{
+      background-color: $bg-gray-dark;
+    }
+  }
+  // Default Calendar Icon
+  &[class*="-icon"]{
+    padding: 10px 40px 10px 65px;
+    background-repeat: no-repeat;
+    background-position: 25px 50%;
+    &:hover, &:active{
+      background-position: 20px 50%;
+      text-decoration: none;
+    }
+  }
+  // Plain Text Hyperlink (IE Version 2 of the Homepage)
+  &.pure-text{
+    //margin-bottom: 20px;
+    display: inline-block;
+    text-decoration: none;
+    // font-weight:700;
+    // text-transform: uppercase;
+    // letter-spacing: 2px;
+    color:$gray;
+    padding: 0;
+    border-bottom: 1px solid transparent;
+    //color:$fadedOrange;
+    &:hover, &:active{
+      //color:$flame;
+      border-bottom: 1px solid $black;
+    }
+    & em {
+      margin-right:6px;
+    }
+  }
+  // &:hover {
+  //   color:$burgandyMed;
+  // }
+}
+
+/* Mobile Edits */
+section[class*="events"] .floatRight,
+section[class*="news"] .floatRight {
+  display: none;
+}
+
+.floatLeft {
+  // float: none;
+  // width: 100%;
+}
+
+.headerBar,
+.pluginTitleBar,
+.sploderTitleBar {
+  background: none;
+  border: none;
+  color: $color1;
+}
+
+.module .mobileButton {
+  background: $color1;
+  border-color: $color1;
+}
+
+div.corpLogWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 5000000;
+  margin: -60px auto;
+  padding-top: 120px;
+}
+
+div.corpLogContainer {
+  width: 100%;
+  max-width: 500px;
+}
+
+#banner_homeTable img {
+  display: none;
+}
+
+// .news {
+//   .prv-centered-title {
+//     margin-bottom:80px;
+//   }
+//   & .mpContent {
+//     padding:0 10px;
+//       & p {
+//       margin-bottom:0;
+//       }
+//       & p + h4 {
+//       margin-top:50px;
+//     }
+//   }
+// }
+//
+// .events-2 .prv-centered-title {
+//   margin-bottom:40px;
+// }

@@ -1,0 +1,146 @@
+$calloutHeight: 225px;
+$revealHeight: 185px;
+$titleHeight: 40px;
+
+.callout-reveal {
+  margin-top:30px;
+  margin-bottom:30px;
+  @media screen and (min-width:$breakpoint-md) {
+    margin:0 auto;
+    height:$calloutHeight;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    z-index: 100;
+    & [class*="-cte"] {
+      position:absolute;
+      bottom:100%;
+      background:#fff;
+      & > div {
+        position:relative;
+        bottom:auto;
+      }
+    }
+  }
+  & .callout-link {
+    display:block
+  }
+  & .callout-item {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    height:$calloutHeight;
+    & .callout-title {
+      height:$titleHeight;
+      padding:0 15px;
+      text-align: center;
+      position:relative;
+      & h4 {
+        line-height: $titleHeight;
+      }
+    }
+    & .callout-box {
+      position:relative;
+      height:$revealHeight;
+    }
+    & .callout-img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &.mp-bg {
+        background:$blue;
+        & > .mpContent {
+          opacity:.25;
+        }
+      }
+    }
+    & .callout-txt {
+      @include centerer(true,true);
+      text-align:center;
+      width:calc(100% - 20px);
+    }
+    & h2 {
+      margin:0 auto;
+      color:#fff;
+      position:relative;
+      padding-bottom:20px;
+      &:after {
+        content:'';
+        display:block;
+        width:106px;
+        height:2px;
+        background:#fff;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        margin-left:-53px;
+      }
+    }
+    @media screen and (min-width:768px) {
+      margin-bottom:0;
+    }
+  }
+  //hover effects
+  & .callout-link {
+    & .callout-title,
+    & .callout-title h4 {
+      @extend %base-animation;
+    }
+    & .callout-item {
+      @include prefix(transition, .7s ease-out, webkit ms moz);
+    }
+    & .callout-title {
+      background:rgba(255,255,255,.8);
+      & h4 {
+        color:$blue;
+      }
+    }
+    @media screen and (min-width:$breakpoint-md) {
+      & .callout-item {
+        top:$revealHeight;
+      }
+    }
+    @media screen and (min-width:$breakpoint-lg) {
+      & .callout-title:after {
+          content:'+';
+          display:block;
+          height:$titleHeight;
+          width:$titleHeight;
+          text-align: center;
+          line-height: 40px;
+          right:0;
+          top:0;
+          position:absolute;
+          @include rem-size(15);
+          color: $blue;
+          font-weight: 700;
+          font-family: $engravers;
+          letter-spacing: .11em;
+          text-transform: uppercase;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      & .callout-title {
+        background:rgba(0,38,84,.8);
+        & h4 {
+          color:#fff;
+          text-decoration: none;
+        }
+      }
+      @media screen and (min-width:$breakpoint-sm) {
+        & .callout-item {
+          top:0;
+        }
+      }
+      @media screen and (min-width:$breakpoint-lg) {
+        & .callout-title:after {
+          content:'-';
+          color:#fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+//tabstrip
+$tabs-bg: $silver;
+$tabs-txt-color: $green;
+$tabs-txt-color-hover: $green;
+$tabs-txt-fontsize: 18;
+$tabs-txt-fontweight:700;
+$tabs-txt-selected-color:$green;
+$tabs-txt-selected-bg:#fff;
+$tabs-content-border-color: $silver;
+
+table[id*="tblTop"] {
+	display:block;
+}
+
+//override for new inline style
+div[id*="_radMultTop"][style*="margin-top"] {
+	margin-top: 0 !important;
+	position:relative;
+}
+
+#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li > a:before {
+	content:"";
+	margin-right:0;
+	}
+
+#content .RadTabStrip_Tab_responsive {
+	margin:0 auto;
+	text-align:left;
+	background:none;
+	padding:0;
+	overflow:hidden;
+	overflow-x:auto;
+	height:56px;
+	position:relative;
+	background:$tabs-bg;
+}
+
+#content .RadTabStrip_Tab_responsive .levelwrap.level1 {
+	padding:0;
+	//width: 100% !important;
+	border: 0;
+	border-bottom:0;
+	text-align:center;
+	height:60px;
+	overflow:hidden;
+	overflow-x: auto;
+	margin:0 auto;
+}
+
+#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul {
+	display:inline-block;
+	margin:0;
+	padding: 0;
+	white-space: nowrap;
+	position:relative;
+	width:100%;
+}
+
+#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li {
+	float:none;
+	display:inline-block;
+	line-height: 54px;
+	margin: 0;
+	font-weight:$tabs-txt-fontweight;
+}
+
+#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li > a {
+	@include prefix(transition, all .3s ease-out, webkit ms moz o);
+	float:none;
+	display:block;
+	@include rem-size($tabs-txt-fontsize);
+	font-weight:$tabs-txt-fontweight;
+	color:$tabs-txt-color;
+	padding: 0 20px;
+	text-decoration:none;
+	position:relative;
+	background: $tabs-bg;
+	border-top:3px solid transparent;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	&:hover {
+		color:$tabs-txt-color-hover;
+	}
+}
+
+
+#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li > a.selected {
+	@include rem-size($tabs-txt-fontsize);
+	text-decoration:none;
+	background:$tabs-txt-selected-bg;
+	color:$tabs-txt-selected-color;
+	border-color:$tabs-txt-selected-color;
+}
+
+#content .tabstrip li a .wrap,
+#content .tabstrip li a .innerWrap {
+	float:none;
+	position:relative;
+}
+
+#content .tabstrip li a.selected .wrap,
+#content .tabstrip li a.selected .innerWrap {
+	cursor:pointer;
+}
+
+.tsContent {
+	padding:35px 15px;
+	border:1px solid $tabs-content-border-color;
+	border-top:none;
+	background:#fff;
+	width:100% !important;
+	line-height: 1.7;
+	@media screen and (min-width:$breakpoint-sm) {
+		padding:35px;
+	}
+}
+
+@media screen and (min-width:768px) {
+	#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul {
+		height:55px;
+		padding: 0;
+		display:inline-block;
+	}
+	#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li {
+		float:none;
+		display:inline-block;
+	}
+
+	#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li > a {
+		//border-bottom:0;
+	}
+
+ // #content .RadTabStrip_Tab_responsive .placeNext,
+ // #content .RadTabStrip_Tab_responsive .placePrev {
+ //  width: 50px;
+ // }
+
+}
+
+.tab-scroll-txt {
+	text-align:left;
+	opacity:0;
+	padding-bottom:4px;
+	position:relative;
+	top:5px;
+	@include prefix(transition, all .3s ease-out, webkit ms moz);
+	&.active {
+		top:0;
+		opacity:1;
+	}
+}

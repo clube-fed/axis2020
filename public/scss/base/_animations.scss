@@ -1,0 +1,17 @@
+/* -----------------------------------*/
+/* ---------->>> ANIMATION <<<-----------*/
+/* -----------------------------------*/
+a {
+	@include prefix(transition, color 0.3s ease-out, webkit ms o moz);
+	}
+
+button,
+.abut,
+.abutSecondary,
+.navbar-default .hamburger,
+.login-wrap .advLogPassword,
+.login-wrap .advLogUsername,
+%base-animation
+ {
+	@include prefix(transition, all 0.3s ease-out, webkit ms o moz);
+	}

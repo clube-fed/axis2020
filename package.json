@@ -1,0 +1,29 @@
+{
+  "name": "axis2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ui": "browser-sync start --port '7777' --proxy 'localhost:3030' --files 'public' 'views' 'server.js'",
+    "dev": "concurrently \"nodemon server.js\" \"sass --watch public/scss:public/css\" \"npm run ui\"",
+    "build": "sass --watch scss:css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "imagemin": "^7.0.0",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}

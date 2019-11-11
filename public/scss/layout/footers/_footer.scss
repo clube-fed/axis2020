@@ -1,0 +1,64 @@
+footer {
+  color:#fff;
+  text-align: center;
+  position: relative;
+  background:$black;
+  padding:30px 15px;
+  @media (min-width:$breakpoint-header) {
+    padding:50px;
+  }
+  & a {
+    color:#fff;
+    &:hover, &:focus {
+      color:rgba(255,255,255,.8);
+    }
+    &[href*="tel"] {
+      color:#fff;
+      cursor:default;
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
+  & .footer-info {
+    & h6 {
+      color:#fff;
+      margin-bottom:5px;
+    }
+    & .ul-basic {
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+    @media (min-width:$breakpoint-md) {
+      text-align: left;
+      & .ul-basic {
+        margin:0;
+      }
+      & .ul-hz {
+        text-align:left;
+        & > li {
+          margin-left:0;
+          &:first-child {
+            width:100%;
+          }
+        }
+      }
+    }
+    @media (min-width:$breakpoint-lg) {
+      & .ul-hz > li:first-child {
+        width:auto
+      }
+    }
+  }
+  & .footer-nav {
+    & p {
+      color:#fff;
+      margin-bottom:0;
+      @include rem-size(14);
+      font-weight:300;
+    }
+    @media (min-width:$breakpoint-md) {
+      text-align:right;
+    }
+  }
+}

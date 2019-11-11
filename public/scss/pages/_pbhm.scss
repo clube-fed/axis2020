@@ -1,0 +1,91 @@
+.media {
+  position:relative;
+  margin:0 auto;
+  & > table {
+    position:absolute;
+    right:20px;
+    top:80%;
+    width:auto;
+    z-index:99;
+  }
+  & [id*="photoPluginWrapper"] {
+    height:270px !important;
+    @media (min-width:$breakpoint-sm) {
+      height:480px !important;
+    }
+    @media (min-width:$breakpoint-md) {
+      height:550px !important;
+    }
+    @media (min-width:$breakpoint-lg) {
+      height:600px !important;
+    }
+    & > div,
+    .palb-wrap {
+      height:100%;
+    }
+    & .palb-wrap {
+      position:relative;
+      margin:0;
+      & a[class*="nextImg"],
+      & a[class*="prevImg"] {
+        display:block;
+        @include centerer(false,true);
+        text-align: center;
+        color:#fff;
+        @include rem-size(36);
+        z-index: 99;
+        &:hover {
+          color:$grayLight;
+        }
+      }
+      & a[class*="nextImg"] {
+        right:30px;
+      }
+      & a[class*="prevImg"] {
+        left:30px;
+      }
+    }
+  }
+  & .counter {
+    position: absolute;
+    bottom:40px;
+    width:100%;
+    text-align: center;
+    z-index: 90;
+  }
+  // .scroller {
+  //   text-align: center;
+  //   position:absolute;
+  //   width:100%;
+  //   bottom:25px;
+  //   z-index:100;
+  //   & * {
+  //     color:#fff;
+  //   }
+  //   & em {
+  //     display:block;
+  //     @include rem-size(30);
+  //     margin-bottom:20px;
+  //   }
+  //   & h6 {
+  //     margin-bottom:0;
+  //   }
+  //   @media screen and (min-width:$breakpoint-sm) {
+  //     bottom:50px;
+  //   }
+  // }
+}
+
+.intro {
+  max-width: 970px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+	margin:0 auto;
+  & h1 {
+    margin-bottom:0;
+    @extend %h2;
+    letter-spacing: 0;
+    text-transform:none;
+	}
+}

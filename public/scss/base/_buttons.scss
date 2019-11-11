@@ -1,0 +1,115 @@
+//buttons
+
+$legacy-btn-bg: $silver;
+$legacy-btn-color: $black;
+$legacy-btn-border-color: $black;
+//.abut
+$btn-bg: $greenDark;
+$btn-bg-hover: $green;
+$btn-color: #fff;
+$btn-color-hover:#fff;
+$btn-border-color: $greenDark;
+$btn-border-color-hover: $green;
+$btn-padding: 21px 35px;
+$btn-font-weight:900;
+$btn-font-family: $sansSerif;
+//.abutSecondary
+$btn-secondary-bg: #fff;
+$btn-secondary-bg-hover: $green;
+$btn-secondary-color: $green;
+$btn-secondary-color-hover: #fff;
+$btn-secondary-border-color: $green;
+$btn-secondary-border-color-hover: $green;
+//%abut_overlay
+$btn-overlay-bg: transparent;
+$btn-overlay-bg-hover: $green;
+$btn-overlay-color: #fff;
+$btn-overlay-color-hover: #fff;
+$btn-overlay-border-color: #fff;
+$btn-overlay-border-color-hover: #fff;
+
+//legacy buttons
+.but, .membut {
+	background: $legacy-btn-bg;
+	border: 1px outset $legacy-btn-border-color;
+	color: $legacy-btn-color;
+	cursor: pointer;
+	@include rem-size(13);
+}
+
+.membut {
+	@include rem-size(13);
+}
+
+//main styles
+.abut,
+input[type=button],
+input[type=submit],
+button,
+.but,
+.mobileButton,
+.abutSecondary,
+.button-wrap a,
+%overlay_abut {
+	border:2px solid $btn-border-color;
+	color:$btn-color;
+	text-decoration:none !important;
+	background:$btn-bg;
+	padding: $btn-padding;
+	cursor:pointer;
+	border-radius:0;
+	margin:0 auto;
+	display:inline-block;
+	width:auto;
+	@include rem-size(12);
+	line-height: 13px;
+  font-weight:$btn-font-weight;
+	text-align:center;
+	font-family:$btn-font-family;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	@media screen and (min-width:$breakpoint-md) {
+		padding:21px 70px;
+	}
+	&:hover, &:focus {
+		color:$btn-color-hover;
+		background:$btn-bg-hover;
+		border-color: $btn-border-color-hover;
+	}
+	& > em {
+		margin-right:7px;
+	}
+}
+
+.abutSecondary {
+	background:$btn-secondary-bg;
+	color:$btn-secondary-color;
+	border-color:$btn-secondary-border-color;
+	letter-spacing: 2px;
+	&:hover, &:focus {
+		background:$btn-secondary-bg-hover;
+		color:$btn-secondary-color-hover;
+		border-color:$btn-secondary-border-color-hover;
+	}
+}
+
+%overlay_abut {
+	background:$btn-overlay-bg;
+	color:$btn-overlay-color;
+	border-color:$btn-overlay-border-color;
+	&:hover, &:focus {
+		background:$btn-overlay-bg-hover;
+		color:$btn-overlay-color-hover;
+		border-color:$btn-overlay-border-color-hover;
+	}
+}
+
+.button-wrap a, .button-wrap .abut {
+	width:100%;
+	display:block;
+	@media screen and (min-width:$breakpoint-md) {
+		& a, & .abut {
+			padding:$btn-padding;
+		}
+	}
+}

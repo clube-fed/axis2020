@@ -1,0 +1,32 @@
+/* -----------------------------------*/
+/* ---------->>> MOSV<<<-----------*/
+/* -----------------------------------*/
+
+$mosvThemeColor: $greenDark;
+
+/*module buttons - i.e. filter, letter picker*/
+.mobileButton {padding:10px; font-size:10px; letter-spacing:0; border:1px solid #fff;}
+.barButtons {float:none; padding-top:10px;}
+.mobileTabsWrapper {border-color:$mosvThemeColor;}
+.mobileTabs li {background: #eee;border-color: #eee;border-bottom: 1px solid $mosvThemeColor;}
+.mobileTabs .selected {border-color:$mosvThemeColor;border-bottom-color: white;	}
+.mobileTabs li a {color:$mosvThemeColor; font-weight: 400; margin: 0; background:$silver;}
+.mobileTabs li a:hover {background-color:$mosvThemeColor; color:#fff !important;}
+.mobileTabs .selected a {color:$mosvThemeColor;}
+.directoryLetterBar ul li {background: #eee;border-color:$mosvThemeColor;}
+.directoryLetterBar ul li.selectedLetter, .directoryLetterBar ul li.close {text-shadow:none;background:$mosvThemeColor;	}
+#calButtons {
+  height:auto;
+}
+/*thish is a thing?*/
+#resFields {font-size:12px; line-height:1.2em;}
+@media screen and (min-width:450px) {
+    .barButtons {float:left; padding-top:0px;}
+    .barButtons.floatRight {float:right;}
+}
+/*UPDATE ON GO LIVE*/
+#eventHeader .mobileButton {padding: 9px 15px 9px 25px; position:relative;}
+#eventHeaderBack #backImage {background:url(A_Master/mobile/css/images/icons-36-white.png) repeat scroll -300px -12px transparent;opacity:1;left: 20px;}
+#doSearch {width:50px; right:0;}
+.searchButton span { position:absolute; left:50%; top:50%; margin-top:-14px; margin-left:-14px;}
+.lightBoxDiv.mobileSploder {position:fixed; top:0; height:100% !important; & > img.lightBoxImg {margin:50px auto;} }

@@ -1,0 +1,471 @@
+//modules -> v2
+//https://www.ceclients.com/sites/A_Master/library/css/rhClub_css/OneStop/#oneMisc
+//NOTES: 
+//11.1.19: jnolfi - removed some of the specific styling (font families, etc)
+//11.1.19: removed text-align:right from [id$=rosterControl_tblListing] [class^=RosterRow]>td:nth-child(2) => bootstrapshiv.css seems to fix this issue
+
+$btnColor: $green;
+$btnColorHover: $greenDark;
+$primary_color: $greenDark;
+$secondary_color: $green;
+
+[id^=masterPageUC] .module-wrap {padding:4rem 1.5rem}
+[id^=masterPageUC] .module-wrap #content {position:relative;}
+[id^=masterPageUC] .module-wrap #content .abut{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:$btnColor;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:10px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s}
+[id^=masterPageUC] .module-wrap #content .abut:active,[id^=masterPageUC] .module-wrap #content .abut:hover{background:$btnColorHover;}
+#content.module-wrap{/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:16px;line-height:1.6;color:#666;text-align:center; padding-top: 10px;}
+#content.module-wrap>*{text-align:left}
+#content .modHeaderLine img{display:none}
+/*#content a{color:$secondary_color;border:none!important}
+#content a:hover{color:$primary_color;}*/
+#content #masterPageUC_MPCA52_AdminBar1 input, #content #masterPageUC_MPCA52_AdminBar1 select { color: #6d5a5a; }
+#content input, #content select{display:inline-block;padding:3px 10px;margin:0 10px 5px 5px;border:1px solid #CCC;border-radius:0;background:0 0;box-shadow:none;outline:0;font-size:16px;color: #6d5a5a }
+
+
+#content select {  }
+#content textarea{display:block;padding:3px 10px;margin:0 10px 5px 5px;border:1px solid #CCC!important;border-radius:0;background:none!important;box-shadow:none!important;outline:0}
+#content .pgpagination{width:100%;text-align:center}
+#content .pgpagination a{padding:.5rem 1.2rem;margin:0 .2rem;border-radius:0;background:0;color:$secondary_color;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:16px;line-height:1;text-transform:uppercase}
+#content .pgpagination a:active,#content .pgpagination a:hover{background:$primary_color;color:#FFF}
+#content .pgpagination a:active .active,#content .pgpagination a:hover .active{color:#fff!important}
+#content .pgpagination a.active{background:$secondary_color!important;box-shadow:none!important;text-shadow:none!important;color:#fff!important}
+#content [id$=tblAdminBar]{width:auto!important;border:none!important}
+#content [id$=tblAdminBar]>tbody>tr>td{padding:0!important}
+#content .adminBar,#content .adminbar{padding:0 10px!important;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:14px;;line-height:1;letter-spacing:.01rem}
+#content .plgHeaderBar{position:absolute;top:0;left:15px;right:15px;border-bottom:1px solid #DDD;/*font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;*/font-weight:400;font-size:32px;line-height:1;color:#444;text-transform:uppercase}
+.Dgrp_ToolBoxTitleBar{background:#cecece;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:-webkit-linear-gradient(top,#cecece 0,#999 100%);background:linear-gradient(to bottom,#cecece 0,#999 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece', endColorstr='#999999', GradientType=0);padding:5px 20px;margin:0 0 10px;height:auto}
+.dpDiv{background:#FFF}
+.rcCalPopup{-webkit-transition:none!important;transition:none!important}
+.RadPicker input{border:1px solid #CCC!important}
+#divSyncEvent{margin:0!important}
+.moduleTabsWrapper{/*font-family:Tahoma,Geneva,sans-serif;*/text-transform:uppercase;margin:20px 0 -1px;padding:0;display:block;position:relative;z-index:3;border-collapse:initial}
+.moduleTabsWrapper *{margin:0;height:auto!important;width:auto!important;font-size:13px;letter-spacing:.1rem}
+.moduleTabsWrapper [class*=avTab].hasText{padding:12px 18px!important;margin:0 2px;-webkit-transition:.3s;transition:.3s;border:1px solid transparent}
+.moduleTabsWrapper [class*=avTab].hasText a{display:block;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out;text-decoration:none;margin:-10px -15px;padding:10px 15px!important}
+.moduleTabsWrapper [class*=avTab].hasText:hover{border-color:#EEE;border-bottom-color:transparent;background:#FFF;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.moduleTabsWrapper [class*=avTab].hasText:hover a{color:#666!important;border:none!important}
+.moduleTabsWrapper [class*=avTab].hasText:hover a:hover{color:#666!important}
+.moduleTabsWrapper [class*=ON].hasText,.moduleTabsWrapper [class*=On].hasText{background:#FFF;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);border:1px solid #EEE;border-bottom-color:transparent}
+.moduleTabsWrapper [class*=ON].hasText span,.moduleTabsWrapper [class*=On].hasText span{border-bottom:1px dashed #CCC;padding:0 0 10px!important;margin:0 0 -11px!important}
+[class*=ArticleList] [height="1"],[class*=ArticleList] [width="1"]{display:none}
+[class*=ArticleList] .adminbar{padding:0!important;display:inline-block;margin:3.6rem 0 0}
+[class*=ArticleList] .adminbar input{margin:0 0 0 .1rem!important}
+[class*=ArticleList] .adminbar td:first-child{padding:0 1.9rem 0 0!important}
+[class*=ArticleList] .articlePrintLink{margin:3.6rem 0 0 .5rem;float:right}
+[class*=ArticleList] .articlePrintLink a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;border:0!important;border-radius:0;background:$secondary_color;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;margin:0}
+[class*=ArticleList] .articlePrintLink a:active,[class*=ArticleList] .articlePrintLink a:hover{background:$primary_color;}
+[class*=ArticleList] .tnavTabON[width="100%"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+[class*=ArticleList] [id$="_QuickFilter"]>tbody>tr>.tnavTabON{padding:0!important}
+[class*=ArticleList] [id$="_QuickFilter"] [id$="_lblFilterText"] font{font-size:14px;;letter-spacing:.1rem;text-transform:uppercase;display:block}
+[class*=ArticleList] [id$="_QuickFilter"] .abut{margin:0 0 2.8rem!important}
+[class*=ArticleList] [id$="_QuickFilter"] #filterdiv1{margin:-1.5rem 0 0}
+[class*=ArticleList] [id$="_QuickFilterTable"]{border-color:#CCC!important;width:300px}
+[class*=ArticleList] [id$="_QuickFilterTable"] br{display:none}
+[class*=ArticleList] [id$="_QuickFilterTable"] input{width:auto}
+[class*=ArticleList] [id$="_QuickFilterTable"] td{padding:1rem 1.5rem!important;text-align:left}
+[class*=ArticleList] [id$="_QuickFilterTable"] td:nth-child(2){text-align:right}
+[class*=ArticleList] [id$="_QuickFilterTable"] tr:first-child>td{border-bottom:.1rem solid #CCC}
+[class*=ArticleList] [id$="_QuickFilterTable"] tr:last-child>td{border-top:.1rem solid #CCC}
+[class*=ArticleList] [id$="_QuickFilterTable"] a{display:block;margin:-1rem -1.5rem;padding:1rem 1.5rem}
+[class*=ArticleList] [id$="_tblArticles"]{position:relative}
+[class*=ArticleList] [id$="_tblArticles"] img,[class*=ArticleList] [id$="_tblArticles"] tr:first-child{display:none}
+[class*=ArticleList] [id$="_tblArticles"] [colspan="6"]{padding:2rem 0;text-align:center}
+[class*=ArticleList] [id$="_tblArticles"] tr:nth-child(5) [colspan="5"]{padding:8rem 0;font-size:14px;text-align:center;text-transform:uppercase}
+[class*=ArticleList] .articleTitleRow td{padding:1rem 0}
+[class*=ArticleList] .articleTitleRow a{font-size:16px;text-transform:uppercase}
+[class*=ArticleList] .articleTitleRow span{margin-left:1rem}
+[class*=ArticleList] .articleTitleRow span a{display:inline-block;padding:.2rem .5rem;font-size:16px;text-transform:lowercase}
+[class*=ArticleList] .articleSummaryRow td{padding:.5rem 0 3rem;border-bottom:3rem solid #FFF;background:#EEE}
+[class*=ArticleList] .articleSummaryRow td:nth-child(3){padding:3rem 2rem}
+[class*=ArticleView] [height="1"],[class*=ArticleView] [width="1"]{display:none}
+[class*=ArticleView] #articleModHeader{height:0}
+[class*=ArticleView] .adminBar{padding:0!important;display:inline-block;margin:7rem 0 0}
+[class*=ArticleView] .adminBar input{margin:0 0 0 .1rem!important}
+[class*=ArticleView] .adminBar td:first-child{padding:0 1.9rem 0 0!important}
+[class*=ArticleView] .articlePrintLink{margin:7rem 0 0 .5rem;float:right}
+[class*=ArticleView] .articlePrintLink a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;border:0!important;border-radius:0;background:$secondary_color;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;margin:0}
+[class*=ArticleView] .articlePrintLink a:active,[class*=ArticleView] .articlePrintLink a:hover{background:$primary_color;}
+[class*=ArticleView] .tnavTabON[width="100%"]{background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);padding:3rem 4rem 5rem!important}
+[class*=ArticleView] #articlePageHeader{width:100%}
+[class*=ArticleView] #articlePageHeader a,[class*=ArticleView] #articlePageHeader span{text-transform:uppercase}
+[class*=ArticleView] #articlePageHeader .articleTitle{display:block;width:75%;padding:0 0 2rem;margin:3rem auto;border-bottom:1px solid #CCC;/*font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;*/font-size:2.4rem;line-height:1;text-align:center}
+[class*=ArticleView] .articleSummary,body[class*=alendar] [height="1"],body[class*=alendar] [width="1"]{display:none}
+body[class*=alendar] [id$="_admin"]{position:absolute;top:3.4rem;right:46.7rem;width:auto!important}
+body[class*=alendar] [id$="_admin"] [colspan="2"]{display:none}
+body[class*=alendar] [id$="_admin"] td{display:table-cell}
+body[class*=alendar] [id$="_admin"] input{margin:0 0 0 .2rem!important}
+body[class*=alendar] #calendarLinkBar{top:3.4rem;right:0;position:absolute;width:auto!important;color:transparent}
+body[class*=alendar] #calendarLinkBar a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:$secondary_color;font-family:Tahoma,Geneva,sans-serif;font-weight:400;font-size:10px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;float:right}
+body[class*=alendar] #calendarLinkBar a:active,body[class*=alendar] #calendarLinkBar a:hover{background:$primary_color;}
+body[class*=alendar] #calendarLinkBar a img{margin:-4px 0 -2px 3px;height:14px;position:relative}
+body[class*=alendar] .calendarLegend{display:block;position:absolute;bottom:0;right:0;left:0;border-top:1px solid #CCC;font-size:14px!important;text-align:center;letter-spacing:1px}
+body[class*=alendar] .calendarLegend *{display:inline-block}
+body[class*=alendar] .calendarLegend img{margin:0 5px 3px 0}
+body[class*=alendar] .calendarLegend td{padding:10px 0}
+body[class*=alendar] .calendarTitleBar{font-size:16px;line-height:1;display:inline-block}
+body[class*=alendar] .calendarTitleBar b{font-weight:400}
+body[class*=alendar] .rcCalPopup:hover{background-position:-13px -4215.5px!important}
+body[class*=alendar] [id^=axisCalendar]{position:relative;padding:6.5rem 0}
+body[class*=alendar] [id^=axisCalendar]>table:last-child>*>tr:nth-child(5)>.tnavTabON{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+body[class*=alendar] [id^=axisCalendar]>table:last-child>*>tr:nth-child(5)>.tnavTabON>*>*>tr:first-child>*>*>*>*>*>*>*>tr:first-child>td:first-child{padding:0!important}
+body[class*=alendar] [id^=axisCalendar]>table:last-child>*>tr:nth-child(5)>.tnavTabON>*>*>tr:first-child>*>*>*>*>*>*>*>tr:first-child>td:first-child+td font{float:right;font-size:14px;;text-transform:uppercase;font-weight:400;display:block}
+body[class*=alendar] #btnQuickFilter{margin:0 0 10px}
+body[class*=alendar] [id^=masterPageUC] .calendarQuickFilterWrap .abut{padding:0!important;margin:5px 10px 0 0!important;border:none!important;background:0 0;color:#404040!important;letter-spacing:0}
+body[class*=alendar] .calendarQuickFilterWrap{min-width:300px}
+body[class*=alendar] .calendarQuickFilterWrap [id^=qf_]{height:12px;float:left;margin:7px 2px 10px 8px!important}
+body[class*=alendar] .calendarQuickFilterWrap [id^=qf_]+label{height:20px;vertical-align:middle;float:left;margin-top:6px;font-weight:400;/*font-family:Tahoma,Geneva,sans-serif;*/letter-spacing:1px}
+body[class*=alendar] .calendarQuickFilterWrap div{padding:1rem}
+body[class*=alendar] .calendarQuickFilterWrap table{width:300px;border-color:#CCC!important}
+body[class*=alendar] .calendarQuickFilterWrap table table{width:100%}
+body[class*=alendar] .calendarQuickFilterWrap table table input{float:left;margin:0 5px 0 0}
+body[class*=alendar] .calendarQuickFilterWrap table table input+label{float:left}
+body[class*=alendar] .calendarQuickFilterWrap td[onclick="javascript:dofilter('ALL')"]{padding:8px 20px!important;border-bottom:1px solid #CCC}
+body[class*=alendar] .modCalDayRow{font-size:16px;padding:0 0 30px}
+body[class*=alendar] .modCalDayRow .smallerfont{display:block;padding:0 20px 0 0;font:400 1.4rem/1.6 Tahoma,Geneva,sans-serif}
+body[class*=alendar] .modCalDayRow>a:first-child{width:100%;display:inline-block;float:left;margin:0 0 10px;font:400 1.4rem/1.6 Tahoma,Geneva,sans-serif}
+body[class*=alendar] .modCalWeekDayHeader a{display:block;margin:30px 0;padding:12px 20px;color:#666;background:#DDD;font-size:14px!important;letter-spacing:.1rem;text-transform:uppercase}
+body[class*=alendar] .modCalWeekDayHeader b{font-weight:400}
+body[class*=alendar] .modCalWeekRow{padding:0 0 10px}
+body[class*=alendar] .modCalWeekRow font{display:block;padding:0 20px 0 0;text-align:right}
+body[class*=alendar] .modCalWeekRow a{display:inline-block;margin:0 0 10px}
+body[class*=alendar] [id$="_dayTable"]{margin:2rem 0;position:relative}
+body[class*=alendar] [id$="_dayTable"] td{display:none;background:0 0}
+body[class*=alendar] [id$="_dayTable"] tr:first-child{border-bottom:1px dashed #CCC;border-top:1px dashed #CCC;width:100%;position:absolute}
+body[class*=alendar] [id$="_dayTable"] tr:first-child td:nth-child(2){display:table-cell;width:auto;padding:0 34px 0 128px}
+body[class*=alendar] [id$="_dayTable"] tr:first-child td:nth-child(6){display:table-cell;width:auto;padding:5px 0}
+body[class*=alendar] [id$="_dayTable"] tr:first-child font{margin:0 15px 0 0;font-size:1.3rem}
+body[class*=alendar] [id$="_dayTable"] tr:nth-child(2) td{display:table-cell;padding:3rem 0}
+body[class*=alendar] [id$="_dayTable"] tr:nth-child(n+2) td:nth-child(2){display:table-cell;width:175px}
+body[class*=alendar] [id$="_dayTable"] tr:nth-child(n+2) td:nth-child(6){display:table-cell;width:31px;padding:5px 15px 0 0}
+body[class*=alendar] [id$="_dayTable"] tr:nth-child(n+2) td:nth-child(7){display:table-cell}
+body[class*=alendar] [id$="_weekTable"],body[class*=alendar] [id$="_listTable"]{margin:2rem 0;position:relative}
+body[class*=alendar] [id$="_weekTable"] td,body[class*=alendar] [id$="_listTable"] td{display:none;background:0 0}
+body[class*=alendar] [id$="_weekTable"] tr:first-child,body[class*=alendar] [id$="_listTable"] tr:first-child{border-bottom:1px dashed #CCC;border-top:1px dashed #CCC;width:100%;position:absolute}
+body[class*=alendar] [id$="_weekTable"] tr:first-child td:nth-child(2),body[class*=alendar] [id$="_listTable"] tr:first-child td:nth-child(2){display:table-cell;width:auto;padding:0 34px 0 128px}
+body[class*=alendar] [id$="_weekTable"] tr:first-child td:nth-child(5),body[class*=alendar] [id$="_listTable"] tr:first-child td:nth-child(5){display:table-cell;width:auto;padding:5px 0}
+body[class*=alendar] [id$="_weekTable"] tr:first-child font,body[class*=alendar] [id$="_listTable"] tr:first-child font{margin:0 15px 0 0;font-size:1.3rem}
+body[class*=alendar] [id$="_weekTable"] tr:nth-child(2) td,body[class*=alendar] [id$="_listTable"] tr:nth-child(2) td{display:table-cell;padding:15px 0}
+body[class*=alendar] [id$="_weekTable"] tr:nth-child(n+2) td:nth-child(2),body[class*=alendar] [id$="_listTable"] tr:nth-child(n+2) td:nth-child(2){display:table-cell;width:175px}
+body[class*=alendar] [id$="_weekTable"] tr:nth-child(n+2) td:nth-child(4),body[class*=alendar] [id$="_listTable"] tr:nth-child(n+2) td:nth-child(4){display:table-cell;width:31px;padding:5px 15px 0 0}
+body[class*=alendar] [id$="_weekTable"] tr:nth-child(n+2) td:nth-child(5),body[class*=alendar] [id$="_listTable"] tr:nth-child(n+2) td:nth-child(5){display:table-cell}
+body[class*=alendar] .modCalMonth{width:100%!important;height:auto!important;margin-top:2rem}
+body[class*=alendar] .modCalMonth th{border-color:#CCC!important;padding:5px;color:#666;font-weight:400;text-align:center}
+body[class*=alendar] .modCalMonth>*>*>*{border:1px solid #CCC!important;letter-spacing:1px;font-weight:400;padding:6px}
+body[class*=alendar] .modCalMonth>*>*>:first-child{padding:0 5px;background:#EEE}
+body[class*=alendar] .modCalMonth>*>*>* td{display:none;font-size:1rem;padding:5px 0 0}
+body[class*=alendar] .modCalMonth>*>*>* td a,body[class*=alendar] .modCalMonth>*>*>* td font{font-size:14px;}
+body[class*=alendar] .modCalMonth>*>*>* td:nth-child(2),body[class*=alendar] .modCalMonth>*>*>* td:nth-child(3){display:table-cell}
+body[class*=alendar] .modCalMonth>*>*>* td:nth-child(3) img{margin:0 auto;display:block;width:90%;border-bottom:1px dashed $secondary_color;height:1px}
+body[class*=alendar] .modCalMonth>*>*>* tr:first-child td{border-bottom:1px solid #CCC;padding:0 0 3px;display:table-cell}
+body[class*=alendar] .modCalMonth>*>*>* tr:first-child td a{font-size:14px;}
+body[class*=alendar] .modCalMonth .currentDay{border:2px solid $secondary_color!important}
+body[class*=alendar] .modCalMonth .calendarEventPastDate{background:#EEE}
+body[class*=alendar] .modCalMonth .modCalMonthWeekDayOtherMonth{background:#E5E5E5}
+body[class*=alendar]:first-child>td{background:none!important;padding:7px 0 4px;font:400 1.3rem/1.6 Tahoma,Geneva,sans-serif;text-transform:uppercase}
+body[class*=alendar]:nth-child(2)>td{padding:8px 10px 5px}
+body[class*=alendar] [id$="_jan"],body[class*=alendar] [id$="_feb"],body[class*=alendar] [id$="_mar"],body[class*=alendar] [id$="_apr"],body[class*=alendar] [id$="_may"],body[class*=alendar] [id$="_jun"],body[class*=alendar] [id$="_jul"],body[class*=alendar] [id$="_aug"],body[class*=alendar] [id$="_sep"],body[class*=alendar] [id$="_oct"],body[class*=alendar] [id$="_nov"],body[class*=alendar] [id$="_dec"]{border:1px solid #CCC;margin-bottom:15px}
+body[class*=alendar] [id$="_jan"] td,body[class*=alendar] [id$="_feb"] td,body[class*=alendar] [id$="_mar"] td,body[class*=alendar] [id$="_apr"] td,body[class*=alendar] [id$="_may"] td,body[class*=alendar] [id$="_jun"] td,body[class*=alendar] [id$="_jul"] td,body[class*=alendar] [id$="_aug"] td,body[class*=alendar] [id$="_sep"] td,body[class*=alendar] [id$="_oct"] td,body[class*=alendar] [id$="_nov"] td,body[class*=alendar] [id$="_dec"] td{padding:5px 10px}
+body[class*=alendar] [id$="_jan"] tr:first-child td,body[class*=alendar] [id$="_feb"] tr:first-child td,body[class*=alendar] [id$="_mar"] tr:first-child td,body[class*=alendar] [id$="_apr"] tr:first-child td,body[class*=alendar] [id$="_may"] tr:first-child td,body[class*=alendar] [id$="_jun"] tr:first-child td,body[class*=alendar] [id$="_jul"] tr:first-child td,body[class*=alendar] [id$="_aug"] tr:first-child td,body[class*=alendar] [id$="_sep"] tr:first-child td,body[class*=alendar] [id$="_oct"] tr:first-child td,body[class*=alendar] [id$="_nov"] tr:first-child td,body[class*=alendar] [id$="_dec"] tr:first-child td{background:none!important;padding:0 10px 10px;text-transform:uppercase}
+body[class*=alendar] td.modCalYearCurrentDayHighlight{background:#F9F5F5}
+body[class*=alendar] .RadPicker_Default{width:160px;margin:0 0 0 20px}
+body[class*=alendar] .RadPicker_Default input:first-child+table input{width:100%;border:1px solid #ddd;padding:5px 10px;margin:10px 0;outline:0;height:30px}
+.v35EvtView [height="1"],.v35EvtView [width="1"],body[class*=EventView] [height="1"],body[class*=EventView] [width="1"]{display:none}
+.v35EvtView #content>script+table,body[class*=EventView] #content>script+table{margin:35px 0 0;display:inline-block;width:auto!important;position:absolute;right:20%;z-index:98}
+.v35EvtView #content>script+table tr,body[class*=EventView] #content>script+table tr{display:none}
+.v35EvtView #content>script+table tr:first-child+tr+tr,body[class*=EventView] #content>script+table tr:first-child+tr+tr{display:table-row}
+.v35EvtView #content>script+table input,body[class*=EventView] #content>script+table input{margin:0 0 0 2px}
+.v35EvtView [id$="_trCheckout"],body[class*=EventView] [id$="_trCheckout"]{position:absolute;top:-80px;right:5px;width:auto}
+.v35EvtView #content>[align=center],body[class*=EventView] #content>[align=center]{margin:65px 0 40px;text-align:left;display:block;width:100%;position:relative}
+.v35EvtView #content>[align=center]>*,.v35EvtView #content>[align=center]>*>*,.v35EvtView #content>[align=center]>*>*>*,body[class*=EventView] #content>[align=center]>*,body[class*=EventView] #content>[align=center]>*>*,body[class*=EventView] #content>[align=center]>*>*>*{display:block;width:100%}
+.v35EvtView [class$=EventLink],body[class*=EventView] [class$=EventLink]{font-size:14px;;padding:0 0 0 .8rem;position:relative;z-index:98;float:left;color:#666}
+.v35EvtView [class$=EventLink]:active,.v35EvtView [class$=EventLink]:hover,body[class*=EventView] [class$=EventLink]:active,body[class*=EventView] [class$=EventLink]:hover{text-decoration:none;color:$secondary_color;}
+.v35EvtView .nextNextEventLink,body[class*=EventView] .nextNextEventLink{float:right;right:1.2rem}
+.v35EvtView #eventView,body[class*=EventView] #eventView{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);position:relative}
+.v35EvtView [id^=eventFlyer] a,body[class*=EventView] [id^=eventFlyer] a{color:$secondary_color!important;}
+.v35EvtView [id^=eventFlyer] a:active,.v35EvtView [id^=eventFlyer] a:hover,body[class*=EventView] [id^=eventFlyer] a:active,body[class*=EventView] [id^=eventFlyer] a:hover{color:$primary_color!important;}
+.v35EvtView #eventHeader,body[class*=EventView] #eventHeader{background:#FFF;border-bottom:1px solid #CCC;height:35px;margin:0 0 20px;padding:10px 0}
+.v35EvtView #eventHeaderBack,body[class*=EventView] #eventHeaderBack{width:auto;font-size:14px;;padding-right:1rem;margin-right:1rem;border-right:1px solid #ddd;position:relative;z-index:99}
+.v35EvtView #eventHeaderBack img,body[class*=EventView] #eventHeaderBack img{height:0;width:0;margin:-.2rem .2rem 0 0;border:.6rem solid transparent;border-right:.6rem solid #000}
+.v35EvtView #eventHeaderRightSpacer,body[class*=EventView] #eventHeaderRightSpacer{display:none}
+.v35EvtView #eventHeaderTitle,body[class*=EventView] #eventHeaderTitle{padding:0;position:relative}
+.v35EvtView #eventHeaderTitle .TitleText,body[class*=EventView] #eventHeaderTitle .TitleText{display:none}
+.v35EvtView #eventHeaderTitle img:last-child,body[class*=EventView] #eventHeaderTitle img:last-child{border-left:.6rem solid #000;border-right:0;position:absolute;right:0}
+.v35EvtView #eventHeaderTitle img,body[class*=EventView] #eventHeaderTitle img{border:.6rem solid transparent;border-right:.6rem solid #000;height:0;width:0;float:left;margin:.4rem 0 0}
+.v35EvtView #topLinkBar,body[class*=EventView] #topLinkBar{position:absolute;top:30px;left:0;right:0}
+.v35EvtView #topLinkBar li,body[class*=EventView] #topLinkBar li{font-size:14px;;display:inline-block;padding:.5rem}
+.v35EvtView #eventDateBottom,.v35EvtView #eventDateTop,body[class*=EventView] #eventDateBottom,body[class*=EventView] #eventDateTop{width:75%;margin:0 auto;padding:1rem 0;font-size:1.4rem}
+.v35EvtView #eventDateTop,body[class*=EventView] #eventDateTop{padding-bottom:3rem}
+.v35EvtView #eventDateBottom,body[class*=EventView] #eventDateBottom{padding-top:3rem}
+.v35EvtView #eventSummaryBottom,.v35EvtView #eventSummaryTop,body[class*=EventView] #eventSummaryBottom,body[class*=EventView] #eventSummaryTop{font-size:16px;width:75%;margin:0 auto;padding:0}
+.v35EvtView #eventSummaryBottom img,.v35EvtView #eventSummaryTop img,body[class*=EventView] #eventSummaryBottom img,body[class*=EventView] #eventSummaryTop img{margin:20px;max-width:100%}
+.v35EvtView #eventTitleBottom,.v35EvtView #eventTitleTop,body[class*=EventView] #eventTitleBottom,body[class*=EventView] #eventTitleTop{display:block;width:75%;border-bottom:1px solid #CCC;padding:0 0 10px;font-size:2.1rem}
+.v35EvtView #eventTitleTop,body[class*=EventView] #eventTitleTop{margin:2rem auto 1rem}
+.v35EvtView #eventTitleBottom,body[class*=EventView] #eventTitleBottom{margin:1rem auto 2rem}
+.v35EvtView #eventFlyer,body[class*=EventView] #eventFlyer{padding:30px 0}
+.NETEventInfo #Table6{background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);padding:0 30px 10px!important;display:block;border-bottom:none!important}
+.NETEventInfo #Table6 tr:first-child td{width:100%}
+.NETEventInfo #Table6 tr:last-child td:first-child{width:25%}
+.NETEventInfo #Table6 tr:last-child td:last-child{width:75%}
+.NETEventInfo #Table1,.NETEventInfo #Table1+table,.NETEventInfo #Table1+table+table{background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);padding:10px 30px!important;display:block;border-top:none!important;border-bottom:none!important}
+.NETEventInfo #Table1+table+table>tbody>tr{background:$secondary_color;color:#FFF}
+.NETEventInfo #Table1+table+table>tbody>tr:first-child td{width:100%;text-align:center!important}
+.NETEventInfo #Table1+table+table>tbody>tr:last-child td:first-child{width:25%}
+.NETEventInfo #Table1+table+table>tbody>tr:last-child td:last-child{width:75%}
+.NETEventInfo #Table1+table+table>tbody>tr td{padding:10px}
+.NETEventInfo #Table1+table+table>tbody>tr a{color:#FFF; font-size:14px;}
+.NETEventInfo #Table1+table+table>tbody>tr a:active,.NETEventInfo #Table1+table+table>tbody>tr a:hover{color:#FFF;border-bottom:1px solid}
+.NETEventInfo #eventReportWrapperDiv{background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);padding:10px 30px!important;display:block;border-top:none!important;border-bottom:none!important}
+.NETEventInfo #eventReportWrapperDiv+div{background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);padding:10px 30px!important;display:block;border-top:none!important}
+.NETEventInfo #divActions{padding:10px 10px 7px!important;width:auto!important}
+.NETEventInfo #divActions li,.NETEventInfo #divActions ul{list-style:none!important;list-style-image:url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)!important;padding:0;margin:0}
+.NETEventInfo #divActions li{margin:0 0 3px}
+.AddMembership [height="1"],.AddMembership [width="1"],.MemberRoster [height="1"],.MemberRoster [width="1"],.v35Directory [height="1"],.v35Directory [width="1"]{display:none}
+.AddMembership #content>:first-child,.MemberRoster #content>:first-child,.v35Directory #content>:first-child{height:0;margin:0 0 10px}
+
+.AddMembership [id$=tblHeader],.MemberRoster [id$=tblHeader],.v35Directory [id$=tblHeader]{position:absolute;margin:6rem 0 0;/*right:6.3rem;*/width:auto}
+
+.AddMembership [id$=tblHeader]>*>:first-child,.AddMembership [id$=tblHeader]>*>:nth-child(3),.MemberRoster [id$=tblHeader]>*>:first-child,.MemberRoster [id$=tblHeader]>*>:nth-child(3),.v35Directory [id$=tblHeader]>*>:first-child,.v35Directory [id$=tblHeader]>*>:nth-child(3){display:none}
+.AddMembership [id$=tblHeader] td:first-child,.MemberRoster [id$=tblHeader] td:first-child,.v35Directory [id$=tblHeader] td:first-child{padding:0 2.7rem 0 0!important}
+.AddMembership .adminbar,.MemberRoster .adminbar,.v35Directory .adminbar{padding:0 0 0 1rem!important}
+.AddMembership .adminbar input,.MemberRoster .adminbar input,.v35Directory .adminbar input{margin:0 0 0 .5rem;float:left}
+.AddMembership .RosterRowHidden,.MemberRoster .RosterRowHidden,.v35Directory .RosterRowHidden{color:#8A0A0A!important}
+.AddMembership .RosterRowHidden:hover,.MemberRoster .RosterRowHidden:hover,.v35Directory .RosterRowHidden:hover{color:#540808!important}
+.AddMembership #printLink,.MemberRoster #printLink,.v35Directory #printLink{margin:6rem 0 0;float:right}
+.AddMembership #printLink a,.MemberRoster #printLink a,.v35Directory #printLink a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:$secondary_color;;font-family:Tahoma,Geneva,sans-serif;font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s}
+.AddMembership #printLink a:active,.AddMembership #printLink a:hover,.MemberRoster #printLink a:active,.MemberRoster #printLink a:hover,.v35Directory #printLink a:active,.v35Directory #printLink a:hover{background:$primary_color;}
+.AddMembership .tnavTabON[width="99%"],.MemberRoster .tnavTabON[width="99%"],.v35Directory .tnavTabON[width="99%"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.AddMembership [id$="_tblAdminStuff"]+table *,.MemberRoster [id$="_tblAdminStuff"]+table *,.v35Directory [id$="_tblAdminStuff"]+table *{display:block}
+.AddMembership [id$="_tblAdminStuff"]+table td:first-child,.MemberRoster [id$="_tblAdminStuff"]+table td:first-child,.v35Directory [id$="_tblAdminStuff"]+table td:first-child{display:none}
+[id$=rosterControl_Panel2]{padding:0 0 2rem!important}
+[id$=rosterControl_lbShowAll]{font-family:Tahoma,Geneva,sans-serif;font-size:14px;;text-transform:uppercase;letter-spacing:.1rem}
+[class^=qFilter]{width:20%}
+[class^=qFilter].label font{font-family:Tahoma,Geneva,sans-serif;font-size:14px;;font-weight:400;color:#9D9D9D;letter-spacing:.14285rem;text-transform:uppercase}
+[class^=qFilter].control input{padding:.3rem 1rem;margin:.3rem 0 0;height:3rem;outline:0;/*font-family:Tahoma,Geneva,sans-serif;*/font-size:14px;;width:100%!important}
+.qFilterButton{width:20%}
+.qFilterButton.label font{/*font-family:Tahoma,Geneva,sans-serif;*/font-size:14px;;font-weight:400;color:#9D9D9D;letter-spacing:.14285rem;text-transform:uppercase}
+.qFilterButton.control input{padding:.3rem 1rem;height:3rem;outline:0;/*font-family:Tahoma,Geneva,sans-serif;*/margin:0!important;font-size:1.1rem}
+[id$=rosterControl_tblListing] td{padding:1.5rem 0}
+[id$=rosterControl_tblListing] .RosterColumnTitle td{padding:.5rem 1rem;font-size:14px;;border-bottom:.1rem dashed #ccc;border-top:.1rem dashed #ccc}
+[id$=rosterControl_tblListing] .RosterColumnTitle td b{font-weight:400}
+[id$=rosterControl_tblListing] .RosterColumnTitle td u{text-decoration:none}
+[id$=rosterControl_tblListing] .RosterRowOff{background:#EEE}
+[id$=rosterControl_tblListing] .RosterRowOn{background:#FFF}
+//jn: this view is messing up in member view and looks like ce bootstrap shiv is fixing this
+// [id$=rosterControl_tblListing] [class^=RosterRow]>td:nth-child(2){text-align:right}
+[id$=rosterControl_tblListing] [class^=RosterRow]>td{font:400 1rem/1 Tahoma,Geneva,sans-serif;letter-spacing:.1rem;color:#222;text-transform:none!important}
+[id$=rosterControl_tblListing] [class^=RosterRow]>td b{font-weight:400}
+[id*=rosterControl_tblLetter]{font:400 1.2rem/1 Tahoma,Geneva,sans-serif;font-size:14px;;line-height:1;text-transform:uppercase;border-bottom:.1rem solid #DDD;border-top:.1rem solid #DDD;margin:0 0 2rem}
+[id*=rosterControl_tblLetter] td{text-align:center!important;padding:0}
+[id*=rosterControl_tblLetter] td[class$="n"]{color:#6D6D6D!important;background:#EEE;font-weight:600}
+[id*=rosterControl_tblLetter] td[class$="f"]{color:$secondary_color;}
+[id*=rosterControl_tblLetter] td[class$="f"]:hover{color:$primary_color;;background:#EEE}
+[id$=rosterControl_tblLetters]{margin:2rem 0}
+[id$=rosterControl_tblLetterBarBottom]{margin:2rem 0 0}
+[id$=rosterControl_tblResultsShell]>*>:nth-child(2){float:left}
+[id$=rosterControl_tblResultsShell]>*>:nth-child(2)>td b{font-size:16px;font-weight:400;text-transform:uppercase}
+[id$=rosterControl_tblResultsShell]>*>:nth-child(3){float:right;margin:.4rem 0 0}
+[id$=rosterControl_tblResultsShell]>*>:nth-child(3)>td a{font-size:1rem;text-transform:uppercase}
+[id$=rosterControl_rapLoginReport]{font:400 1.4rem/1 Tahoma,Geneva,sans-serif}
+[id$=rosterControl_rapLoginReport]>table:first-child td{padding:0 1.2rem 0 0;text-transform:uppercase;font-size:14px;}
+[id$=rosterControl_rapLoginReport]>table:first-child td:last-child{padding:0}
+[id$=rosterControl_rapLoginReport]>table:first-child td:last-child a{font-size:400 1.2rem Tahoma,Geneva,sans-serif;font-family:Tahoma,Geneva,sans-serif;text-transform:uppercase;letter-spacing:.1rem}
+[id$=rosterControl_rapLoginReport]>table:first-child .RadPicker input{height:3rem!important;padding:.3rem 1rem!important}
+[id$=rosterControl_rapLoginReport]>table:first-child [id$=rosterControl_lbShowAll]{float:none}
+[id$=rosterControl_tblInput] i{font-style:normal}
+[id$=rosterControl_btnAdd]{margin-bottom:2rem!important}
+[id$=MyProfile] [id$=ProfilePage] td:first-child{width:40%}
+table#profilePhoto{margin:0 auto 1.42857rem}
+.MemProfile #content>table:first-child,.MemberEdit #content>table:first-child{height:0;display:block}
+.MemProfile [id$="_tblHeader"],.MemberEdit [id$="_tblHeader"]{margin:7rem 0 0;padding:0!important;display:inline-block;width:auto}
+.MemProfile [id$="_tblHeader"]>*>:first-child,.MemProfile [id$="_tblHeader"]>*>:nth-child(3),.MemberEdit [id$="_tblHeader"]>*>:first-child,.MemberEdit [id$="_tblHeader"]>*>:nth-child(3){display:none}
+.MemProfile .adminbar,.MemberEdit .adminbar{padding:0!important}
+.MemProfile .adminbar input,.MemberEdit .adminbar input{float:right}
+.MemProfile #printLink,.MemberEdit #printLink{display:inline-block;position:relative;margin:7rem 0 0;float:right}
+.MemProfile #printLink a,.MemberEdit #printLink a{display:inline-block;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:$secondary_color;;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;vertical-align:top}
+.MemProfile #printLink a:active,.MemProfile #printLink a:hover,.MemberEdit #printLink a:active,.MemberEdit #printLink a:hover{background:$primary_color;}
+.MemProfile #Table2,.MemberEdit #Table2{margin:0 0 2.85714rem}
+.MemProfile #Table2>*>*>.tnavBorder,.MemProfile #Table2>*>:first-child>:first-child,.MemProfile #Table2>*>:first-child>:nth-child(3),.MemProfile #Table2>*>:nth-child(2)>:first-child,.MemProfile #Table2>*>:nth-child(2)>:nth-child(5),.MemProfile #Table2>*>:nth-child(3),.MemberEdit #Table2>*>*>.tnavBorder,.MemberEdit #Table2>*>:first-child>:first-child,.MemberEdit #Table2>*>:first-child>:nth-child(3),.MemberEdit #Table2>*>:nth-child(2)>:first-child,.MemberEdit #Table2>*>:nth-child(2)>:nth-child(5),.MemberEdit #Table2>*>:nth-child(3){display:none}
+.MemProfile #Table2>*>*>.tnavTabON,.MemberEdit #Table2>*>*>.tnavTabON{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.MemProfile [id$=tblMyProfile]>*>tr>td:first-child{padding:0 3rem 0 0}
+.MemProfile [id$=tblMyProfile]>*>tr>td:last-child{padding:0 0 0 3rem}
+.MemProfile [id$="_tblProfile"]>*>tr:first-child>td strong{display:block;float:left;width:75%;padding:0 0 .5rem;font:400 2rem Tahoma,Geneva,sans-serif}
+.MemProfile [id$="_tblProfile"]>*>tr>td:first-child{width:25%}
+.MemProfile [id$="_tblProfile"]>*>tr>td:first-child i{display:block;padding:.5rem 1rem;margin:0 0 .5rem;background:#EEE;font-style:normal}
+.MemProfile [id$="_tblProfile"]>*>tr>td:first-child b i{padding:0;margin:1.5rem 0 2rem;border-bottom:1px solid #CCC;border-right:0;background:0 0;color:#666;text-transform:uppercase;letter-spacing:.1rem}
+.MemProfile [id$="_tblProfile"]>*>tr>td{padding:0 .5rem;border:none!important;vertical-align:middle}
+.MemProfile [id$="_tblProfile"]>*>tr>td b{display:block;color:#666;font-weight:400;text-align:left}
+.MemProfile [id$="_tblProfile"]>*>tr>td:nth-child(3){text-align:left;padding:.5rem 0;color:#666}
+.MemProfile [id$="_tblProfile"]>*>.modRosterHiliteHiddenField>td:nth-child(3){color:#888!important}
+.MemProfile #memberPhoto{width:70%;margin:0 0 0 auto}
+.MemProfile #memberPhoto~table{margin:0 0 0 auto}
+.MemProfile #memberPhoto>*>tr:nth-child(2) td{line-height:0}
+.MemProfile #memberPhoto>*>tr:nth-child(2) td input{border:none;display:block;padding:1rem .8rem .8rem;height:3.1rem;width:100%!important;margin:0}
+.MemProfile #memberPhoto p{margin:0}
+.MemProfile #memberPhoto>*>tr:first-child img{display:block;max-width:100%;margin:0 auto}
+.MemberEdit [id$="_tblInput"]{width:100%}
+.NET_MemberInbox #content,.v35MessageCenter #content{padding:25px 15px 0}
+.NET_MemberInbox #content [id$=tblMessages]>*>tr:first-child,.NET_MemberInbox #content [id$=tblScheduledMessages]>*>tr:first-child,.v35MessageCenter #content [id$=tblMessages]>*>tr:first-child,.v35MessageCenter #content [id$=tblScheduledMessages]>*>tr:first-child{background:#5a5858;color:#FFF}
+.NET_MemberInbox #content [id$=tblMessages]>*>tr:first-child>td,.NET_MemberInbox #content [id$=tblScheduledMessages]>*>tr:first-child>td,.v35MessageCenter #content [id$=tblMessages]>*>tr:first-child>td,.v35MessageCenter #content [id$=tblScheduledMessages]>*>tr:first-child>td{padding:15px;vertical-align:middle}
+.NET_MemberInbox #content [id$=tblMessages]>*>tr:first-child>td a,.NET_MemberInbox #content [id$=tblScheduledMessages]>*>tr:first-child>td a,.v35MessageCenter #content [id$=tblMessages]>*>tr:first-child>td a,.v35MessageCenter #content [id$=tblScheduledMessages]>*>tr:first-child>td a{color:#FFF!important;line-height:1.5;display:inline-block;text-align:center}
+.NET_MemberInbox #content [id$=tblMessages]>*>tr:first-child>td a img,.NET_MemberInbox #content [id$=tblScheduledMessages]>*>tr:first-child>td a img,.v35MessageCenter #content [id$=tblMessages]>*>tr:first-child>td a img,.v35MessageCenter #content [id$=tblScheduledMessages]>*>tr:first-child>td a img{display:none}
+.NET_MemberInbox #content [id$="_trMailReport"],.v35MessageCenter #content [id$="_trMailReport"]{display:inline-block;width:auto!important;color:#DDD;float:right}
+.NET_MemberInbox #content [id$="_trMailReport"] a,.v35MessageCenter #content [id$="_trMailReport"] a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:#5a5858;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;float:right}
+.NET_MemberInbox #content [id$="_trMailReport"] a:active,.NET_MemberInbox #content [id$="_trMailReport"] a:hover,.v35MessageCenter #content [id$="_trMailReport"] a:active,.v35MessageCenter #content [id$="_trMailReport"] a:hover{background:$primary_color;}
+.NET_MemberInbox #content [id$="_trMailReport"] a img,.v35MessageCenter #content [id$="_trMailReport"] a img{margin:-2px 0 -2px 3px}
+.NET_MemberInbox #content>[align=center],.v35MessageCenter #content>[align=center]{margin:0 0 40px;position:relative}
+.NET_MemberInbox #content>[align=center] .rosterletteroff,.v35MessageCenter #content>[align=center] .rosterletteroff{background:#5a5858;color:#FFF}
+.NET_MemberInbox #content>[align=center] .rosterletteroff>td,.v35MessageCenter #content>[align=center] .rosterletteroff>td{padding:5px 15px;vertical-align:middle}
+.NET_MemberInbox #content>[align=center] .rosterletteroff>td:first-child,.v35MessageCenter #content>[align=center] .rosterletteroff>td:first-child{width:35%}
+.NET_MemberInbox #content>[align=center]>*>tr>td,.v35MessageCenter #content>[align=center]>*>tr>td{display:none}
+.NET_MemberInbox #content>[align=center]>*>tr:first-child>td:nth-child(2),.NET_MemberInbox #content>[align=center]>*>tr:nth-child(2)>td:nth-child(2),.v35MessageCenter #content>[align=center]>*>tr:first-child>td:nth-child(2),.v35MessageCenter #content>[align=center]>*>tr:nth-child(2)>td:nth-child(2){display:table-cell;width:100%}
+.NET_MemberInbox #content>[align=center]>*>tr>.tnavBorder,.v35MessageCenter #content>[align=center]>*>tr>.tnavBorder{display:none!important}
+.NET_MemberInbox #content>[align=center]>*>tr>.tnavTabON,.v35MessageCenter #content>[align=center]>*>tr>.tnavTabON{display:table-cell;padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.NET_MemberInbox #content>[align=center] [id$="_litHTML"] iframe:first-child,.v35MessageCenter #content>[align=center] [id$="_litHTML"] iframe:first-child{border:1px solid #CCC!important;margin:0 0 10px!important;padding:20px!important}
+.NETCVM #content [height="1"],.NETCVM #content [style="width:5%;"],.NETCVM #content [width="1"]{display:none}
+.NETCVM #content>[align=center]{margin:30px 0 40px}
+.NETCVM #content .tnavTabON[width="99%"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);font:400 1.4rem/1.6 Tahoma,Geneva,sans-serif}
+.NETCVM #content .tnavTabON[width="99%"]>br{display:none}
+.NETEmailUIEditSched [id$=tblMessages]>*>tr:first-child,.NETEmailUIEditSched [id$=tblScheduledMessages]>*>tr:first-child,.NETEmailUIMain [id$=tblMessages]>*>tr:first-child,.NETEmailUIMain [id$=tblScheduledMessages]>*>tr:first-child{background:$secondary_color;;color:#fff}
+.NETEmailUIEditSched [id$=tblMessages]>*>tr:first-child>td,.NETEmailUIEditSched [id$=tblScheduledMessages]>*>tr:first-child>td,.NETEmailUIMain [id$=tblMessages]>*>tr:first-child>td,.NETEmailUIMain [id$=tblScheduledMessages]>*>tr:first-child>td{padding:15px;vertical-align:middle}
+.NETEmailUIEditSched [id$=tblMessages]>*>tr:first-child>td a,.NETEmailUIEditSched [id$=tblScheduledMessages]>*>tr:first-child>td a,.NETEmailUIMain [id$=tblMessages]>*>tr:first-child>td a,.NETEmailUIMain [id$=tblScheduledMessages]>*>tr:first-child>td a{color:#fff!important;line-height:1.5;display:inline-block;text-align:center}
+.NETEmailUIEditSched [id$=tblMessages]>*>tr:first-child>td a img,.NETEmailUIEditSched [id$=tblScheduledMessages]>*>tr:first-child>td a img,.NETEmailUIMain [id$=tblMessages]>*>tr:first-child>td a img,.NETEmailUIMain [id$=tblScheduledMessages]>*>tr:first-child>td a img{display:none}
+.NETEmailUIEditSched #content>table:first-child+table,.NETEmailUIMain #content>table:first-child+table{margin:0 0 40px}
+.NETEmailUIEditSched #content>table:first-child+table>*>tr>.tnavTabON,.NETEmailUIMain #content>table:first-child+table>*>tr>.tnavTabON{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.NETCEDynamicGroups #content [height="1"],.NETCEDynamicGroups #content [width="1"]{display:none}
+.NETCEDynamicGroups #content>table[align=center]{margin:0 0 40px}
+.NETCEDynamicGroups #content .tnavTabON[width="99%"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);font-size:1rem;line-height:1.6}
+.EventReportListing #content>script:first-child+table+div+div{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);border-collapse:initial;margin:0 0 40px;display:block!important}
+.EventReportListing #content>script:first-child+table+div+div [id$=tblGlobalReports]>tbody>tr:first-child,.EventReportListing #content>script:first-child+table+div+div [id$=tblLocalReports]>tbody>tr:first-child{background:#5a5858;color:#FFF}
+.EventManager #divActions,.EventManager #divHelp{padding:10px 10px 7px!important;width:auto!important}
+.EventManager #divActions li,.EventManager #divActions ul,.EventManager #divHelp li,.EventManager #divHelp ul{padding:0;margin:0}
+.EventManager #divActions li,.EventManager #divHelp li{margin:0 0 3px}
+.EventManager [id$="_tblEvents"]>*>:first-child{background:#5a5858;color:#fff}
+.EventManager [id$="_tblEvents"]>*>*>*{vertical-align:middle!important;padding:0 10px}
+.EventManager .floatedTableHeader{border-bottom:1px solid #000;display:block;background:#eee;padding:0 15px 0 0}
+.EventManager table[onkeydown]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);border-collapse:initial;margin:0 0 40px}
+.EventManager table[onkeydown] td{font-size:14px!important}
+.EventManager table[onkeydown]+div{margin:0 0 20px}
+.EventManager table[onkeydown]+div a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:$secondary_color;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s}
+.EventManager table[onkeydown]+div a:active,.EventManager table[onkeydown]+div a:hover{background:$primary_color;}
+.EventManager table[onkeydown]+div+div{color:transparent;margin:0 -110px 0 0}
+.EventManager table[onkeydown]+div+div a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:#5a5858;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;float:left;text-indent:initial}
+.EventManager table[onkeydown]+div+div a:active,.EventManager table[onkeydown]+div+div a:hover{background:$primary_color;}
+.EventManager [id$="_rapEvents"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.GlobalNotifications #content hr{display:none}
+.GlobalNotifications #content .plgHeaderBar{padding:0 0 10px}
+.GlobalNotifications #content table{margin:80px 0 40px;padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.GlobalNotifications #content table td{padding:15px}
+.NETBizDBReport [id$="_tblContent"]{margin:0 0 40px;padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.NETBizDBReport [id$="_tblContent"]>*>*>td:first-child{padding:0 0 0 30px}
+.NETBizDBReport [id$="_tblContent"]>*>:first-child>td{padding:30px 30px 0}
+.NETBizDBReport [id$="_tblContent"]>*>:first-child+tr+tr>td:first-child+td,.NETBizDBReport [id$="_tblContent"]>*>:first-child+tr>td:first-child+td+td{padding:0 30px 0 0}
+.NETBizDBReport [id$="_tblContent"]>*>:first-child+tr+tr+tr>td{padding:0 30px 30px}
+[id$=imgButInvisibleRefresh]{visibility:hidden}
+.NET_SiteStats [id$=tabMainContent] span.icon{display:none}
+.NET_SiteStats #content [id$="_pnlTView"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.NETsitesConfig #content>:first-child{margin:0 0 50px}
+.NETsitesConfig [height="1"],.NETsitesConfig [width="1"]{display:none}
+.NETsitesConfig [id$="_pnlArticleView"]{margin:0 0 40px}
+.NETsitesConfig [id$="_pnlArticleView"]>*>*>*>:first-child,.NETsitesConfig [id$="_pnlArticleView"]>*>*>*>:last-child{display:none}
+.NETsitesConfig .moduleTabsWrapper{margin:0 0 -1px}
+.NETsitesConfig .tnavTabON[width="99%"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.PollManager [id$="_tblMainView"]{margin:40px 0;padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.PollManager [id$="_tblMainView"]>*>*>*{padding:0 30px 30px}
+.PollManager [id$="_tblMainView"]>*>:first-child>*{padding:30px}
+.SiteStatsMain [id$=cblDisplayStat]{border-collapse:collapse;width:300px;display:inline-block;text-align:left}
+.SiteStatsMain [id$=cblDisplayStat] tr{display:inline-block;width:50%}
+.SiteStatsMain [id$=cblDisplayStat] tr td{display:inline-block;width:100%}
+.SiteStatsMain [id$=cblDisplayStat] tr td input{vertical-align:top;margin:3px 10px 5px 5px}
+.SiteStatsMain [id$=cblDisplayStat] tr td label{width:70%}
+.SiteStatsMain [id$=cblDisplayStat] tr td nobr{white-space:normal}
+.SiteStatsMain #siteStatisticsWrapper>table{margin:0 0 40px}
+.SiteStatsMain #siteStatisticsWrapper>table>tbody>tr:first-child+tr+tr{display:none}
+.SiteStatsMain #siteStatisticsWrapper>table>tbody>tr:first-child+tr>.tnavTabON{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.SiteStatsMain #siteStatisticsWrapper>table .RadToolTip .rtWrapper{table-layout:fixed;width:300px}
+.SiteStatsSessions #content link:first-child+link+table+table{margin:0 0 40px}
+.SiteStatsSessions #content link:first-child+link+table+table>*>*>.tnavTabON,.v35ActiveUserListing #Table1{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.v35ActiveUserListing #Table1 [width="10"]{display:none}
+.v35ActiveUserListing #Table1>*>*>*{padding:30px!important}
+.v35ProfileUpdateReport [height="1"],.v35ProfileUpdateReport [width="1"]{display:none}
+.v35ProfileUpdateReport #content>:first-child+*{margin:3rem 0 0}
+.v35ProfileUpdateReport #content [id$="_tblSavedReports"],.v35ProfileUpdateReport #content [id$="_tblNewReportSetup"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.v35ProfileUpdateReport #content [id$="_tblSavedReports"]{border-bottom:0}
+.v35ProfileUpdateReport #content [id$="_tblSavedReports"] td{padding:0 30px}
+.v35ProfileUpdateReport #content [id$="_tblSavedReports"] tr:first-child td{padding:30px 30px 0}
+.v35ProfileUpdateReport #content [id$="_tblNewReportSetup"]{border-top:0}
+.v35ProfileUpdateReport #content [id$="_tblNewReportSetup"]>*>*>*{padding:0 30px}
+.v35SiteConfig #content>:first-child{margin:0 0 50px}
+.v35SiteConfig [height="1"],.v35SiteConfig [width="1"]{display:none}
+.v35SiteConfig #Table1 .moduleTabsWrapper{margin:0 0 -1px}
+.v35SiteConfig #Table1>tbody>tr:first-child>td:first-child+td{width:100%}
+.v35SiteConfig .tnavTabON[width="99%"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.NETSrvyMain #Table1,.v35SurveyManager #Table1{margin:0 0 40px}
+.NETSrvyMain #Table1>tbody>tr:first-child+tr>.tnavTabON,.v35SurveyManager #Table1>tbody>tr:first-child+tr>.tnavTabON{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.NETSrvyMain #Table1 .modArticlesDayHeader,.v35SurveyManager #Table1 .modArticlesDayHeader{background:$secondary_color;color:#FFF}
+.NETSrvyMain .modSurveyEditDividerHdr,.v35SurveyManager .modSurveyEditDividerHdr{padding:0 0 30px}
+.FirstImpressionListing .RosterLetterOff{background:$secondary_color;color:#fff}
+.FirstImpressionListing #content div[align=right]{margin:20px 0;text-indent:-9999px;overflow:auto;color:transparent}
+.FirstImpressionListing #content div[align=right] a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:$secondary_color;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;float:right;text-indent:0}
+.FirstImpressionListing #content div[align=right] a:active,.FirstImpressionListing #content div[align=right] a:hover{background:$primary_color;}
+.FirstImpressionListing #content>div[style]{background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);padding:30px 30px 0!important;font-size:2rem;border-bottom:none!important}
+.FirstImpressionListing #content [id$=tblActivePages],.FirstImpressionListing #content [id$=tblExpiredPages],.FirstImpressionListing #content [id$=tblPendingPages]{background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);border-collapse:separate;border-top:none!important;padding:10px 30px 30px!important}
+.FirstImpressionListing #content [id$=tblActivePages]+div,.FirstImpressionListing #content [id$=tblExpiredPages]+div,.FirstImpressionListing #content [id$=tblPendingPages]+div{margin:40px 0 0}
+.NETDynEntryFormLanding #content .RosterLetterOff{background:#000;color:#fff}
+.NETDynEntryFormLanding #content .RosterLetterOff>td{padding:10px}
+.NETDynEntryFormLanding #content>script:first-child+table{width:100%;height:50px;margin:1rem 0 6rem;float:left;text-align:left}
+.NETDynEntryFormLanding #content>script:first-child+table+table{display:inline-block;width:100%;margin:70px 0 0;padding:0!important;position:absolute;right:15px;text-align:right}
+.NETDynEntryFormLanding #content>script:first-child+table+table *{display:inline-block;color:transparent;letter-spacing:-.3rem}
+.NETDynEntryFormLanding #content>script:first-child+table+table a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;border:0!important;border-radius:0;background:$secondary_color;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;margin:0}
+.NETDynEntryFormLanding #content>script:first-child+table+table a:active,.NETDynEntryFormLanding #content>script:first-child+table+table a:hover{background:$primary_color;}
+.NETDynEntryFormLanding #content [id$="_tblForms"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.NETResultsLanding #content table:first-child+table{padding:3rem!important;background:#FFF;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);border:none}
+.NETResultsLanding #content [id$="_tblSubmissions"]{margin:0 0 40px;padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.NETFullFormReport #content script:first-child+table+div>a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background:$secondary_color;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:12px;line-height:1;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s}
+.NETFullFormReport #content script:first-child+table+div>a:active,.NETFullFormReport #content script:first-child+table+div>a:hover{background:$secondary_color;}
+.NETFullFormReport #content script:first-child+table+div+div{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);display:block!important;margin:40px 0 0}
+.NETFullFormReport #content script:first-child+table+div+div>div{max-width:100%;overflow:auto}
+.NETFullFormReport #content script:first-child+table+div+div>div>table>tbody>tr:first-child>td{vertical-align:bottom;min-width:150px;padding:5px 5px 10px;background:#333;color:#FFF}
+.NETFullFormReport #content script:first-child+table+div+div>div>table>tbody>tr:first-child>td img{vertical-align:bottom;float:right;width:17px}
+.NETDynamicForm #content .formBaseFormWrapper,.NETDynamicFormView #content #Table2>tbody>tr:nth-child(2)>td>table,.NETFormReport #content table:first-child+div{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.SupportContacts #content>table+table{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05);display:block}
+.SupportContacts .plgHeaderBar{position:relative;left:0;right:0;padding:0 0 10px;overflow:auto;height:auto;text-align:center}
+.SupportContacts .plgHeaderBar b{font-weight:400;display:block;padding:0 0 10px;border-bottom:1px solid #CCC}
+.SupportContacts .plgHeaderBorder{border-bottom:1px solid #CCC}
+.SupportContacts tr[id$=Group] tbody,.SupportContacts tr[id$=Group] td,.SupportContacts tr[id$=Group] tr,.SupportContacts tr[id$=trAM] tbody,.SupportContacts tr[id$=trAM] td,.SupportContacts tr[id$=trAM] tr,.SupportContacts tr[id$=trAM]+tr tbody,.SupportContacts tr[id$=trAM]+tr td,.SupportContacts tr[id$=trAM]+tr tr{display:inline-block;width:100%;border:none!important;overflow:auto;height:auto!important}
+.SupportContacts tr[id$=Group] table table,.SupportContacts tr[id$=trAM] table table,.SupportContacts tr[id$=trAM]+tr table table{width:100%!important}
+.SupportContacts tr[id$=Group] table table td,.SupportContacts tr[id$=trAM] table table td,.SupportContacts tr[id$=trAM]+tr table table td{width:25%!important}
+.RadGrid_Axis .rgAdd,.RadGrid_Axis .rgCancel,.RadGrid_Axis .rgCollapse,.RadGrid_Axis .rgDel,.RadGrid_Axis .rgEdit,.RadGrid_Axis .rgExpCSVP,.RadGrid_Axis .rgExpDOC,.RadGrid_Axis .rgExpPDF,.RadGrid_Axis .rgExpXLS,.RadGrid_Axis .rgExpand,.RadGrid_Axis .rgFilter,.RadGrid_Axis .rgPageFirst,.RadGrid_Axis .rgPageLast,.RadGrid_Axis .rgPageNext,.RadGrid_Axis .rgPagePrev,.RadGrid_Axis .rgRefresh,.RadGrid_Axis .rgSortAsc,.RadGrid_Axis .rgSortDesc,.RadGrid_Axis .rgUngroup,.RadGrid_Axis .rgUpdate{background-image:url(../../../A_Master/NET/Telerik/Skins/Axis/Grid/sprite.gif)!important;border:none!important;background-color:transparent!important;background-repeat:no-repeat!important}
+.RadGrid_Axis .rgExpand{background-position:5px -496px!important}
+.RadGrid_Axis .rgHeader .rgSortDesc{background-position:3px -198px!important;height:10px}
+.RadGrid_Axis .rgCollapse{background-position:3px -444px!important}
+.RadGrid_Axis .rgPageFirst{background-position:0 -550px!important}
+.RadGrid_Axis .rgPagePrev{background-position:0 -700px!important}
+.RadGrid_Axis .rgPageNext{background-position:0 -850px!important}
+.RadGrid_Axis .rgPageLast{background-position:0 -1000px!important}
+.RadTabStrip .rtsUL,.RadTabStripVertical .rtsUL{min-width:400px}
+.modStatsUserBar,.modStatsVisitorBar{text-align:left}
+.RadGrid .rgHeader{background:#000;color:#FFF}
+.RadGrid .rgHeader input{display:none}
+/*#content.container input[type="button"], #content.container input[type="submit"], button, .abut, .but, .mobileButton { color: #6d5a5a; }*/
+
+.RadTabStrip .rtsLevel1 .rtsTxt, .RadTabStripVertical .rtsLevel1 .rtsTxt { }
+
+.RadTabStrip.RadTabStrip_Default.RadTabStripTop_Default.RadTabStripTop.RadTabStripTop_Default_Baseline .rtsTxt {
+  color: #000;
+
+}
+
+.RadTabStrip .rtsLevel .rtsOut, .RadTabStrip .rtsLevel .rtsIn, .RadTabStrip .rtsLevel .rtsTxt, .RadTabStripVertical .rtsLevel .rtsOut, .RadTabStripVertical .rtsLevel .rtsIn, .RadTabStripVertical .rtsLevel .rtsTxt {
+  color: inherit;
+
+}
+
+.ResultsDiv {
+  overflow: visible!important;
+
+}
+
+body[class*=alendar] .modCalMonth > * > * > * td:nth-child(2), body[class*=alendar] .modCalMonth > * > * > * td:nth-child(3) {
+  vertical-align: top;
+
+}

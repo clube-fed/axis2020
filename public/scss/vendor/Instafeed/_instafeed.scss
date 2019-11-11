@@ -1,0 +1,49 @@
+.insta-title {
+  padding:0 15px;
+  & em {
+    @include rem-size(21);
+    margin-right:7px;
+  }
+  @media (min-width:$breakpoint-sm) {
+    padding:0 50px;
+  }
+}
+#instafeed {
+  margin:0;
+  & > a {
+    display:block;
+    padding:15px;
+    width:100%;
+    & > .instagram-img {
+      height:265px;
+      @include prefix(transition, .3s, moz ms webkit);
+      position:relative;
+      z-index: 2;
+      &:after {
+        content:'';
+        @include prefix(transition, .3s, moz ms webkit);
+        position:absolute;
+        right:0;
+        left:0;
+        top:0;
+        bottom:0;
+        z-index: 1;
+        background:rgba(0,0,0,.15);
+      }
+    }
+    &:hover > .instagram-img:after {
+      background:rgba(0,0,0,0);
+    }
+    @media screen and (min-width:768px) {
+      width:20%;
+      padding:0 1px;
+      //float:left;
+      &:first-of-type {
+        padding-left:0;
+      }
+      &:last-of-type {
+        padding-right:0;
+      }
+    }
+  }
+}

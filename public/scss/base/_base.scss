@@ -1,0 +1,130 @@
+$bg-gray: $silver;
+$mp-bg: #000;
+$overlay-bg-color: rgba(0,0,0,.3);
+$content-max-width:1170px;
+$content-max-width-sm:870px;
+
+.overlay {
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:$overlay-bg-color;
+	z-index: 1;
+}
+
+.white-bg {
+	background-color:#fff;
+}
+
+.gray-bg{
+  // Hero, Quicklinks 4, News-1, etc all use this, the generic class you made will work to save size and can be used by content/client at the same time.
+  background: $bg-gray;
+}
+
+//Client Editable Background (MiniPage Background)	Requires JS as IE doesnt allow objectfit.
+.mp-bg{
+  position: relative;
+  background: $mp-bg;
+  > *{ position: relative; }
+  > .mpContent{
+    position: absolute;
+    z-index: 0;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0.4;
+    overflow: hidden;
+  }
+  .mpContent img{
+    width: 100%;
+  }
+  .clickToEditDiv {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 10
+  }
+  &.grayscale{
+    .mpContent{
+      filter: gray;
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+    }
+  }
+}
+
+//11/6/19: jnolfi - parallax scrolling use with .mp-bg
+.mp-parallax > .mpContent {
+  background-attachment: fixed;
+}
+
+.content-pad{
+  padding: 80px 15px;
+}
+
+.content-max-width,
+.content-max-width-sm {
+  width: 100%;
+  max-width: $content-max-width;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.content-max-width-sm {
+	max-width: $content-max-width-sm;
+}
+
+//Hero Slider Counter
+ul.counter{
+  display: inline-block;
+  margin: 0; padding: 0;
+  li{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 0; margin: 0 4px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    &.active{
+      background: #fff;
+    }
+  }
+
+}
+
+input[type=radio],
+input[type=checkbox] {
+  margin: 4px 4px 0 0;
+}
+
+[id^="photoPlugin"] {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  width:100% !important;
+}
+
+.image-bg-cover {
+  background-size: cover;
+  background-position: 50%;
+  -o-object-position: -999999px -999999px;
+  object-position: -999999px -999999px;
+}
+
+//👀
+.private-mp .public-show,
+.public-mp .private-show {
+  display: none
+}
+
+//👀
+.searchButton {
+  width: 42px;
+  right: 15px;
+}
+
+//bootstrap fixes for Axis :(
+.RadEditor.reWrapper > table[id*="_dpEditor"] {padding-top:30px;}

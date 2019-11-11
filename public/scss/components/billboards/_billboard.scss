@@ -1,0 +1,49 @@
+$billboardHeight: 500px;
+$billboardBGColor: #000;
+$billboardImgOpacity: .6;
+
+.billboard {
+  & .billboard-item {
+    position: relative;
+    background: $billboardBGColor;
+    @media (min-width:$breakpoint-sm) {
+      height: $billboardHeight;
+    }
+  }
+  & .billboard-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    &.mp-bg > .mpContent {
+      opacity: $billboardImgOpacity;
+    }
+  }
+  & .billboard-txt {
+    position:relative;
+    text-align: center;
+    z-index: 2;
+    padding:20px;
+    @media (min-width:$breakpoint-sm) {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+      -moz-transform: translate(50%, -50%);
+      transform: translate(50%, -50%);
+      width: 90%;
+      padding:0;
+      max-width:770px;
+    }
+    & .mpContent * {
+      color:#fff;
+    }
+    & h2 {
+      @include rem-size(35);
+    }
+    & .abut {
+      @extend %overlay_abut;
+    }
+  }
+}

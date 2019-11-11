@@ -1,0 +1,29 @@
+.quicklinks-2{
+	text-align: center;
+	padding: 40px 10px;
+	h2{ margin-bottom: 20px; @include rem-size(36); color:#fff;  }
+	ul li a{
+		display: block;
+		padding: 10px 20px;
+		font-weight: 700;
+		@include rem-size(14);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		text-decoration: none;
+		color:#fff;
+		& em {
+			display:block;
+			@include rem-size(25);
+			margin:0 auto 10px;
+		}
+		&:hover {
+			color:rgba(255,255,255,.85);
+		}
+	}
+	@media (max-width: 768px) {
+		ul li{
+			display: block;
+			margin: 0 0 5px;
+		}
+	}
+}

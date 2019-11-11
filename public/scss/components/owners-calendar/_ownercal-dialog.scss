@@ -1,0 +1,185 @@
+/***NEED THIS TO OVERRIDE DUMB GLOBAL STYLES***/
+/** The hope is that this can be reworked in to future ... easier to skin styles **/
+$proximanova: "proxima-nova",sans-serif;
+/*overrides b/c no communication led us to this point*/
+#occBookingRoot div, 
+#occBookingRoot table, 
+.occBookingBody a, 
+.occBookingBody a:hover {
+	font-family: $proximanova;
+	font-weight:300; 
+	font-size: 11px !important;
+	}
+
+#bookingCal .available a:hover {
+	text-decoration:none;
+	}
+#occBookingRoot {
+	padding:0;
+	}
+	
+#occBookingRoot .chkRatesTbl {
+	border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+	}
+	
+#occBookingRoot .chkRatesTbl .rateInputs, 
+#occBookingRoot .chkRatesTbl .rateOptionsCell {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 30px;
+}
+
+#occBookingRoot .rateOptions {
+	border:0;
+	}
+
+#occBookingRoot .rateOptionsList .rateSummary {
+    padding: 5px;
+    border: 0;
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+}
+
+.rateStay, .rateDetailItem {
+    line-height: 16px;
+}
+
+#occBookingRoot .rateOptionsList .rateItem .rateDetailTotalItem {
+	border-top:1px solid #f0f0f0;	
+}
+
+.occBookingBody .navbar {display: none !important;}
+#occBookingRoot .chkRatesTbl .rateInputs,
+#occBookingRoot .chkRatesTbl .rateOptionsCell {display:block !important; width:100% !important; margin-bottom:30px; }
+@media screen and (min-width:768px) {
+#occBookingRoot .chkRatesTbl .rateInputs,
+#occBookingRoot .chkRatesTbl .rateOptionsCell {display:table-cell !important; margin-bottom:0; }
+#occBookingRoot .chkRatesTbl .rateInputs {width:60% !important;}
+#occBookingRoot .chkRatesTbl .rateOptionsCell {width:40% !important;}
+}
+#occAlertContainerDialog {padding:40px;}
+
+#bookResFields .bookInfo {display:none;}
+
+
+/*****############################################################
+##################################################################
+##################################################################
+------------------------------------------------------------------
+>>>>>  NEEEEEEEEEEEEEEEEEEEEEEEWWWWWWW STYLEZ VERSION 2!!!  <<<<<<
+------------------------------------------------------------------
+##################################################################
+##################################################################
+###############################################################**/
+
+.OccBookHeaderDiv {
+	position: relative;
+    text-align: left;
+    height: 40px;
+    padding: 5px 0;
+	}
+
+.OccBookHeaderDiv .OccRateBookDescSpan {
+	font-size: 24px;
+	margin-left:10px;
+	}
+	
+.OccBookHeaderDiv .OccRateCloseSpan {
+	@include prefix(transition,opacity .4s ease-in-out, webkit ms moz o);
+	position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../_axisGlobal/images/close.png) no-repeat scroll center center / 40% auto;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    text-indent: -999999px;
+	opacity:.8;
+	&:hover {
+		opacity:1;
+	}
+}
+
+.OccRateContentDiv {
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 20px;
+  }
+
+.OccRateContentDiv label:first-child {
+  font-weight: 700;
+  margin-right: 5px;
+  }
+
+.OccRateContentDiv > div {
+  margin-left: -15px;
+  margin-right: -15px;
+ border-top:1px solid #f0f0f0; 
+   }
+
+.OccRateHeadDiv {
+	border-top:0;
+}
+
+.OccRateHeadSpan,
+.OccRateContentDiv > div > div,
+.OccSpecReqCon {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/*clearfixing*/
+.OccRateContentDiv > div:before,
+.OccRateContentDiv > div:after {
+  display: table;
+  content: " "; }
+
+.OccRateContentDiv > div:after {
+  clear: both;
+  content: " "; }
+
+@media screen and (min-width: 768px) {
+  .OccRateUnitDiv > div,
+  .OccRateStayDiv > div {
+    width: 50%;
+    float: left; }
+
+  .OccRateOccsDiv > div {
+    float: left;
+    width: 33.33333333%; }
+
+  .OccRatePricingDiv .OccRateSubTotalCon,
+  .OccRatePricingDiv .OccRateExtrasCon,
+  .OccRatePricingDiv .OccRateGratCon,
+  .OccRatePricingDiv .OccRateTaxCon {
+    display: inline-block;
+    /* padding: 0 10px; */
+    } }
+.OccRateTotalCon {
+  border-top:1px solid #f0f0f0;
+  width:100%;
+  clear:both;
+}
+.OccSpecReqCon textarea {
+  width: 100%; }
+  
+  #OccDetailDialog {
+  width: 95% !important;
+  left:auto !important;
+  height:auto !important;
+  left: 2.5% !important;
+}
+
+@media screen and (min-width:768px) {
+ #OccDetailDialog {
+  width: 600px !important;
+  left:50% !important;
+  margin-left:-300px;
+  height:auto !important;
+  padding-bottom: 20px;
+ }
+}

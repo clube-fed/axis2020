@@ -1,0 +1,23 @@
+//these are overrides for WSYWYG
+
+body[style="background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); zoom: 100%;"] {
+  & *:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.abut) {
+    position:relative;
+    height:auto;
+    margin:0;
+    right: auto;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    background:none;
+    transform: none;
+  }
+  & *:not(.clearfix):not(.row):before,
+  & *:not(.clearfix):not(.row):after {
+    display:none;
+  }
+}
+
+td.dialogContent > iframe {
+  min-height: 0;
+}

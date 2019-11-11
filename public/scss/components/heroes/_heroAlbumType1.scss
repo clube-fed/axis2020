@@ -1,0 +1,101 @@
+/* HERO ALBUM TYPE 1 */
+.featured-hero-1{
+	background: $grayLight;
+	& .img-bg {
+		background-image:url(#{$imgpath}/pvhm-media-bg.jpg);
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		opacity:.35;
+	}
+	ul.counter {
+		margin: 50px 0 0;
+		display:block;
+	}
+	> table { // Settings Table
+		position: absolute;
+		top: 0;
+		right: 25px;
+		width: 25px;
+		z-index: 10;
+	}
+	.hero-wrap{ // Used to ensure IE9 Compatability
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		> div{ display: table-row; }
+		@media screen and (min-width:992px) {
+			height:660px;
+		}
+	}
+	.hero-img{
+		display: table-cell; width: 50%;
+		background-size: cover;
+		background-position: 50% 50%;
+		img{
+			//IMG is necessary for some spacing conflicts but can be hidden. By setting a max-height, you can control the maximum height the album will scale outside of the content, useful for really large screen sizes (1900+)
+			width: 100%; max-height:660px; opacity: 0;
+		}
+	}
+	.hero-desc{
+		display: table-cell; width: 35%;
+		vertical-align: middle;
+		font-size: 0; // Removes Inline-block spacing
+		text-align: right; // Pushes content inside
+		background:none;
+		> div{
+			display: inline-block;
+			width: 100%;
+			max-width: 600px;
+			padding: 0 60px;
+			@include rem-size(16);
+			text-align: left; // Fixes font-alignment
+		}
+	}
+	h1{
+		color: $blueBlack;
+		margin-bottom: 20px;
+		text-transform: none;
+		@include rem-size(40);
+		line-height: 1.3;
+	}
+	p{
+		max-width: 475px;
+	}
+	h5 {
+		color:$gold;
+	}
+	.hero-btn {
+		color: #fff;
+		font-weight:700;
+		background:$navy;
+		transition:.3s ease-out;
+		&:hover, &:active{
+			background: $blue;
+		}
+	}
+	@media(max-width: 991px){
+		ul.counter{	margin: 25px 0 0; }
+		.hero-wrap{
+			display: block;
+			width: 100%;
+			> div{ display: table; width: 100%; }
+		}
+		.hero-img{
+			display: table-header-group; width: 100%;
+			img {
+				opacity:1;
+			}
+		}
+		.hero-desc{
+			display: table-footer-group; width: 100%;
+			> div{ padding: 25px 10px 45px; text-align: center; }
+		}
+		p {
+			max-width: none;
+		}
+
+	}
+}

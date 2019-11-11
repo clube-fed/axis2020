@@ -1,0 +1,154 @@
+
+//********** MEEEEEEEEEEXINZ ************
+
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+	@include prefix(transform, translate(-50%, -50%), webkit ms);
+  } @else if ($horizontal) {
+    left: 50%;
+    @include prefix(transform, translate(-50%, 0), webkit ms);
+  } @else if ($vertical) {
+    top: 50%;
+    @include prefix(transform, translate(0, -50%), webkit ms);
+  }
+}
+
+//v3: adding an extend as a mixin
+@mixin ieCenterTransform {
+  @at-root .t-ie & {
+      right:50%;
+      bottom:50%;
+      left:auto;
+      top:auto;
+      @include prefix(transform, translate(50%, 50%), webkit ms moz);
+  }
+}
+
+//v1: updated with commonly used patterns
+
+//v1: bottom-shadow => place el [preferably pseudo-el] to create a shadow on bottom
+//v2: UPDATE: add z-index arg || moved opacity to el
+//v2.01: Fixed scss issue
+@mixin bottom-shadow($height,$opacity, $zindex) {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:($height/2);
+  background: rgb(0,0,0);
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  z-index:$zindex;
+  opacity:$opacity;
+  left:0;
+  @media (min-width:$breakpoint-sm) {
+    height:$height;
+  }
+}
+
+@mixin elBetweenNavItems($content, $color, $leftPos) {
+  position:relative;
+  &:before {
+    content: $content;
+    color: $color;
+    position: absolute;
+    left: $leftPos;
+    top: 0;
+  }
+  &:first-of-type:before {
+    content: '';
+  }
+}
+
+//v3: double border inner shadow effect
+@mixin dblBorder($shadowColor, $borderColor, $borderWidth) {
+  border:$borderWidth+px solid $borderColor;
+  -webkit-box-shadow: 0px 0px 0px 1px $shadowColor, 0px 0px 0px 1px $shadowColor inset;
+  -moz-box-shadow:    0px 0px 0px 1px $shadowColor, 0px 0px 0px 1px $shadowColor inset;
+  box-shadow:         0px 0px 0px 1px $shadowColor, 0px 0px 0px 1px $shadowColor inset; 
+}
+
+// This is a simplified example of Smarter Link Underlines built for Sass rather than Stylus.
+//Original code example by Adam Schwartz of eager.io.
+
+// View the gist on Github
+//https://gist.github.com/jimmynotjim/16290a7ed59b6f3bb28d
+
+@mixin text-underline-crop($background) {
+  text-shadow:  .03em 0 $background,
+                -.03em 0 $background,
+                0 .03em $background,
+                0 -.03em $background,
+                .06em 0 $background,
+                -.06em 0 $background,
+                .09em 0 $background,
+                -.09em 0 $background,
+                .12em 0 $background,
+                -.12em 0 $background,
+                .15em 0 $background,
+                -.15em 0 $background;
+}
+
+@mixin text-underline($color-bg, $color-text) {
+  background-image: linear-gradient($color-text, $color-text);
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-position: 0% 95%;
+}
+
+@mixin text-selection($selection) {
+  &::selection {
+    @include text-underline-crop($selection);
+    color:#fff;
+    background: $selection;
+  }
+
+  &::-moz-selection {
+    @include text-underline-crop($selection);
+
+    background: $selection;
+  }
+}
+
+@mixin gradient-animation( $start, $end, $transTime ){
+  background-size: 100%;
+  background-image: linear-gradient($start, $end);
+  position: relative;
+  z-index: 1;
+  &:before {
+    // this is flipped version
+    // background-image: linear-gradient($end, $start);
+    background-image: linear-gradient($end, $end);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity $transTime;
+  }
+  &:hover {
+     &:before {
+       opacity: 1;
+     }
+  }
+}

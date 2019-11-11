@@ -1,0 +1,155 @@
+//v1: _typography
+
+//v2: linted scss
+//simple remulade
+@mixin rem-size($h-size,$b-size:$body-base-font-size) {
+	font-size: ($h-size) + px;
+	font-size: ($h-size/$b-size) + rem;
+}
+
+//lato bold 20 uppercase
+
+//body
+$body-bg-color: #fff;
+$body-font-family:$sansSerif;
+$body-base-font-size: 10;
+$body-font-size:16.5;
+$body-font-color: $black;
+$body-font-weight: 400;
+//h1
+$h1-font-family:$sansSerif;
+$h1-font-size: 36;
+$h1-font-color: $black;
+$h1-font-weight: 900;
+//h2
+$h2-font-family:$serif;
+$h2-font-size: 30;
+$h2-font-color: $smoke;
+$h2-font-weight: 400;
+//h3
+$h3-font-family:$serif;
+$h3-font-size: 24;
+$h3-font-color: $smoke;
+$h3-font-weight: 400;
+//h4
+$h4-font-family:$sansSerif;
+$h4-font-size: 18;
+$h4-font-color: $green;
+$h4-font-weight: 700;
+//h5
+$h5-font-family:$sansSerif;
+$h5-font-size: 16;
+$h5-font-color: $green;
+$h5-font-weight: 700;
+//h6
+$h6-font-family:$sansSerif;
+$h6-font-size: 13.5;
+$h6-font-color: $black;
+$h6-font-weight: 900;
+
+$link-font-color: $gray;
+$link-hover-font-color: $green;
+
+html, body {
+	height:100%;
+}
+
+html {
+	font-size:$body-base-font-size + px;
+}
+
+body {
+	@include rem-size($body-font-size);
+	font-family:$body-font-family;
+	color: $body-font-color;
+	font-weight:$body-font-weight;
+	background:$body-bg-color;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+	margin:0 0 20px;
+}
+
+
+h1, %h1 {
+	@include rem-size($h1-font-size);
+	color:$h1-font-color;
+	font-weight:$h1-font-weight;
+	font-family:$h1-font-family;
+	line-height: 1.3;
+	text-transform:uppercase;
+	letter-spacing: 2px;
+}
+
+h2, %h2 {
+	@include rem-size($h2-font-size);
+  	color:$h2-font-color;
+	font-weight:$h2-font-weight;
+	font-family:$h2-font-family;
+	line-height:1.2;
+}
+
+h3, %h3 {
+	@include rem-size($h3-font-size);
+	line-height:1.33;
+	font-family:$h3-font-family;
+	font-weight:$h3-font-weight;
+	color:$h3-font-color;
+}
+
+h4, %h4 {
+	@include rem-size($h4-font-size);
+	color:$h4-font-color;
+	line-height:1.667;
+	font-weight:$h4-font-weight;
+	font-family:$h4-font-family;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h5, %h5 {
+	@include rem-size($h5-font-size);
+	color:$h5-font-color;
+	font-family: $h5-font-family;
+	line-height:1.2;
+	font-weight:$h5-font-weight;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h6, %h6 {
+	@include rem-size($h6-font-size);
+	color:$h6-font-color;
+	line-height:1.2;
+	font-weight:$h6-font-weight;
+	font-family: $h6-font-family;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+p, ul, ol, .mpContent {
+	line-height: 1.7;
+}
+
+a {
+	color:$link-font-color;
+	text-decoration:none;
+&:hover {
+	color:$link-hover-font-color;
+	text-decoration:none;
+	}
+}
+
+// #content .mpContent a {
+// 	text-decoration: underline;
+// 	&:hover {
+// 		text-decoration: underline;
+// 	}
+// }
+
+blockquote {
+	border:0;
+	font-size:inherit;
+	padding:0;
+	margin:20px auto;
+}

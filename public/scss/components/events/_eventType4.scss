@@ -1,0 +1,42 @@
+.events-4{
+	//border-right: 1px solid rgba(0, 0, 0, .2);
+	table>tbody>tr:first-of-type{ display: none; }
+	.view-button{ margin-top: 20px; }
+	& [id$="EventsWrapper"] > div > a {
+		@include rem-size(21);
+	}
+	h2{
+		@include rem-size(24);
+		margin: 10px auto 20px;
+	}
+	.cal-date{
+		@include rem-size(16);
+		//text-transform: uppercase;
+		//letter-spacing: 2px;
+		//color: $color2;
+		& sup {
+			top:auto;
+			font-size:100%;
+		}
+	}
+	// .cal-title{
+	// 	@include rem-size(21);
+	// 	font-family: $serif;
+	// 	color:$greenDark;
+	// }
+	.event-title{
+		font-family: $serif;
+		color:$greenDark;
+		font-weight: 700;
+		margin-bottom: 25px;
+		display: block;
+		line-height: 1.2;
+		&:hover {
+			color:$red;
+		}
+	}
+	@media (max-width: 991px){
+		border: none;
+		text-align: center;
+	}
+}

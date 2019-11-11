@@ -1,0 +1,23 @@
+// General Hero Album Styles
+[class^="featured-hero"]{
+	position: relative;
+	overflow: hidden;
+	[id^="photoPlugin"]{ width: 100% !important; height: auto !important; }
+	.hero-btn{
+		display: inline-block;
+		padding: 12px 40px;
+		@include rem-size(14);
+		letter-spacing: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+}
+
+/********** TYPE 1 **********/
+//@import "heroAlbumType1.scss";
+
+/********** TYPE 1 **********/
+//@import "heroAlbumType2.scss";

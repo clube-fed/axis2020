@@ -1,0 +1,48 @@
+//This is version 4.3.1 of Bootstrap 
+//Axis/Build conflicts addressed below imports
+
+// Required
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/_variables";
+@import "../../node_modules/bootstrap/scss/_mixins";
+
+// Optional
+@import "../../node_modules/bootstrap/scss/_reboot";
+@import "../../node_modules/bootstrap/scss/_utilities";
+@import "../../node_modules/bootstrap/scss/_type";
+@import "../../node_modules/bootstrap/scss/_images";
+@import "../../node_modules/bootstrap/scss/_code";
+@import "../../node_modules/bootstrap/scss/_grid";
+@import "../../node_modules/bootstrap/scss/_forms";
+@import "../../node_modules/bootstrap/scss/_print";
+@import "../../node_modules/bootstrap/scss/_tables";
+@import "../../node_modules/bootstrap/scss/_modal";
+
+//ADA
+
+// WebKit-style focus
+@mixin tab-focus {
+  // WebKit-specific. Other browsers will keep their default outline style.
+  // (Initially tried to also force default via `outline: initial`,
+  // but that seems to erroneously remove the outline in Firefox altogether.)
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+//different classes here
+.modal-backdrop.fade.in {
+  opacity: .5;
+}
+
+.modal.fade.in .modal-dialog {
+  transform: none
+}
+
+a:focus,
+.advLogRemoveChk:focus {
+  @include tab-focus();
+}
+//Axis Fixes
+.RadEditor.reWrapper > table[id*="_dpEditor"],
+#editor_reAxisEditorWrapper {border-collapse: separate;}
+//td.ul.reToolbar {margin-top:32px !important;}

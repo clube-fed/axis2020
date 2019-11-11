@@ -1,0 +1,18 @@
+<section class="login-page login-box">
+<div class="login-wrap">
+    <a class="logo" href="#"><span class="sr-only">{{{siteNameTitle}}}</span></a>
+<div id="wrapLogin51">
+    <div class="error-msg"><span class="errLogin" style="display:none;color:Red;font-size:8pt;"><span>Error: </span></span></div>
+<input name="masterPageUC$MPCA52$ctl00$ctl00$txtUsername" type="text" maxlength="50" id="masterPageUC_MPCA52_ctl00_ctl00_txtUsername" tabindex="2" class="advLogUsername masked" autocomplete="off" placeholder="Username" onkeypress="pwKeypress(event,this);" style="">
+<input name="masterPageUC$MPCA52$ctl00$ctl00$txtPassword" type="password" maxlength="50" id="masterPageUC_MPCA52_ctl00_ctl00_txtPassword" tabindex="3" class="advLogPassword masked" autocomplete="off" placeholder="Password" onkeypress="pwKeypress(event,this);" style="">
+<input type="button" value="Sign In" class="abut" style="z-index:3;" onclick="doLogin('p=MembersDefault',8,'0');return false;" id="btnSecureLogin" name="btnSecureLogin">
+<div class="login-txt">
+<span class="advLogRemoveChk"><input id="masterPageUC_MPCA52_ctl00_ctl00_chkRM" type="checkbox" name="masterPageUC$MPCA52$ctl00$ctl00$chkRM"><label for="masterPageUC_MPCA52_ctl00_ctl00_chkRM">Remember Me</label></span>
+<a style="cursor:pointer;" onclick="forgotUnPWdlg('https://www.ceclients.com/sites/BaldPeakColonyClub')">Forgot Password?</a>
+</div>
+</div>
+</div>
+</section>
+<script>
+    $j('body').addClass('loginBG');
+</script>

@@ -1,0 +1,142 @@
+.global-scripts {
+    display: none
+}
+
+.global-scripts.script9,
+.global-scripts.script5 {
+    display: block;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    padding: 0 0 15px 0;
+    text-align: center;
+    bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    background: #fff;
+    overflow: hidden;
+    z-index: 50000000000
+}
+
+.global-scripts.script9.minimized,
+.global-scripts.script5.minimized {
+    width: 36px;
+    height: 46px;
+    padding: 0 0 15px 10px;
+    bottom: 95px
+}
+
+.global-scripts.script9.minimized:hover,
+.global-scripts.script5.minimized:hover {
+    width: 41px
+}
+
+.GS-head {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    padding: 8px 0 5px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    text-align: center
+}
+
+.global-scripts.script9.minimized .GS-head,
+.global-scripts.script5.minimized .GS-head {
+    text-align: right;
+    font-size: 11px;
+    padding: 17px 0px;
+    padding-right: 31px;
+    color: transparent
+}
+
+.GS-toggle {
+    width: 100%;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+.GS-head:hover {
+    cursor: pointer
+}
+
+.toggle-1,
+.toggle-2 {
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background: #000;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    right: 16px;
+    top: 17px
+}
+
+.toggle-2 {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.toggle-1 {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.global-scripts.script9.minimized .toggle-2,
+.global-scripts.script5.minimized .toggle-2 {
+    -webkit-transform: rotateZ(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotateZ(90deg)
+}
+
+.global-scripts.script9.minimized .toggle-1,
+.global-scripts.script5.minimized .toggle-1 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg)
+}
+
+.GS-head:hover .GS-toggle .toggle-1,
+.GS-head:hover .GS-toggle .toggle-2 {
+    width: 2px
+}
+
+.hide-toggle {
+    position: relative;
+    font-size: 13px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    width: 120px;
+    margin: 0 auto
+}
+
+.hide-toggle input[type="checkbox"] {
+    margin: 0;
+    top: 3px;
+    right: -4px;
+    position: absolute
+}
+
+.fed-scripts {
+    padding-bottom: 2px
+}
+
+@media (max-width: 768px) {
+    .global-scripts,
+    .global-scripts.script9,
+    .global-scripts.script5 {
+        display: none
+    }
+}

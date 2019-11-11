@@ -1,0 +1,77 @@
+//login page
+$login-bg: $greenDark;
+$login-box-bg:#fff;
+
+.loginBG {
+  position: relative;
+  background: $login-bg;
+  background-size: cover;
+  background-attachment: fixed;
+  @media screen and (min-width: $breakpoint-sm) {
+    background-image: url(#{$imgpath}/loginBG.jpg);
+  }
+  & .clickToEditDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+  & .login-wrap .clickToEditDiv {
+    position: relative;
+    bottom: auto;
+  }
+  &:after {
+  	content:'';
+  	position:absolute;
+  	top:0;
+  	bottom:0;
+  	left:0;
+  	right:0;
+  	background: rgba(0,0,0,.3);
+  	z-index: -1;
+  }
+  & .overlay {
+  	z-index:-1;
+  }
+}
+
+.login-wrap {
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media screen and (min-width: 450px) {
+    width: 370px;
+    margin: 0 auto;
+  }
+  & p {
+    text-align: center;
+  }
+}
+
+.login-box {
+  padding: 30px 15px;
+  width: 90%;
+  margin: 15px auto;
+  background: $login-box-bg;
+  z-index: 2;
+  position: relative;
+  & .logo {
+    position: relative;
+    width: 76px;
+    height: 127px;
+    background: url(#{$imgpath}/logo.png) no-repeat;
+    margin: 0 auto 15px;
+    background-size: cover;
+    display:block;
+  }
+  & p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $breakpoint-sm) {
+    @include centerer(true, true);
+    width: 570px;
+    padding: 50px 50px 70px;
+    margin: 0;
+  }
+}

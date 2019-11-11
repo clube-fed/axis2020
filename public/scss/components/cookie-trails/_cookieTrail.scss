@@ -1,0 +1,67 @@
+//cookieTrail RESETS
+
+.side-menu .CookieTrail_Template {
+	width:100% !important;
+	margin-bottom:20px;
+}
+
+.side-menu .CookieTrail_Template .ctRootGroup,.side-menu .CookieTrail_Template a.ctLink,
+.side-menu .CookieTrail_Template .ctGroup .ctText {
+	background-image: none;
+	background-color: transparent;
+}
+
+.side-menu .CookieTrail_Template .ctRootGroup{
+	border: 0;background-repeat: no-repeat;
+	background-position: 0 0;
+	background-color: transparent;
+}
+
+.side-menu .cookieTrail {
+	border:none;background: none;
+}
+
+.side-menu .CookieTrail_Template {
+	padding:0;
+}
+
+.side-menu .CookieTrail_Template a.ctLink{
+	width:100%;
+	padding:0;
+	font-size: 1.6rem;
+	color: #3e3d3d;
+	font-family: "agenda", sans-serif;
+	line-height: 1.6875;
+	font-weight: 600;
+	margin-bottom: 0;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+.side-menu .CookieTrail_Template .ctItem {
+	margin:0;
+	display:block;
+	width:100%;
+  	text-align:left;
+	text-transform: none;
+    letter-spacing: 0;
+}
+
+.side-menu .CookieTrail_Template a.ctLink {
+	background-position: 0 0;
+}
+
+.side-menu .CookieTrail_Template a.ctLink:hover,
+.side-menu .CookieTrail_Template a.ctFocused,
+.side-menu .CookieTrail_Template a.ctSelected {
+	background-color: transparent;
+	text-decoration:none;
+}
+
+.side-menu .CookieTrail_Template .ctText {
+	width:auto;
+	display:inline-block;
+	padding-left: 0px;
+	white-space:pre-wrap;
+  	float:none;
+}

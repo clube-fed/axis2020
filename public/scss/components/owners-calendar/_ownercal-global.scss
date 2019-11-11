@@ -1,0 +1,902 @@
+/*This version includes items for version 2 of the owner's portal [11/8/16]*/
+//booking widget
+
+//NOTE: occUnavailArrivalLimited
+
+//variables
+
+//CALENDAR ITEMS
+$ctoday: #ccc;
+$cavailable: #fff;
+$cocc: #e73220;
+$cguest: #a93030;
+$cowner: #37837b;
+$cfriendofowner: #22618d;
+$csel: #666;
+
+//SITE SPECIFIC
+$font1: 'Josefin Sans', sans-serif;
+
+
+//meeeeeexins
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+	@include prefix(transform, translate(-50%, -50%), webkit ms);
+  } @else if ($horizontal) {
+    left: 50%;
+    @include prefix(transform, translate(-50%, 0), webkit ms);
+  } @else if ($vertical) {
+    top: 50%;
+    @include prefix(transform, translate(0, -50%), webkit ms);
+  }
+}
+
+@mixin splitDayBg($top, $bottom) {
+	background: $top;
+    background: -moz-linear-gradient(-45deg, $top 0%, $top 50%, $bottom 50%, $bottom 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$top), color-stop(50%,$top), color-stop(50%,$bottom), color-stop(100%,$bottom));
+    background: -webkit-linear-gradient(-45deg, $top 0%,$top 50%,$bottom 50%,$bottom 100%);
+    background: -o-linear-gradient(-45deg, $top 0%,$top 50%,$bottom 50%,$bottom 100%);
+    background: -ms-linear-gradient(-45deg, $top 0%,$top 50%,$bottom 50%,$bottom 100%);
+    background: linear-gradient(135deg, $top 0%,$top 50%,$bottom 50%,$bottom 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}',GradientType=1 );
+}
+
+@mixin sameDaySplit($top, $bottom) {
+background: $top; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  $top 49%, #ffffff 50%, $bottom 51%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  $top 49%,#ffffff 50%,$bottom 51%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  $top 49%,#ffffff 50%,$bottom 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/*-------------------------------*/
+/*---------->> LEGEND <<---------*/
+/*-------------------------------*/
+
+.legend {text-align:left; margin-top:20px; margin-bottom:20px;}
+.legend li {margin-bottom:8px; padding-right:0; display:block; font-size:12px;}
+.legend li.color-box:before {content:""; display:inline-block; width:25px; height:16px; margin-right:7px; position:relative; top:3px;}
+li#leg-today.color-box:before {background-color:$ctoday;}
+li#leg-avail.color-box:before {background-color:$cavailable; border:1px solid #ccc;}
+li#leg-guest.color-box:before {background-color:$cguest;}
+li#leg-owner.color-box:before {background-color:$cowner;}
+li#leg-friendofowner.color-box:before {background-color:$cfriendofowner;}
+li#leg-sel.color-box:before {background-color:$csel;}
+
+/*-----------------------------------*/
+/*---------->> DATEPICKER <<---------*/
+/*-----------------------------------*/
+
+/*outer wrap*/
+.occRoot {
+	position:relative;
+	}
+
+/*loading image*/
+.occLoading,
+#occBookingRoot .occBookLoading {
+	@include centerer(true, true);
+	display:block;
+	z-index: 2880;
+	background: #FFF;
+	border: 4px solid $csel;
+	width:30px;
+	height:30px;
+	& img {
+		@include centerer(true, true);
+		margin:0 !important;
+		}
+	}
+
+//overrides inline styles on page
+#occBookingRoot .occBookLoading {
+	border: 4px solid $csel !important;
+	width:30px !important;
+	height:30px !important;
+	position:absolute !important;
+	left:50% !important;
+	top: 50% !important;
+	}
+
+/*title bar*/
+/*hiding this for Sunriver -> ###TARGET SPAN SPECIFICALLY TO AVOID HIDING ADMIN CONTROLS### */
+.occTitle > span {
+	display:none;
+	}
+
+.occSelector {
+	margin-bottom:15px;
+	}
+
+/*DATEPICKER*/
+
+/*font reset*/
+.ui-widget {
+	font-family: $font1;
+	font-size:14px;
+	font-weight:300;
+	}
+
+/*override main wrapper*/
+.ui-datepicker.ui-widget-content,
+#bookingCal .ui-datepicker.ui-widget-content {
+	width: 100% !important; //overrides inline width
+	//override jquery-ui
+	border:0;
+	padding:0;
+	margin:0;
+	background:none;
+	}
+
+/*header*/
+.ui-widget-header,
+#occBookingRoot .ui-widget-header {
+	border:0;
+	background:none;
+	color: #666;
+	font-weight:300;
+	box-shadow:none;
+	}
+
+.ui-datepicker .ui-datepicker-header {
+	padding:20px 0;
+	}
+
+/*title*/
+.ui-datepicker .ui-datepicker-title {
+	font-size:14px;
+	font-weight:400;
+	line-height:22px;
+	}
+
+@media screen and (min-width:768px) {
+		.ui-datepicker .ui-datepicker-title {
+			font-size:22px;
+			}
+	}
+
+#bookingCal .ui-datepicker .ui-datepicker-title {
+	font-size:16px !important;
+	}
+
+/*arrows*/
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next,
+#bookingCal .ui-datepicker .ui-datepicker-prev,
+#bookingCal .ui-datepicker .ui-datepicker-next {
+	@include centerer(false, true);
+	@include prefix(transition, opacity .4s ease-in-out, webkit ms moz o);
+	width:11px;
+	height:19px;
+	opacity:1;
+	border:0;
+	background:none;
+	color:$csel;
+	line-height:normal;
+	& span {
+			@include centerer(true, true);
+			margin:0;
+			width:11px;
+			height:19px;
+		}
+	&:hover {
+		opacity:.6;
+		}
+	}
+
+.ui-datepicker .ui-datepicker-prev-hover,
+#bookingCal .ui-datepicker .ui-datepicker-prev-hover {
+	top: 50%;
+	}
+
+.ui-datepicker .ui-datepicker-prev-hover,
+#occBookingRoot .ui-datepicker .ui-datepicker-prev-hover {
+	left:2px;
+	}
+
+.ui-datepicker .ui-datepicker-next-hover,
+#occBookingRoot .ui-datepicker .ui-datepicker-next-hover {
+	right:2px;
+	}
+
+.ui-icon.ui-icon-circle-triangle-e,
+#bookingCal .ui-icon.ui-icon-circle-triangle-e {
+	background:url(../Images/arw-r.png) no-repeat 0 0;
+	}
+
+.ui-icon.ui-icon-circle-triangle-w,
+#bookingCal .ui-icon.ui-icon-circle-triangle-w {
+	background:url(../Images/arw-l.png) no-repeat 0 0;
+	}
+
+/*hover overrides*/
+.ui-widget-header .ui-state-hover,
+.ui-widget-header .ui-state-focus,
+.ui-widget-content .ui-widget-header .ui-state-hover,
+.ui-widget-content .ui-widget-header .ui-state-focus {
+	background:none;
+	border:0;
+	}
+
+/*week row [th]*/
+.ui-datepicker th,
+#bookingCal .ui-datepicker th {
+	background:$csel;
+	font-weight:700;
+	color:#fff;
+	font-size:16px;
+	padding:2px 0;
+	}
+
+#bookingCal .ui-datepicker th {
+	font-size:13px;
+	}
+
+.ui-datepicker td a,
+#bookingCal .ui-datepicker td a {
+	padding:4px;
+	line-height:normal; //overrides any line-height from body
+	}
+
+/*available - basic state*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.chkRates .ui-state-default,
+.chkRates  .ui-widget-content .ui-state-default {
+	border:1px solid #ccc;
+	background:none;
+	color:#000;
+	}
+
+/*override -hover states*/
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+#occBookingRoot .ui-state-hover,
+#occBookingRoot .ui-widget-content .ui-state-hover,
+#occBookingRoot .ui-state-focus,
+#occBookingRoot .ui-widget-content .ui-state-focus
+ {
+	border:1px solid #ccc;
+}
+
+/*available*/
+.ui-widget-content .available a,
+#bookingCal .ui-widget-content .available a
+  {
+	background:#fff;
+	border:1px solid #ccc;
+	color:#000;
+	&:hover {
+		background:#fff;
+		border-color:#ccc;
+		color:#000;
+		}
+	}
+
+  //past dates
+  /*past dates*/
+  .ui-widget-content .unavailable-past a,
+  //v2
+  .ui-widget-content .OccUnavailPast  a {
+  	opacity:.6;
+  	}
+
+/*selected*/
+.ui-widget-content .selected a {
+	background:$csel !important;
+	color:#fff !important;
+	}
+
+/*unavailable - OOO - OccUnavailOutOfOrder*/
+.ui-widget-content .unavailable a,
+#bookingCal .ui-widget-content .unavailable a,
+//v2
+.ui-widget-content .OccUnavailOutOfOrder a {
+	border:1px solid $cocc;
+	background:$cocc;
+	color:#fff;
+	&:hover {
+		border-color:$cocc;
+		background:$cocc;
+		color:#fff;
+		}
+	}
+
+/*unavailable - GUEST - OccUnavail + OccUnavailpublishedrate*/
+.ui-widget-content .unavailable.guest a,
+#bookingCal .ui-widget-content .unavailable.guest a,
+//v2
+//updating - custom JS class added
+.ui-widget-content .guestUnavail a
+ {
+	border:1px solid $cguest;
+	background:$cguest;
+	color:#fff;
+	&:hover {
+		border-color:$cguest;
+		background:$cguest;
+		color:#fff;
+		}
+	}
+
+
+
+/*unavailable - owner*/
+.ui-widget-content .unavailable.owner a,
+#bookingCal .ui-widget-content .unavailable.owner a,
+//v2
+.ui-widget-content .OccUnavailowner a {
+	border:1px solid $cowner;
+	background:$cowner;
+	color:#fff;
+	&:hover {
+		border-color:$cowner;
+		background:$cowner;
+		color:#fff;
+		}
+	}
+
+/*unavailable - friendofowner*/
+.ui-widget-content .unavailable.friendofowner a,
+#bookingCal .ui-widget-content .unavailable.friendofowner a,
+//v2
+.ui-widget-content .OccUnavailguestofowner a {
+	border:1px solid $cfriendofowner;
+	background:$cfriendofowner;
+	color:#fff;
+	&:hover {
+		border-color:$cfriendofowner;
+		background:$cfriendofowner;
+		color:#fff;
+		}
+	}
+
+/*today*/
+.ui-widget-content .today a {
+	border:1px solid $ctoday;
+	background:$ctoday;
+	color:#fff;
+	&:hover {
+		border-color:$ctoday;
+		background:$ctoday;
+		color:#fff;
+		}
+	}
+
+/*Arrival + Departures*/
+
+/*OOO + Available*/
+
+.ui-widget-content .isArrival.available a,
+#bookingCal .ui-widget-content .isArrival.available a,
+//v2
+.ui-widget-content .OccAvailForDepart.OccUnavailArrivalOutOfOrder a {
+	@include splitDayBg (#fff, $cocc);
+	border: 1px solid $cocc !important;
+	color: #000;
+	}
+
+.ui-widget-content .isDeparture.available a,
+#bookingCal .ui-widget-content .isDeparture.available a,
+//v2
+.ui-widget-content .OccAvailForArrival.OccUnavailDepartOutOfOrder a {
+	@include splitDayBg ($cocc, #fff);
+	border: 1px solid $cocc !important;
+	color: #000;
+	}
+
+
+/* GUEST + Available*/
+.ui-widget-content .isArrival.available.guest a,
+#bookingCal .ui-widget-content .isArrival.available.guest a,
+//v2
+.ui-widget-content .OccAvailForDepart.guestArrivalUnavail a
+ {
+	@include splitDayBg (#fff, $cguest);
+	color: #000;
+	}
+
+.ui-widget-content .isDeparture.available.guest a,
+#bookingCal .ui-widget-content .isArrival.available.guest a,
+//v2
+.ui-widget-content .OccAvailForArrival.guestDepartUnavail a {
+	@include splitDayBg ($cguest, #fff);
+	color: #000;
+	}
+
+/*Owner + Available*/
+.ui-widget-content .isArrival.available.owner a,
+#bookingCal .ui-widget-content .isArrival.available.owner a,
+//v2
+.ui-widget-content .OccAvailForDepart.OccUnavailArrivalowner a {
+	@include splitDayBg (#fff, $cowner);
+	color: #000;
+	}
+
+.ui-widget-content .isDeparture.available.owner a,
+#bookingCal .ui-widget-content .isDeparture.available.owner a,
+//v2
+.ui-widget-content .OccUnavailArrival.OccUnavailDepartowner a {
+	@include splitDayBg ($cowner, #fff);
+	color: #000;
+	}
+
+/*Friend of owner + Available*/
+.ui-widget-content .isArrival.available.friendofowner a,
+#bookingCal .ui-widget-content .isArrival.available.friendofowner a,
+//v2
+.ui-widget-content .OccAvailForDepart.OccUnavailArrivalguestofowner a {
+	@include splitDayBg (#fff, $cfriendofowner);
+	color: #000;
+	}
+
+.ui-widget-content .isDeparture.available.friendofowner a,
+#bookingCal .ui-widget-content .isDeparture.available.friendofowner a,
+//v2
+.ui-widget-content .OccAvailForArrival.OccUnavailDepartguestofowner a {
+	@include splitDayBg ($cfriendofowner, #fff);
+	color: #000;
+	}
+
+/*combos -> V2 ONLY*/
+
+/*OOO + OOO*/
+.ui-widget-content .OccUnavailDepartOutOfOrder.OccUnavailArrivalOutOfOrder a {
+	@include sameDaySplit ($cocc, $cocc);
+	color:#fff;
+	}
+
+/*OOO + Owner*/
+.ui-widget-content .OccUnavailDepartowner.OccUnavailArrivalOutOfOrder a {
+	@include splitDayBg ($cowner, $cocc);
+	color:#fff;
+	}
+
+.ui-widget-content .OccUnavailDepartOutOfOrder.OccUnavailArrivalowner a {
+	@include splitDayBg ($cocc, $cowner);
+	color:#fff;
+	}
+
+/*OOO + GUEST*/
+//v2
+.ui-widget-content .guestDepartUnavail.OccUnavailArrivalOutOfOrder a {
+	@include splitDayBg ($cguest, $cocc);
+	color:#fff;
+	}
+
+  //v2
+  .ui-widget-content .OccUnavailDepartOutOfOrder.guestArrivalUnavail a,
+   {
+	@include splitDayBg ($cocc, $cguest);
+	color:#fff;
+	}
+
+/*OOO + FRIENDSOFOWNER*/
+.ui-widget-content .OccUnavailDepartguestofowner.OccUnavailArrivalOutOfOrder a {
+	@include splitDayBg ($cfriendofowner, $cocc);
+	color:#fff;
+	}
+
+.ui-widget-content .OccUnavailDepartOutOfOrder.OccUnavailArrivalguestofowner a {
+	@include splitDayBg ($cocc, $cfriendofowner);
+	color:#fff;
+	}
+
+/*guest + guest*/
+.ui-widget-content .guestDepartUnavail.guestArrivalUnavail a {
+	@include sameDaySplit ($cguest, $cguest);
+	color:#fff;
+	}
+
+  //v2
+  .ui-widget-content .OccUnavailDepartowner.guestArrivalUnavail {
+	@include splitDayBg ($cowner, $cguest);
+	color:#fff;
+	}
+
+
+/*guest + owner*/
+//v2
+.ui-widget-content .guestDepartUnavail.OccUnavailArrivalowner a {
+	@include splitDayBg ($cguest, $cowner);
+	color:#fff;
+	}
+
+  //v2
+  .ui-widget-content .OccUnavailDepartowner.guestArrivalUnavail {
+	@include splitDayBg ($cowner, $cguest);
+	color:#fff;
+	}
+
+/*guest + friends*/
+//v2
+.ui-widget-content .guestDepartUnavail.OccUnavailArrivalguestofowner a
+ {
+	@include splitDayBg ($cguest, $cfriendofowner);
+	color:#fff;
+	}
+
+  //v2
+  .ui-widget-content .OccUnavailDepartguestofowner.guestArrivalUnavail a {
+	@include splitDayBg ($cfriendofowner, $cguest);
+	color:#fff;
+	}
+
+/*owner + friend*/
+.ui-widget-content .OccUnavailDepartguestofowner.OccUnavailArrivalowner a {
+	@include splitDayBg ($cfriendofowner, $cowner);
+	color:#fff;
+	}
+
+.ui-widget-content .OccUnavailDepartowner.OccUnavailArrivalguestofowner a {
+	@include splitDayBg ($cowner, $cfriendofowner);
+	color:#fff;
+	}
+
+/*owner + owner*/
+.ui-widget-content .OccUnavailDepartowner.OccUnavailArrivalowner a {
+	@include sameDaySplit ($cowner, $cowner);
+	color:#fff;
+	}
+
+/*friend + friend*/
+.ui-widget-content .OccUnavailDepartguestofowner.OccUnavailArrivalguestofowner a {
+	@include sameDaySplit ($cfriendofowner, $cfriendofowner);
+	color:#fff;
+	}
+
+
+/*---------------------------------------------------*/
+/*------------------->> BUTTONS <<-------------------*/
+/*---------------------------------------------------*/
+.occActions {
+	margin-top:50px;
+}
+
+#occBookingRoot .occActions {
+	margin-top:20px;
+}
+
+//checkrates button
+.textButton,
+#lnkCheckRates,
+//make res button
+#occBookingRoot .Button.lnkSelectRate,
+#occBookingRoot #lnkCheckRates  {
+	@include prefix(transition, all .3s ease-in-out, webkit ms moz o);
+	border: 0;
+    color: #fff;
+    text-decoration: none !important;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #d58431;
+	text-shadow: none;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+	filter:none;
+	border-radius:0;
+    width: auto;
+    display:none;
+		&:hover {
+		background:#ef9a43;
+		color:#fff;
+		border:0;
+		text-shadow:none;
+		filter:none;
+
+		}
+	}
+
+#resetDateRange,
+#occBookingRoot #resetDateRange.Button {
+	margin-left:20px;
+}
+
+#occBookingRoot #resetDateRange.Button {
+	background:none;
+	border:0;
+	color:#000;
+  display:none;
+    border-radius: 0;
+	text-shadow:none;
+	font-family:$font1;
+	&:hover {
+		color:#000;
+		text-shadow:none;
+		font-family:$font1;
+		}
+	}
+
+.lnkCancelBtn {
+	@include prefix(transition, all .3s ease-in-out, webkit ms moz o);
+	background:#7f7f7f;
+	border:0;
+	border-radius:0;
+	text-shadow:none;
+	text-transform:uppercase;
+	font-size:14px;
+	letter-spacing:1px;
+	display:inline-block;
+	padding:7px 25px;
+	color:#fff;
+	&:hover {
+		background:#000;
+		color:#fff;
+		}
+	}
+
+.oresTitle {
+	margin-bottom:40px;
+	}
+
+.oresTitle span {
+	color: #000;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display:none;
+	}
+
+.oresRoot .oresContent #occMyReservationItems li {
+	//overriding inline styles
+	padding:0 0 35px !important;
+	border-bottom:1px solid #d9d9d9;
+	margin-bottom: 35px !important;
+	}
+
+	.oresRoot .oresContent #occMyReservationItems li:last-child {
+	border-bottom:0;
+	}
+
+@media (min-width: 768px) {
+.content-wrap .inner {
+    width: 100%;
+	}
+}
+
+@media (min-width:992px) {
+	.oresTitle span {
+		font-size:30px;
+		}
+}
+
+.res-title {
+	margin-bottom:20px;
+	}
+
+/*owner stay selectors*/
+
+
+/*START V2 STYLES AND OVERRIDES*/
+
+/*PREVIOUS BLOCK OF CODE REPRESENTS V1, SOME OF WHICH CARRIES OVER [DATEPICKERS]*/
+/*REMOVING THE MULTIPLE DATEPICKERS -- AT SOME POINT WE NEED TO DECIDE WHAT WE WANT HERE ... IF A USER CAN SELECT A CALENDAR THAT VISUALLY REPRESENTS THE OWNER CALENDAR THEN I DONT NEED 9 OTHER DATEPICKERS*/
+
+.OccStDate,
+.OccEdDate,
+.OccModTitle {
+	display:none;
+	}
+
+
+.OccContractInfo label,
+.OccPartyInfo label,
+.OccNightsInfo label {
+	display:block;
+	font-size:10px;
+	font-weight:700;
+	margin:0;
+	}
+
+.OwnerOccupantQty, .OccNightsInfo {
+  display:none;
+}
+
+.OccNightsInfo label {
+	display:inline-block;
+	}
+
+/*LOADER*/
+#loadingBox {
+	width:200px !important;
+	}
+
+.axisDialogBox .dialogContentLoader .dialogContentLoaderImg {
+	margin-top:-13px;
+	width:150px;
+	margin-left:-75px;
+	background-position:center top;
+	}
+
+.dialogContentLoaderImg label {
+	font-weight:700;
+	margin-top:15px;
+	}
+
+.subItemDetailCallout
+{
+	z-index:99900;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	background: none repeat scroll 0 0 white;
+    display: none;
+    height: 250px;
+    left: 0;
+    margin: 0 5px;
+    position: absolute;
+    top: 0;
+    border-radius: 2px;
+    width: 350px;
+}
+
+.subItemDetailCallout.Reservation{height:300px;}
+
+.subItemDetailCallout.LoadingAsMobile,.subItemDetailCallout.Reservation.LoadingAsMobile{position:static;width:100%;height:auto;}
+
+.subItemDetailCallout .dialogToolbar {
+	position: absolute;
+	height: 2em;
+}
+
+.subItemDetailCallout .dialogToolbar ul {
+	height: 2em;
+	padding: 1px 0;
+}
+.subItemDetailCallout .dialogToolbar ul li a {
+    padding: 5px 14px;
+}
+
+.closeCallout {
+    background: url("http://admin.clubessential.com/styles/images/icons-18-black.png") repeat scroll -71px 1px #DDDDDD;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+    height: 20px;
+    margin: -10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+
+.calloutText {
+    height: 245px;
+    overflow: auto;
+    padding: 5px;
+}
+
+.subItemDetailCallout.Reservation{
+    height: 295px;
+}
+
+.subItemDetailCallout.LoadingAsMobile,.subItemDetailCallout.Reservation.LoadingAsMobile{height:auto;overflow:visible;}
+
+.calloutText h1 {
+    font-size: 16px;
+    margin: 0 0 2px;
+    padding: 0;
+}
+.calloutText p {
+    margin: 10px 0;
+    padding: 0;
+}
+.calloutText label {
+    font-weight: bold;
+    display: inline-block;
+    width: 110px;
+}
+.calloutArrow {
+    background: none repeat scroll 0 0 white;
+    height: 20px;
+    margin: -10px;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    z-index: 100;
+}
+.subItemDetailCallout .dialogContentLoaderImg, #projectsListing .dialogContentLoaderImg, #searchPane .dialogContentLoaderImg {
+    background: url("http://admin.clubessential.com/styles/images/barLoader.gif") no-repeat scroll 0 0 transparent;
+    height: 12px;
+    left: 50%;
+    margin-left: -22px;
+    margin-top: -6px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 44px;
+}
+#searchPane .dialogContentLoaderImg {
+    margin-top: 50px;
+    position: relative;
+}
+.calloutText h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    margin: 0 0 2px;
+}
+.calloutText .noteText {
+    display: block;
+    margin-bottom: 3px;
+}
+
+
+
+.OccSysUnavailDialog {
+    padding: 50px;
+}
+
+//jump to date Button
+.OwnerAvailSelectors {
+  position:relative; margin-bottom:10px;
+}
+
+.OwnerAvailSelectors .abut {
+  position:absolute; right:0; top:0; padding:15px;
+}
+
+//modal
+.ownercal-month.modal {
+  z-index: 9999999;
+}
+
+.modal-content {
+    padding:30px 15px;
+    margin:0 auto;
+    max-width: 400px;
+}
+
+.ownercal-month .btn-default {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity .3s ease;
+	  padding:0;
+    }
+    .ownercal-month .btn-default:hover {
+      opacity:1;
+    }
+
+//sticky STYLES
+.content-wrap.sticky > .row {position:relative;}
+
+@media screen and (min-width:992px) {
+	.content-wrap.sticky .sidebar {float:right;}
+	.content-wrap.sticky .content-area {position:fixed;float:none;top: 20px;width: 485px;}
+.content-wrap.sticky .content-area.bottom {position:absolute; top:auto; bottom:0; width:50%;}
+	}
+@media screen and (min-width:1200px) {
+  	.content-wrap.sticky .content-area {width: 585px;}
+}
+
+@import '_ownercal-dialog.scss';

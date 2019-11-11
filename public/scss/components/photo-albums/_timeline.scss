@@ -1,0 +1,149 @@
+//slick it up
+.timeline-wrap {
+  text-align: center;
+  & h1 {
+    font-family:$serif;
+    color:$green;
+    @media screen and (min-width:768px) {
+      font-size:32px;
+    }
+  }
+  & h2 {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  & [id*="photoPluginWrap"] {
+    margin-top:30px;
+  }
+}
+
+//slick structure
+button[class*="slick"] {
+  padding:0;
+  border-color:#fff;
+  width:35px;
+  height:35px;
+  background:none;
+  color:#fff;
+  border-radius:50%;
+  position:absolute;
+  top:200px;
+  z-index:1;
+  &:hover, &:focus {
+    border-color:$greenLight;
+    color:$greenLight;
+    background:#fff;
+    outline:none;
+  }
+  @media screen and (min-width:768px) {
+    border-color:$smoke;
+    color:$smoke;
+    top:0;
+    &:hover, &:focus {
+      background:none;
+    }
+  }
+  &.slick-prev {
+    left:15px;
+    & i {
+      left:-1px;
+    }
+    @media screen and (min-width:768px) {
+      left:0;
+    }
+    @media screen and (min-width:1100px) {
+      left:-50px;
+    }
+  }
+  &.slick-next {
+    right:15px;
+    & i {
+      left:2px;
+    }
+    @media screen and (min-width:768px) {
+      right:0;
+    }
+    @media screen and (min-width:1100px) {
+      right:-50px;
+    }
+  }
+  & i {
+    font-size:18px;
+    position:relative;
+  }
+}
+
+.slick-list {
+  @media screen and (min-width:768px) {
+     padding-top:120px !important;
+   }
+}
+
+.slick-dots {
+  @extend .ul-basic;
+  @extend .ul-hz;
+  position:absolute;
+  width:calc(100% - 90px);
+  left:45px;
+  top:17px;
+  border-top:1px solid $grayLight;
+  & > li {
+    display:inline-block;
+    padding:20px;
+    position:relative;
+    letter-spacing: 2px;
+    color:$green;
+    cursor: pointer;
+    &:before {
+      content:'';
+      width: 16px;
+      height: 16px;
+      background:$green;
+      border-radius: 50%;
+      display:block;
+      top: -8px;
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      opacity: 0;
+    }
+    &.slick-active:before {
+      opacity:1;
+    }
+  }
+  @media screen and (min-width:1100px)  {
+    width:100%;
+    left:0;
+  }
+}
+
+.timeline-wrap {
+  & .timeline-img {
+    height:405px;
+    margin-bottom:60px;
+  }
+  & p {
+    padding:0 10%;
+  }
+  & .timeline-year {
+    padding-bottom:10px;
+    margin-bottom:10px;
+    position:relative;
+    color:$green;
+    &:after {
+      content:'';
+      position:absolute;
+      left:50%;
+      bottom:0;
+      margin-left:-45px;
+      display:block;
+      width:90px;
+      height:5px;
+      background:$green;
+    }
+    @media screen and (min-width:768px) {
+      display:none;
+    }
+  }
+}

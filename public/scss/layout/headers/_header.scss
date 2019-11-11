@@ -1,0 +1,52 @@
+//header components
+header {
+  position:relative;
+  height:60px;
+  z-index:103;
+  width:100%;;
+  background:#fff;
+  @media screen and (min-width:$breakpoint-header) {
+    text-align:center;
+    height:120px;
+  }
+  & > div {
+    display:flex;
+    height:100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & .logo a {
+    display:block;
+    width:30px;
+    height:50px;
+    margin-top:5px;
+    margin-left:25px;
+    background: url(#{$imgpath}/logo.png) no-repeat 0 0;
+    background-size:cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width:$breakpoint-header) {
+      margin-top:9px;
+      width: 60px;
+      height: 102px;
+      margin-left:50px;
+    }
+  }
+  &.module-header {
+    position:relative;
+  }
+  & .abut {
+    display:none;
+    @media (min-width:$breakpoint-header) {
+      display:inline-block;
+      padding:20px 30px;
+    }
+  }
+  & .header-btn {
+    margin-right:50px;
+  }
+  @media (min-width:$breakpoint-header) {
+    & .logo, & .header-btn {
+      flex: 0 0 13%;
+    }
+  }
+}

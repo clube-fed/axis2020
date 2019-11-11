@@ -1,0 +1,22 @@
+.callout-img-strip {
+  & .callout-wrap {
+    float:left;
+    width:33.333333333%;
+    height:160px;
+    &.callout-lg {
+      width:40%;
+    }
+    &.mp-bg > .mpContent {
+      opacity:1;
+    }
+    @media screen and (min-width:768px) {
+      height:250px;
+    }
+    @media screen and (min-width:992px) {
+      height:300px;
+    }
+    @media screen and (min-width:1200px) {
+      height:420px;
+    }
+  }
+}

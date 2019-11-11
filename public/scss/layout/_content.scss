@@ -1,0 +1,106 @@
+#masterPageUC_MSTR5 {
+  position: relative;
+}
+
+#content {
+  padding: 0;
+  min-height: 200px !important;
+  &.container,
+  &.container-fluid {
+    padding: 0 15px;
+  }
+  & .mpContent img.img-responsive {
+    display: inline-block;
+  }
+}
+
+#content.module-wrap {
+  text-align: left;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1170px;
+  margin: 0 auto;
+  @media screen and (min-width: $breakpoint-md) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.page-banner {
+  position: relative;
+  height: 270px;
+  @media screen and (min-width: $breakpoint-sm) {
+    height: 430px;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    height: 550px;
+  }
+  &.mp-bg > .mpContent {
+    opacity: 0.7;
+  }
+  & .page-title {
+	@include centerer(true, true);
+	@include ieCenterTransform;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    top: 55%;
+    & h1 {
+      color: #fff;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+  }
+  &.mp-bg .page-title .clickToEditDiv {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+}
+
+.content-wrap {
+  padding-bottom: 45px;
+  padding-top: 45px;
+  @media screen and (min-width: $breakpoint-sm) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.content-area {
+  margin-bottom: 30px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 0;
+    //padding-right:70px;
+  }
+}
+
+// .sidebar {
+// 	@media screen and (min-width:$breakpoint-md) {
+//
+// 	}
+// }
+
+.secondary {
+  margin-top: 30px;
+}
+
+//news + cal plugins in content
+#content .clickToEditDiv + [class^="events-"],
+#content .clickToEditDiv + [class^="news-"],
+#content [id*="_dpPlaceholder"] + [class^="events-"],
+#content [id*="_dpPlaceholder"] + [class^="news-"] {
+  margin-top: 30px;
+}
+
+#content .clickToEditDiv + [class^="events-"],
+#content [id*="_dpPlaceholder"] + [class^="events-"] {
+  padding: 0;
+}
+
+.content-area .mpContent > .row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

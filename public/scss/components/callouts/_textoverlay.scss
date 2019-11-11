@@ -1,0 +1,70 @@
+$imgHeightSm: 350px;
+$imgHeightLg: 350px;
+$imgOpacity: .7;
+$imgOpacityHover: 1;
+$callout-txt-align: center;
+$callout-txt-color: #fff;
+$callout-txt-color-hover: #fff;
+
+.callout-overlay {
+  margin:0 auto 2px;
+  overflow: hidden;
+  @media (min-width:$breakpoint-sm) {
+    & > .row {
+      margin-left:-1px;
+      margin-right:-1px;
+    }
+    & .callout-wrap {
+      padding-left:1px;
+      padding-right:1px;
+    }
+  }
+  & .callout-item {
+      position: relative;
+      width: 100%;
+      margin-bottom:20px;
+      @media (min-width:768px) {
+          height:$imgHeightLg;
+          margin-bottom:0;
+      }
+  }
+  & .callout-img {
+      width: 100%;
+      height:100%;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      overflow: hidden;
+      position: absolute;
+      &.mp-bg > .mpContent {
+          opacity:$imgOpacity;
+          transition:.3s;
+      }
+  }
+  & .callout-txt {
+      z-index: 2;
+      text-align: $callout-txt-align;
+      //position center by default
+      @include centerer(true, true);
+      @include ieCenterTransform();
+      width: calc(100% - 20px);
+      padding: 0;
+      //theme
+      @include rem-size(46);
+      font-family:$cursive;
+      color:$callout-txt-color;
+  }
+  //hover effects in here
+  & .callout-link {
+      display:block;
+      &:hover {
+          & .callout-txt {
+              color:$callout-txt-color-hover;
+          }
+          & .callout-img.mp-bg > .mpContent {
+              opacity:$imgOpacityHover;
+          }
+      }
+  }
+}

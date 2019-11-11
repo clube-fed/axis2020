@@ -1,0 +1,39 @@
+/***SINGLE LISTING***/
+//action bar
+//overrides
+.real-estate #relListings .relSingleListing .addressBar {
+	background:#fff;
+	margin:0 auto 30px;
+	padding:15px;
+	max-width:970px;
+	box-shadow:0px 0px 84px 16px rgba(0,0,0,.1);
+	text-align: center;
+	font-weight:700;
+	font-size:14px;
+	@media screen and (min-width:768px) {
+		padding:20px 40px;
+	}
+	& > a {
+		color:$grayLight !important; //base css uses .sitewrap parent to target <a>
+		border-bottom: 0 !important; //base css uses .sitewrap parent to target <a>
+		text-transform:uppercase;
+		letter-spacing: 1px;
+		&:hover, &:focus {
+			color:$gray !important;
+		}
+		& em {
+			margin-right:8px;
+		}
+	}
+}
+
+@media screen and (min-width:1200px) {
+	.realestate-property {
+		padding:0 50px;
+	}
+}
+
+#relListings .relSingleListing {
+	border:0;
+	padding:0 15px;
+}

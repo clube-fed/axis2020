@@ -1,0 +1,39 @@
+.news-1{
+	.view-button{
+		//padding-left: 30px;
+		//background-position: 0px 50%;
+		//color:$green;
+		display:inline-block;
+		& em {
+			margin-right:10px;
+		}
+		&:hover, &:active{
+			//background-position: -5px 50%;
+			text-decoration: none;
+			//color:$black;
+		}
+	}
+	.newsItem a {
+		display: block;
+		@include rem-size(18);
+		line-height: 1.2;
+		color:$smoke;
+		font-weight:400;
+		// font-family: $serif;
+	}
+	.newsItem a:hover {
+		text-decoration: none;
+		color: $gray;
+	}
+	.newsItem {
+		margin-bottom: 20px;
+	}
+	.newsItem .article-date {
+		//text-transform: uppercase;
+		@include rem-size(14);
+		//color: #acacac;
+		//font-weight:700;
+		//letter-spacing: 2px;
+		//font-family:$serif;
+	}
+}

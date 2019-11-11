@@ -1,0 +1,142 @@
+//inputs => login-wrap is parent component
+$login-input-bg: #fff;
+$login-input-bg-focus:#fff;
+$login-input-border: $silver;
+$login-input-border-focus:$greenDark;
+$login-input-color:$black;
+$login-input-color-focus:$black;
+$login-input-font-weight:400;
+$login-input-height:56px;
+$login-txt-font-weight:400;
+$login-txt-font-size: 14;
+$login-txt-color:$black;
+$login-chk-bg: $gray;
+$login-forgotpw-color: $black;
+$login-forgotpw-color-hover: $green;
+
+
+.login-wrap {
+	//padding:30px 15px;
+	& .advLogUsername,
+	& .advLogPassword {
+		height:40px;
+		width:100%;
+		border: 1px solid $login-input-border;
+		text-indent:15px;
+		margin-bottom:15px;
+		background:$login-input-bg;
+		@include rem-size(16);
+		font-weight:$login-input-font-weight;
+		color: $login-input-color;
+		&::placeholder {
+			color:$login-input-color;
+		}
+		&:focus {
+			border-color:$blue;
+		}
+		@media screen and (min-width:$breakpoint-sm) {
+			height:$login-input-height;
+		}
+	}
+	& .abut {
+		margin:0 auto;
+		display:block;
+		width:100%;
+		padding-top:0;
+		padding-bottom:0;
+		height:40px;
+		@media screen and (min-width:$breakpoint-sm) {
+			height:$login-input-height;
+		}
+		// line-height: 50px;
+	}
+}
+
+//login text under inputs
+.login-txt {
+	margin-top:25px;
+	display:flex;
+	justify-content: space-between;
+	font-weight:$login-txt-font-weight;
+	color:$login-txt-color;
+	@include rem-size($login-txt-font-size);
+	& > span {
+		display:inline-block;
+		padding-right:10px;
+	}
+	& > a {
+		//line-height:52px;
+		color:$login-forgotpw-color !important;
+		margin-left:auto;
+		//text-decoration: underline;
+		&:hover, &:focus {
+			color:$login-forgotpw-color-hover !important;
+		}
+	}
+}
+
+//custom checkboxes
+.advLogRemoveChk {
+	//line-height:52px;
+	& input {
+		vertical-align: middle;
+		margin: 0 4px 0 0;
+	}
+	& input[type="checkbox"] {
+		display:none;
+	}
+	& label:before {
+		background-color: $login-chk-bg;
+    	content: "";
+    	display: block;
+    	float: left;
+    	height: 16px;
+    	margin: 3px 6px 0 0;
+    	width: 16px;
+    	cursor: pointer;
+    	border-radius: 50%;
+	}
+	& input[type="checkbox"]:checked + label:before {
+		background: $login-chk-bg;
+	  	text-align: center;
+	  	display: inline-block;
+	  	font: normal normal normal 14px/16px 'Nucleo Glyph';
+	  	speak: none;
+	  	text-transform: none;
+	  	-webkit-font-smoothing: antialiased;
+	  	-moz-osx-font-smoothing: grayscale;
+	  	content: '\ed40';
+	  	color: #fff;
+	}
+}
+
+.error-msg > span {
+	display: block;
+	padding: 10px;
+	border-radius: 5px;
+	background: #d9534f;
+	margin-bottom: 5px;
+	border: 1px solid #b64542;
+	color: #fff !important;
+	line-height: 18px;
+	font-size: 11px !important;
+	& > .forgotPwResetLink > a {
+	color:#fff;
+	opacity:.8;
+	text-decoration:underline;
+	@include prefix(transition, opacity .3s ease-out, webkit ms moz);
+	  &:hover {
+	  color:#fff;
+	  text-decoation:underline;
+		opacity:1;
+	 }
+	}
+}
+
+	//already logged In {
+.logged-in {
+	color:#fff;
+	& * {
+		color:#fff;
+	}
+}

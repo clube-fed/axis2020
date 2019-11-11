@@ -1,0 +1,63 @@
+/*carousel*/
+.property-carousel {
+	margin-bottom:30px;
+	& .hero {
+		margin-bottom:0;
+		& > div {
+			width:100% !important;
+			height:auto !important;
+		}
+		& img {
+			width:100%;
+		}
+	}
+	& .imagesThumbnailsWrapper {
+		padding:5px 0 !important;
+		& > ul {
+			margin: 0 -5px !important;
+			& > li {
+				padding:5px;
+				display:inline-block;
+				float:none;
+				height:80px;
+				position:relative;
+				width:50%;
+				@media screen and (min-width:768px) {
+					width:25%;
+				}
+				@media screen and (min-width:768px) {
+					width:16.666667%;
+				}
+				& > img {
+					width:100%;
+					height:100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+	@media screen and (min-width:992px) {
+		float:left;
+		width:60%;
+		margin:0;
+	}
+}
+
+//lightbox overrides
+.relLightbox .closeLightboxImage {
+	text-align: right;
+	padding:10px;
+	font-weight:700;
+	text-transform: uppercase;
+	&:before {
+		margin-right:8px;
+		content:'\ed2b';
+		display: inline-block;
+    font: normal normal normal 14px/1 'Nucleo Outline';
+    font-size: inherit;
+    speak: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	}
+}

@@ -1,0 +1,72 @@
+/*album with overlay bar*/
+
+.featured-hero-3 {
+  & .hero-wrap {
+    position:relative;
+    padding-bottom:70px;
+    @media screen and (min-width:992px) {
+      padding-bottom:50px;
+    }
+  }
+  & .container-fluid {
+    position:absolute;
+    bottom:0;
+    left:50%;
+    @include prefix(transform,translate(-50%,0),webkit ms moz);
+  }
+  & .hero-img {
+    & > img {
+      width:100%;
+      max-height:630px;
+    }
+  }
+  & .hero-desc {
+    background:$deepblue;
+    padding:20px;
+    text-align:center;
+    position: relative;
+    & h3 {
+      font-weight:700;
+      color:#fff;
+      margin-bottom:5px;
+    }
+    & a {
+      display:block;
+      color:$periwinkle;
+      &:hover, &:focus {
+        color:#fff;
+      }
+    }
+    & [class*="prevImg"],
+    & [class*="nextImg"] {
+      position:absolute;
+      @include rem-size(15);
+      top:50%;
+      @include prefix(transform, translate(0,-50%), webkit ms moz);
+    }
+    & [class*="prevImg"] {
+      left:5px;
+    }
+    & [class*="nextImg"] {
+      right:5px;
+    }
+    @media screen and (min-width:768px) {
+      padding:20px 60px;
+      & [class*="prevImg"] {
+        left:40px;
+      }
+      & [class*="nextImg"] {
+        right:40px;
+      }
+    }
+    @media screen and (min-width:992px) {
+      padding:20px 100px;
+      & [class*="prevImg"] {
+        left:60px;
+      }
+      & [class*="nextImg"] {
+        right:60px;
+      }
+    }
+  }
+}

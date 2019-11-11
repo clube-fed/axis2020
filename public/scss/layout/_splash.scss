@@ -1,0 +1,42 @@
+.splash {
+  padding:15px;
+  text-align: center;
+  margin:0 auto;
+  @media screen and (min-width:768px) {
+    padding:4em;
+  }
+  & .login-wrap {
+    text-align: center;
+  }
+  img {
+    display:block;
+    margin:0 auto;
+    max-height:85px;
+  }
+  & ul {
+    padding-bottom:10px;
+  }
+  & img, & ul+ul, .row {
+    margin-bottom:30px;
+  }
+  & ul+ul {
+    padding-bottom:30px;
+    border-bottom:1px solid $silver;
+  }
+  & h6 {
+    margin-bottom:5px;
+  }
+  & [class^="col-"] {
+    margin-bottom:15px;
+  }
+  & .abut {
+    line-height:60px;
+  }
+  @media screen and (min-width:$breakpoint-sm) {
+    & ul > li:last-child:before {
+      content:'|';
+      position:relative;
+      left:-11px;
+    }
+  }
+}
