@@ -2,10 +2,7 @@
 
 //v2: linted scss
 //simple remulade
-@mixin rem-size($h-size,$b-size:$body-base-font-size) {
-	font-size: ($h-size) + px;
-	font-size: ($h-size/$b-size) + rem;
-}
+//v3: moving rem mixin out to mixins
 
 //lato bold 20 uppercase
 
@@ -134,6 +131,7 @@ p, ul, ol, .mpContent {
 a {
 	color:$link-font-color;
 	text-decoration:none;
+	@include prefix(transition, color 0.3s ease-out, webkit ms o moz);
 &:hover {
 	color:$link-hover-font-color;
 	text-decoration:none;

@@ -1,6 +1,5 @@
-/* -----------------------------------*/
-/* ---------->>> ANIMATION <<<-----------*/
-/* -----------------------------------*/
+//ANIMATION
+//DEPRECATING -- each element is has its own transition + %base-animation moved to extends
 a {
 	@include prefix(transition, color 0.3s ease-out, webkit ms o moz);
 	}

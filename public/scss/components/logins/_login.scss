@@ -28,6 +28,7 @@ $login-forgotpw-color-hover: $green;
 		@include rem-size(16);
 		font-weight:$login-input-font-weight;
 		color: $login-input-color;
+		@include prefix(transition, all 0.3s ease-out, webkit ms o moz);
 		&::placeholder {
 			color:$login-input-color;
 		}

@@ -61,6 +61,7 @@ button,
 	margin:0 auto;
 	display:inline-block;
 	width:auto;
+	@include prefix(transition, all 0.3s ease-out, webkit ms o moz);
 	@include rem-size(12);
 	line-height: 13px;
   font-weight:$btn-font-weight;

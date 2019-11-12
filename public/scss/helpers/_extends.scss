@@ -9,6 +9,11 @@
   }
 }
 
+//deprecated animation
+%base-animation {
+	@include prefix(transition, all 0.3s ease-out, webkit ms o moz);
+}
+
 //sprite-only
 %sprite-el {
   position:relative;
