@@ -1,12 +1,6 @@
 
 //********** MEEEEEEEEEEXINZ ************
 
-//v4: updating with remsizer from typography
-@mixin rem-size($h-size,$b-size:$body-base-font-size) {
-	font-size: ($h-size) + px;
-	font-size: ($h-size/$b-size) + rem;
-}
-
 /// Mixin to prefix a property
 /// @author Hugo Giraudel
 /// @param {String} $property - Property name
@@ -75,7 +69,7 @@
     content: $content;
     color: $color;
     position: absolute;
-    left: $leftPos;
+    left: $leftPos+px;
     top: 0;
   }
   &:first-of-type:before {

@@ -3,11 +3,12 @@
 //NOTES: 
 //11.1.19: jnolfi - removed some of the specific styling (font families, etc)
 //11.1.19: removed text-align:right from [id$=rosterControl_tblListing] [class^=RosterRow]>td:nth-child(2) => bootstrapshiv.css seems to fix this issue
+//11.12.19: removed global input/select/textarea overrides => using bootstrap globals here
 
-$btnColor: $green;
-$btnColorHover: $greenDark;
-$primary_color: $greenDark;
-$secondary_color: $green;
+$btnColor: $black06;
+$btnColorHover: $canary;
+$primary_color: $black06;
+$secondary_color: $canary;
 
 [id^=masterPageUC] .module-wrap {padding:4rem 1.5rem}
 [id^=masterPageUC] .module-wrap #content {position:relative;}
@@ -19,11 +20,11 @@ $secondary_color: $green;
 /*#content a{color:$secondary_color;border:none!important}
 #content a:hover{color:$primary_color;}*/
 #content #masterPageUC_MPCA52_AdminBar1 input, #content #masterPageUC_MPCA52_AdminBar1 select { color: #6d5a5a; }
-#content input, #content select{display:inline-block;padding:3px 10px;margin:0 10px 5px 5px;border:1px solid #CCC;border-radius:0;background:0 0;box-shadow:none;outline:0;font-size:16px;color: #6d5a5a }
+// #content input, #content select{display:inline-block;padding:3px 10px;margin:0 10px 5px 5px;border:1px solid #CCC;border-radius:0;background:0 0;box-shadow:none;outline:0;font-size:16px;color: #6d5a5a }
 
 
-#content select {  }
-#content textarea{display:block;padding:3px 10px;margin:0 10px 5px 5px;border:1px solid #CCC!important;border-radius:0;background:none!important;box-shadow:none!important;outline:0}
+// #content select {  }
+// #content textarea{display:block;padding:3px 10px;margin:0 10px 5px 5px;border:1px solid #CCC!important;border-radius:0;background:none!important;box-shadow:none!important;outline:0}
 #content .pgpagination{width:100%;text-align:center}
 #content .pgpagination a{padding:.5rem 1.2rem;margin:0 .2rem;border-radius:0;background:0;color:$secondary_color;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:16px;line-height:1;text-transform:uppercase}
 #content .pgpagination a:active,#content .pgpagination a:hover{background:$primary_color;color:#FFF}

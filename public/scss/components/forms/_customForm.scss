@@ -4,18 +4,11 @@
 
 .new-form input,
 .new-form textarea {
-	border:1px solid $silver;
+	border:1px solid $black;
 	width:100%;
 	@include prefix(transition, all .3s ease-in-out, webkit ms moz);
 	&:focus {
-		border-color:$smoke;
-	}
-}
-
-@media screen and (min-width:768px) {
-	.new-form .form-element:nth-of-type(1),
-	.new-form .form-element:nth-of-type(2) {
-		width:50%;
+		border-color:$green;
 	}
 }
 
@@ -24,7 +17,7 @@
 }
 
 .new-form .form-element {
-	margin-bottom:10px;
+	margin-bottom:20px;
 }
 
 .new-form input {
@@ -35,4 +28,8 @@
 
 .new-form textarea {
 	height:160px;
+}
+
+.formBaseForm + .smallerfont {
+	display:none;
 }

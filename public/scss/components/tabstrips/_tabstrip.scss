@@ -1,12 +1,14 @@
 //tabstrip
 $tabs-bg: $silver;
-$tabs-txt-color: $green;
-$tabs-txt-color-hover: $green;
-$tabs-txt-fontsize: 18;
-$tabs-txt-fontweight:700;
-$tabs-txt-selected-color:$green;
+$tabs-txt-color: $brownBlack;
+$tabs-txt-color-hover: $canary;
+$tabs-height:70;
+$tabs-selBorder-height: 3;
+$tabs-txt-fontsize: 15;
+$tabs-txt-fontweight:500;
+$tabs-txt-selected-color:$canary;
 $tabs-txt-selected-bg:#fff;
-$tabs-content-border-color: $silver;
+$tabs-content-border-color: #f1f1f1;
 
 table[id*="tblTop"] {
 	display:block;
@@ -30,21 +32,23 @@ div[id*="_radMultTop"][style*="margin-top"] {
 	padding:0;
 	overflow:hidden;
 	overflow-x:auto;
-	height:56px;
+	height:auto;
 	position:relative;
-	background:$tabs-bg;
 }
 
 #content .RadTabStrip_Tab_responsive .levelwrap.level1 {
-	padding:0;
+	padding:0 15px;
 	//width: 100% !important;
 	border: 0;
 	border-bottom:0;
 	text-align:center;
-	height:60px;
+	height:$tabs-height+px;
 	overflow:hidden;
 	overflow-x: auto;
 	margin:0 auto;
+	background:$tabs-bg;
+	border:1px solid #b4b4b4;
+	border-radius:3px;
 }
 
 #content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul {
@@ -59,7 +63,7 @@ div[id*="_radMultTop"][style*="margin-top"] {
 #content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li {
 	float:none;
 	display:inline-block;
-	line-height: 54px;
+	line-height: ($tabs-height - $tabs-selBorder-height)+px;
 	margin: 0;
 	font-weight:$tabs-txt-fontweight;
 }
@@ -75,7 +79,7 @@ div[id*="_radMultTop"][style*="margin-top"] {
 	text-decoration:none;
 	position:relative;
 	background: $tabs-bg;
-	border-top:3px solid transparent;
+	border-top:($tabs-selBorder-height)+px solid transparent;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	&:hover {
@@ -117,7 +121,6 @@ div[id*="_radMultTop"][style*="margin-top"] {
 
 @media screen and (min-width:768px) {
 	#content .RadTabStrip_Tab_responsive .levelwrap.level1 > ul {
-		height:55px;
 		padding: 0;
 		display:inline-block;
 	}

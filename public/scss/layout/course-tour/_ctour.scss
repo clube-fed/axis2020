@@ -1,0 +1,152 @@
+//course tour slide
+.ctour-img {
+    & > img {
+        width: 100%;
+        max-width:none;
+    }
+    @media (min-width:$breakpoint-md) {
+        height:570px;
+        & > img {
+            object-fit:cover;
+            height:100%;
+        }
+    }
+}
+
+.ctour-txt {
+    & ul.hole-info > li,
+    & ul.hole-yards > li {
+        margin-left:0 !important;
+        @media (min-width:$breakpoint-sm) {
+            margin:0 10px !important;
+            &:first-child {
+                margin-left:0 !important;
+            }
+        }
+    }
+    & ul.hole-info {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color:$brownBlack;
+        font-weight:500;
+        letter-spacing:2px;
+        @include rem-size(15);
+        @media (min-width:$breakpoint-sm) {
+            & > li {
+                @include elBetweenNavItems('|', $black27, -17)
+            }
+        }
+    }
+
+    & p {
+        line-height: 1.7;
+    }
+    &>.inner {
+        background: $silver;
+        @media (min-width:$breakpoint-md) {
+            height:100%;
+        }
+    }
+    & .ctour-pad {
+        padding: 20px;
+        @media screen and (min-width:992px) {
+            padding: 40px;
+        }
+    }
+    & h3 {
+        color:$black27;
+    }
+    & h6 {
+        color: #fff;
+        background: $canary;
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        padding: 15px 25px 15px 45px;
+        @include rem-size(16.5);
+        letter-spacing:.5px;
+        &:after {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 25px 0 24px 25px;
+            border-color: transparent transparent transparent $canary;
+            content: '';
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+    }
+
+    & .ul-hz {
+        text-align: left;
+    }
+}
+
+.hole-yards {
+    margin-bottom:40px;
+    & li:before {
+        content: '';
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        margin-right: 5px;
+        border-radius: 50%;
+        position: relative;
+        top: 3px;
+    }
+
+    & li.black:before {
+        background-color: #000;
+    }
+
+    & li.blue:before {
+        background-color: #2f3d7f;
+    }
+
+    & li.white:before {
+        background-color: #fff;
+        border: 1px solid #b4b4b4;
+    }
+
+    & li.gold:before {
+        background-color: $canary;
+    }
+
+    & li.red:before {
+        background-color: #902e2e;
+    }
+
+    & li.green:before {
+        background-color: #36590c;
+    }
+}
+
+//tab overrides
+#content .ctour {
+    & .RadTabStrip_Tab_responsive .levelwrap.level1 {
+        background:$brownBlack;
+        border:0;
+        border-radius:0;
+    }
+    & .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li > a {
+        color:#fff;
+        background:$brownBlack;
+        &:hover {
+            color:$canary;
+        }
+    }
+    & .RadTabStrip_Tab_responsive .levelwrap.level1 > ul > li > a.selected {
+        background:#3e3737;
+        border-color:transparent;
+    }
+    & .tsContent { 
+        padding:15px;
+        border:0;
+        position: relative;
+        border: 0;
+        & .clickToEditDiv {
+            position: relative;
+        }
+    }
+}
