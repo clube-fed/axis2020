@@ -23,7 +23,7 @@ The SCSS uses the atomic approach to CSS and breaks out for top-down styling fro
 
 npm run build compiles a compressed css file
 
-## JS (./public/js)
+### JS (./public/js)
 The Javascript is broken down into components (located in the src/components folder) to be compiled into a bundle for deployment. Components include:
 - ada.js: js to make Axis more ada-compliant - based on work of Roger and Will
 - adminScriptToggle.js: js to launch the admin toggle for scripts at the bottom of the page
@@ -47,7 +47,7 @@ The Javascript is broken down into components (located in the src/components fol
 
 npm run bundle triggers the grunt-concat task to compile your axis-bundle.js file. You can configure which components are in your bundle via the Gruntfile.js in the root. There is an array of strings pointing to the js component path, configure to your needs and deploy to the site.
 
-## Handlebars (./views)
+### Handlebars (./views)
 Handlebars is a simple templating engine that uses basic HTML and breaks it down into partials to build layouts quickly and easily. The structure of the views folder is:
 - Pages (i.e. My Club or Staff page) are located in the root
 - Components: Handlebars partials are located here. These files represent the HTML structure of your component, while some create the layout for Axis items (i.e. a minipage)
@@ -60,10 +60,10 @@ The basic premise follows the logic used for this project: build smaller compone
 - Partials are called using this method {{> myPartial}} where myPartial referes to an .hbs file in the views/components folder
 - The minipage and photoAlbumPlugin partials are two special partials that allow you to create custom content inside a standard axis layout. They follow this pattern: {{#> minipage}}<h1>Hello World!</h1>{{/minipage}}. The h1 tag and content will be injected into an .mpContent div when the page renders. Note the # symbol before the > in this setup.
 
-## server.js
+### server.js
 In the root of the package is a server file set up to run an express server with the handlebars templating engine out of the box. You can configure your navigation for the site by modifying the navigation variable. You can also configure your routes to each page for the build. The routes all take an object with the variable navigation set to the navigation variable configured in the variable above. There is a Handlebars template that will replicate a CE menu, complete with subnav items.
 
-## Task Runners
+### Task Runners
 The package includes the following utilies to help optimize build:
 - grunt: This is being used to concatenate the js partials into the axis bundle (grunt concat)
 - imagemin: This tool will compress images down further (npm compress)
