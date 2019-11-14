@@ -56,9 +56,20 @@ Handlebars is a simple templating engine that uses basic HTML and breaks it down
 You can learn more about handlebars here: https://handlebarsjs.com/
 
 The basic premise follows the logic used for this project: build smaller components to build larger layouts:
-- Your masterpage files will look like a normal HTML doc with the handlebar variable {{{body}}} where the page content is to be injected.
-- Partials are called using this method {{> myPartial}} where myPartial referes to an .hbs file in the views/components folder
-- The minipage and photoAlbumPlugin partials are two special partials that allow you to create custom content inside a standard axis layout. They follow this pattern: {{#> minipage}}<h1>Hello World!</h1>{{/minipage}}. The h1 tag and content will be injected into an .mpContent div when the page renders. Note the # symbol before the > in this setup.
+```
+{{{body}}}
+```
+Your masterpage files will look like a normal HTML doc with the handlebar variable {{{body}}} where the page content is to be injected.
+```
+{{> partial}}
+```
+Partials are called using this method {{> myPartial}} where myPartial referes to an .hbs file in the views/components folder
+```
+{{#> minipage}}
+<h1>Hello World!</h1>
+{{/minipage}}
+```
+The minipage and photoAlbumPlugin partials allow you to create custom content inside a standard axis layout. They follow this pattern above. The h1 tag and content will be injected into an .mpContent div when the page renders. Note the # symbol before the > in this setup.
 
 ### server.js
 In the root of the package is a server file set up to run an express server with the handlebars templating engine out of the box. You can configure your navigation for the site by modifying the navigation variable. You can also configure your routes to each page for the build. The routes all take an object with the variable navigation set to the navigation variable configured in the variable above. There is a Handlebars template that will replicate a CE menu, complete with subnav items.
