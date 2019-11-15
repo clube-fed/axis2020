@@ -4,8 +4,6 @@
 //simple remulade
 //v3: moving rem mixin out to mixins
 
-//lato bold 20 uppercase
-
 //body
 $body-bg-color: #fff;
 $body-font-family:$sansSerif;
@@ -132,9 +130,9 @@ a {
 	color:$link-font-color;
 	text-decoration:none;
 	@include prefix(transition, color 0.3s ease-out, webkit ms o moz);
-&:hover {
-	color:$link-hover-font-color;
-	text-decoration:none;
+	&:hover {
+		color:$link-hover-font-color;
+		text-decoration:none;
 	}
 }
 

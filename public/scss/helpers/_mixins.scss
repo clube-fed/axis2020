@@ -1,5 +1,10 @@
 
 //********** MEEEEEEEEEEXINZ ************
+//simple remulade for rem-sizing
+@mixin rem-size($h-size,$b-size:$body-base-font-size) {
+	font-size: ($h-size) + px;
+	font-size: ($h-size/$b-size) + rem;
+}
 
 /// Mixin to prefix a property
 /// @author Hugo Giraudel
