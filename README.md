@@ -6,17 +6,14 @@ A simple, local Axis front end dev environment using Express and Handlebars.js. 
 mkdir MYPROJECT
 ```
 Create a new directory for your project
-
 ```
 git clone https://github.com/clube-fed/axis2020.git
 ```
 From your directory/folder run the git clone command to pull down the repo
-
 ```
 npm i
 ```
 Install the dependencies
-
 ```
 npm run dev
 ```
@@ -43,8 +40,6 @@ The SCSS uses the atomic approach to CSS and breaks out for top-down styling fro
 - Pages: Page-specific stylesheets
 - Vendor: Any third-party CSS files
 
-npm run build compiles a compressed css file
-
 ### JS (./public/js)
 The Javascript is broken down into components (located in the src/components folder) to be compiled into a bundle for deployment. Components include:
 - ada.js: js to make Axis more ada-compliant - based on work of Roger and Will
@@ -54,6 +49,7 @@ The Javascript is broken down into components (located in the src/components fol
 - bootstrapModal.js: bootstrap's js for their modal plugin
 - burgers.js: click event for a burger menu animation
 - cteBuild.js: changes configuration of minipage layout for callouts, billboars, panels, etc.
+- eventUnwrap.js: a simple function that will unwrap events from axis divs in the plugin
 - formBaseFormat.js: a starter js file to reconfigure FormBase forms
 - fullHeightPalb.js: sets the photo album to be the full height of the window (called on plugin load and can be run in a resize event)
 - imgBG.js: sets image in minipage to be the background of that minipage (uses class .mp-bg)
@@ -67,7 +63,10 @@ The Javascript is broken down into components (located in the src/components fol
 - tabsSizer.js: sets the size of tabs and toggles a message for more scrolling on smaller views
 - weatherTxtFormatter: just a starter file to modify string inside of weather plugin
 
-npm run bundle triggers the grunt-concat task to compile your axis-bundle.js file. You can configure which components are in your bundle via the Gruntfile.js in the root. There is an array of strings pointing to the js component path, configure to your needs and deploy to the site.
+```
+npm run bundle
+```
+This npm script will trigger the grunt-concat task to compile your axisbundle.js file. You can configure which components are in your bundle via the Gruntfile.js in the root. There is an array of strings pointing to the js component path, configure to your needs and deploy to the site. This bundler will run when you deploy for production.
 
 ### Handlebars (./views)
 Handlebars is a simple templating engine that uses basic HTML and breaks it down into partials to build layouts quickly and easily. The structure of the views folder is:
