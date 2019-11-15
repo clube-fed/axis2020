@@ -7,6 +7,13 @@ A simple, local Axis front end dev environment using Express and Handlebars.js. 
 - npm i to install dependencies
 - npm run dev to launch the environment
 
+## Deploy your code
+```
+npm run build
+```
+Run this npm script to output your site stylesheet in a minified format. In package.json change the SITENAME text in the build script to what you want to name your stylesheet. In the _variables.scss, change the environment variable to 'prod' ('dev' is for local environment). The build script will also compile your javascript bundle from the javascript files specified in Gruntfile.js.
+
+
 ## What's Inside
 
 ### Public

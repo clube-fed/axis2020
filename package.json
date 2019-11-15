@@ -9,7 +9,7 @@
     "bundle": "grunt concat",
     "ui": "browser-sync start --port '7777' --proxy 'localhost:3030' --files 'public' 'views' 'server.js'",
     "dev": "concurrently \"nodemon server.js\" \"npm run scss\" \"npm run bundle\" \"npm run ui\"",
-    "build": "node-sass public/scss/style.scss public/css/suncadia19.css --output-style compressed",
+    "build": "node-sass public/scss/style.scss public/css/suncadia19.css --output-style compressed && npm run bundle",
     "scss": "node-sass --watch public/scss -o public/css"
   },
   "keywords": [],
