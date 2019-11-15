@@ -6,14 +6,17 @@ A simple, local Axis front end dev environment using Express and Handlebars.js. 
 mkdir MYPROJECT
 ```
 Create a new directory for your project
+
 ```
 git clone https://github.com/clube-fed/axis2020.git
 ```
 From your directory/folder run the git clone command to pull down the repo
+
 ```
 npm i
 ```
 Install the dependencies
+
 ```
 npm run dev
 ```
