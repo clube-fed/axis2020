@@ -2,10 +2,22 @@
 A simple, local Axis front end dev environment using Express and Handlebars.js. Includes boilerplate code to quickly launch and code in a local environment based on Clubessential Axis.
 
 ## Getting Started
-- Create a new directory for your project
-- git clone this repo
-- npm i to install dependencies
-- npm run dev to launch the environment
+```
+mkdir MYPROJECT
+```
+Create a new directory for your project
+```
+git clone https://github.com/clube-fed/axis2020.git
+```
+From your directory/folder run the git clone command to pull down the repo
+```
+npm i
+```
+Install the dependencies
+```
+npm run dev
+```
+Launch your local environment. Happy coding!
 
 ## Deploy your code
 ```
