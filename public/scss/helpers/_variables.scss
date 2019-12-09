@@ -15,7 +15,7 @@ $serif: 'Lora', serif;
 $sansSerif: 'Lato', sans-serif;
 
 //Images
-$imgpath: if($environment == 'prod', '../../../Images', '/Images');
+$imgpath: if($environment == 'prod', '../images', '/images');
 
 //breakpoints [min-width//mobile first]
 $breakpoint-xs: 450px;
