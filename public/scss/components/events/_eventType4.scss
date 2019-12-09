@@ -26,13 +26,13 @@
 	// }
 	.event-title{
 		font-family: $serif;
-		color:$greenDark;
+		color:$smoke;
 		font-weight: 700;
 		margin-bottom: 25px;
 		display: block;
 		line-height: 1.2;
 		&:hover {
-			color:$red;
+			color:$green;
 		}
 	}
 	@media (max-width: 991px){

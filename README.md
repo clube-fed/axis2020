@@ -95,6 +95,9 @@ The minipage and photoAlbumPlugin partials allow you to create custom content in
 ### server.js
 In the root of the package is a server file set up to run an express server with the handlebars templating engine out of the box. You can configure your navigation for the site by modifying the navigation variable. You can also configure your routes to each page for the build. The routes all take an object with the variable navigation set to the navigation variable configured in the variable above. There is a Handlebars template that will replicate a CE menu, complete with subnav items.
 
+### AWS-SDK
+This package has been updated to include boilerplate code for a simple node utility to upload files to Clubessential's s3 server. See details here: https://github.com/clube-fed/aws-upload-utility
+
 ### Task Runners
 The package includes the following utilies to help optimize build:
 - grunt: This is being used to concatenate the js partials into the axis bundle (grunt concat)

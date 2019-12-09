@@ -9,15 +9,18 @@
     "bundle": "grunt concat",
     "ui": "browser-sync start --port '7777' --proxy 'localhost:3030' --files 'public' 'views' 'server.js'",
     "dev": "concurrently \"nodemon server.js\" \"npm run scss\" \"npm run bundle\" \"npm run ui\"",
-    "build": "node-sass public/scss/style.scss public/css/suncadia19.css --output-style compressed && npm run bundle",
-    "scss": "node-sass --watch public/scss -o public/css"
+    "build": "node-sass public/scss/style.scss public/css/SITENAME.css --output-style compressed && npm run bundle",
+    "scss": "node-sass --watch public/scss -o public/css",
+    "scss-deploy": "node-sass --watch public/scss/style.scss public/css/SITENAME.css --output-style compressed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "aws-sdk": "^2.585.0",
     "browser-sync": "^2.26.7",
     "concurrently": "^5.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "grunt": "^1.0.4",

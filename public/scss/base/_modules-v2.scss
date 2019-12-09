@@ -4,11 +4,15 @@
 //11.1.19: jnolfi - removed some of the specific styling (font families, etc)
 //11.1.19: removed text-align:right from [id$=rosterControl_tblListing] [class^=RosterRow]>td:nth-child(2) => bootstrapshiv.css seems to fix this issue
 //11.12.19: removed global input/select/textarea overrides => using bootstrap globals here
+//12.3.19: adding modules-only class for .plgHeaderBar
+//12.4.19: updating path to telerik grid gif to point to A_Master folder on s3 [global image is there]
 
 $btnColor: $black06;
 $btnColorHover: $canary;
 $primary_color: $black06;
 $secondary_color: $canary;
+$telerikSprite: '../../A_Master/library/img/axis-grid-sprite.gif';
+
 
 [id^=masterPageUC] .module-wrap {padding:4rem 1.5rem}
 [id^=masterPageUC] .module-wrap #content {position:relative;}
@@ -33,7 +37,7 @@ $secondary_color: $canary;
 #content [id$=tblAdminBar]{width:auto!important;border:none!important}
 #content [id$=tblAdminBar]>tbody>tr>td{padding:0!important}
 #content .adminBar,#content .adminbar{padding:0 10px!important;/*font-family:Tahoma,Geneva,sans-serif;*/font-weight:400;font-size:14px;;line-height:1;letter-spacing:.01rem}
-#content .plgHeaderBar{position:absolute;top:0;left:15px;right:15px;border-bottom:1px solid #DDD;/*font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;*/font-weight:400;font-size:32px;line-height:1;color:#444;text-transform:uppercase}
+.module-wrap #content .plgHeaderBar{position:absolute;top:0;left:15px;right:15px;border-bottom:1px solid #DDD;/*font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;*/font-weight:400;font-size:32px;line-height:1;color:#444;text-transform:uppercase}
 .Dgrp_ToolBoxTitleBar{background:#cecece;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:-webkit-linear-gradient(top,#cecece 0,#999 100%);background:linear-gradient(to bottom,#cecece 0,#999 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece', endColorstr='#999999', GradientType=0);padding:5px 20px;margin:0 0 10px;height:auto}
 .dpDiv{background:#FFF}
 .rcCalPopup{-webkit-transition:none!important;transition:none!important}
@@ -435,7 +439,7 @@ table#profilePhoto{margin:0 auto 1.42857rem}
 .SupportContacts tr[id$=Group] tbody,.SupportContacts tr[id$=Group] td,.SupportContacts tr[id$=Group] tr,.SupportContacts tr[id$=trAM] tbody,.SupportContacts tr[id$=trAM] td,.SupportContacts tr[id$=trAM] tr,.SupportContacts tr[id$=trAM]+tr tbody,.SupportContacts tr[id$=trAM]+tr td,.SupportContacts tr[id$=trAM]+tr tr{display:inline-block;width:100%;border:none!important;overflow:auto;height:auto!important}
 .SupportContacts tr[id$=Group] table table,.SupportContacts tr[id$=trAM] table table,.SupportContacts tr[id$=trAM]+tr table table{width:100%!important}
 .SupportContacts tr[id$=Group] table table td,.SupportContacts tr[id$=trAM] table table td,.SupportContacts tr[id$=trAM]+tr table table td{width:25%!important}
-.RadGrid_Axis .rgAdd,.RadGrid_Axis .rgCancel,.RadGrid_Axis .rgCollapse,.RadGrid_Axis .rgDel,.RadGrid_Axis .rgEdit,.RadGrid_Axis .rgExpCSVP,.RadGrid_Axis .rgExpDOC,.RadGrid_Axis .rgExpPDF,.RadGrid_Axis .rgExpXLS,.RadGrid_Axis .rgExpand,.RadGrid_Axis .rgFilter,.RadGrid_Axis .rgPageFirst,.RadGrid_Axis .rgPageLast,.RadGrid_Axis .rgPageNext,.RadGrid_Axis .rgPagePrev,.RadGrid_Axis .rgRefresh,.RadGrid_Axis .rgSortAsc,.RadGrid_Axis .rgSortDesc,.RadGrid_Axis .rgUngroup,.RadGrid_Axis .rgUpdate{background-image:url(../../../A_Master/NET/Telerik/Skins/Axis/Grid/sprite.gif)!important;border:none!important;background-color:transparent!important;background-repeat:no-repeat!important}
+.RadGrid_Axis .rgAdd,.RadGrid_Axis .rgCancel,.RadGrid_Axis .rgCollapse,.RadGrid_Axis .rgDel,.RadGrid_Axis .rgEdit,.RadGrid_Axis .rgExpCSVP,.RadGrid_Axis .rgExpDOC,.RadGrid_Axis .rgExpPDF,.RadGrid_Axis .rgExpXLS,.RadGrid_Axis .rgExpand,.RadGrid_Axis .rgFilter,.RadGrid_Axis .rgPageFirst,.RadGrid_Axis .rgPageLast,.RadGrid_Axis .rgPageNext,.RadGrid_Axis .rgPagePrev,.RadGrid_Axis .rgRefresh,.RadGrid_Axis .rgSortAsc,.RadGrid_Axis .rgSortDesc,.RadGrid_Axis .rgUngroup,.RadGrid_Axis .rgUpdate{background-image:url($telerikSprite)!important;border:none!important;background-color:transparent!important;background-repeat:no-repeat!important}
 .RadGrid_Axis .rgExpand{background-position:5px -496px!important}
 .RadGrid_Axis .rgHeader .rgSortDesc{background-position:3px -198px!important;height:10px}
 .RadGrid_Axis .rgCollapse{background-position:3px -444px!important}
