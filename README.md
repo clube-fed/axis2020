@@ -49,7 +49,7 @@ The Javascript is broken down into components (located in the src/components fol
 - formBaseFormat.js: a starter js file to reconfigure FormBase forms
 - fullHeightPalb.js: sets the photo album to be the full height of the window (called on plugin load and can be run in a resize event)
 - imgBG.js: sets image in minipage to be the background of that minipage (uses class .mp-bg)
-- navSlideIn.js: js for a nav that slides in on mobile
+- navOffcanvas.js: js for a nav that slides in from offcanvas on mobile
 - navSplash.js: js for a nav that splashes on to the screen for mobile
 - override-palb.js: overrides axis photoAlbum plugin js
 - resizeSiteWrap.js: a resize sitewrap function

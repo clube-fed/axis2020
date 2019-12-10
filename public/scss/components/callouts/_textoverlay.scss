@@ -52,7 +52,6 @@ $callout-txt-color-hover: #fff;
       padding: 0;
       //theme
       @include rem-size(46);
-      font-family:$cursive;
       color:$callout-txt-color;
   }
   //hover effects in here

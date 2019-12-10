@@ -3,22 +3,22 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: [
-                    'js/src/components/axis-base.js',
-                    'js/src/components/navSplash.js',
-                    'js/src/components/imgBG.js',
-                    'js/src/components/tabsSizer.js',
-                    'js/src/components/albumScripts.js',
-                    'js/src/components/resizeSiteWrap.js',
-                    'js/src/components/sidemenu.js',
-                    'js/src/components/cteBuild.js',
-                    'js/src/components/adminScriptToggle.js',
-                    'js/src/components/fullHeightPalb.js',
-                    'js/src/components/responsiveCarousel.js',
-                    'js/src/components/weatherTxtFormatter.js',
-                    'js/src/components/override-palb.js',
-                    'js/src/components/ada'
+                    './public/js/src/components/axis-base.js',
+                    './public/js/src/components/navOffcanvas.js',
+                    './public/js/src/components/imgBG.js',
+                    './public/js/src/components/tabsSizer.js',
+                    './public/js/src/components/albumScripts.js',
+                    './public/js/src/components/resizeSiteWrap.js',
+                    './public/js/src/components/sidemenu.js',
+                    './public/js/src/components/cteBuild.js',
+                    './public/js/src/components/adminScriptToggle.js',
+                    './public/js/src/components/fullHeightPalb.js',
+                    './public/js/src/components/responsiveCarousel.js',
+                    './public/js/src/components/weatherTxtFormatter.js',
+                    './public/js/src/components/override-palb.js',
+                    './public/js/src/components/ada'
                 ],
-                dest: 'js/dist/axisbundle.js'
+                dest: './public/js/axisbundle.js'
             }
         },
         watch: {
