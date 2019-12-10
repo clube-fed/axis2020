@@ -27,6 +27,8 @@
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "imagemin": "^7.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
     "node-sass": "^4.13.0",
     "nodemon": "^1.19.4"
   },
