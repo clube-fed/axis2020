@@ -6,12 +6,13 @@
 //11.12.19: removed global input/select/textarea overrides => using bootstrap globals here
 //12.3.19: adding modules-only class for .plgHeaderBar
 //12.4.19: updating path to telerik grid gif to point to A_Master folder on s3 [global image is there]
+//12.10.19: updating conflict with MOSV injectContent height
 
-$btnColor: $black;
-$btnColorHover: $green;
-$primary_color: $black;
-$secondary_color: $green;
-$telerikSprite: '../../A_Master/library/img/axis-grid-sprite.gif';
+$btnColor: $green;
+$btnColorHover: $greenDark;
+$primary_color: $green;
+$secondary_color: $greenDark;
+$telerikSprite: '../../../A_Master/NET/Telerik/Skins/Axis/Grid/sprite.gif';
 
 
 [id^=masterPageUC] .module-wrap {padding:4rem 1.5rem}
@@ -225,7 +226,7 @@ body[class*=alendar] .RadPicker_Default input:first-child+table input{width:100%
 .NETEventInfo #divActions li,.NETEventInfo #divActions ul{list-style:none!important;list-style-image:url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)!important;padding:0;margin:0}
 .NETEventInfo #divActions li{margin:0 0 3px}
 .AddMembership [height="1"],.AddMembership [width="1"],.MemberRoster [height="1"],.MemberRoster [width="1"],.v35Directory [height="1"],.v35Directory [width="1"]{display:none}
-.AddMembership #content>:first-child,.MemberRoster #content>:first-child,.v35Directory #content>:first-child{height:0;margin:0 0 10px}
+.AddMembership #content>:first-child:not(.injectContent),.MemberRoster #content>:first-child:not(.injectContent),.v35Directory #content>:first-child:not(.injectContent){height:0;margin:0 0 10px}
 
 .AddMembership [id$=tblHeader],.MemberRoster [id$=tblHeader],.v35Directory [id$=tblHeader]{position:absolute;margin:6rem 0 0;/*right:6.3rem;*/width:auto}
 
