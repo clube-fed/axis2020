@@ -51,11 +51,12 @@
 //v1: bottom-shadow => place el [preferably pseudo-el] to create a shadow on bottom
 //v2: UPDATE: add z-index arg || moved opacity to el
 //v2.01: Fixed scss issue
+//v2.02: fixed scss issue
 @mixin bottom-shadow($height,$opacity, $zindex) {
   position:absolute;
   bottom:0;
   width:100%;
-  height:($height/2);
+  height:($height/2)+px;
   background: rgb(0,0,0);
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
   background: -o-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
@@ -64,7 +65,7 @@
   opacity:$opacity;
   left:0;
   @media (min-width:$breakpoint-sm) {
-    height:$height;
+    height:$height+px;
   }
 }
 
