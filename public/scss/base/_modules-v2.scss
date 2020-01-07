@@ -7,6 +7,7 @@
 //12.3.19: adding modules-only class for .plgHeaderBar
 //12.4.19: updating path to telerik grid gif to point to A_Master folder on s3 [global image is there]
 //12.10.19: updating conflict with MOSV injectContent height
+//1.6.20: updating random modules not covered
 
 $btnColor: $green;
 $btnColorHover: $greenDark;
@@ -475,3 +476,6 @@ body[class*=alendar] .modCalMonth > * > * > * td:nth-child(2), body[class*=alend
   vertical-align: top;
 
 }
+
+//stuff?
+#NewGrpSploderHeaderRow td{height:auto !important;padding:5px !important;line-height:normal;background:#e0e0e0 !important}#NewGrpSploderPinLink{right:54px}#NewGrpSploderMinMaxLink{right:18px;position:absolute;width:39px;display:block;text-align:left}#NewGrpSploderMinMaxLink img{position:relative !important;display:inline-block;margin-left:5px}.Dgrp_ToolBoxTitleBar{height:auto !important;background:#fefefe}

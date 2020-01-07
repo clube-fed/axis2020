@@ -24,14 +24,10 @@ function aScrollResize(tag) {
   }
   aScrollTarget.each(function () {
     var pHeight = 0;
-    if ($j(this).has('.photoGalleryWrapDiv[style*="z-index: 50"]').length) {
-      pHeight = $j(this)
-        .find('.photoGalleryWrapDiv[style*="z-index: 50"]')
-        .height();
+    if ($j(this).has('.photoGalleryWrapDiv[style*="z-index: 60"]').length) {
+      pHeight = $j(this).find('.photoGalleryWrapDiv:not([style*="none"])').height();
     } else {
-      pHeight = $j(this)
-        .find(".photoGalleryWrapDiv:visible")
-        .height();
+      pHeight = $j(this).find('.photoGalleryWrapDiv:not([style*="none"])').height();
     }
     $j(this).css("min-height", pHeight + "px");
   });
