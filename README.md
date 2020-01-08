@@ -58,6 +58,7 @@ The Javascript is broken down into components (located in the src/components fol
 - navSplash-es5.js: navSplash.js for non es6 compliant browswers
 - override-palb.js: overrides axis photoAlbum plugin js
 - parallax.js: simple parallax function for image backgrounds
+- realestate-extension.js: This extension modifies functionality of the real estate module to behave as a filtering plugin
 - resizeSiteWrap.js: a resize sitewrap function
 - responsiveCarousel.js: resizes carousels to attach to events
 - sidemenu.js: creates an arrow to activate a sub-menu in a sidebar navigation
