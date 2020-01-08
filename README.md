@@ -45,17 +45,23 @@ The Javascript is broken down into components (located in the src/components fol
 - bootstrapModal.js: bootstrap's js for their modal plugin
 - burgers.js: click event for a burger menu animation
 - cteBuild.js: changes configuration of minipage layout for callouts, billboars, panels, etc.
+- eventDateFormatter.js: utility functions for formatting date strings (i.e. adding ordinal values to dates)
 - eventUnwrap.js: a simple function that will unwrap events from axis divs in the plugin
+- fixedHeader.js: simple fixed header function
 - formBaseFormat.js: a starter js file to reconfigure FormBase forms
 - fullHeightPalb.js: sets the photo album to be the full height of the window (called on plugin load and can be run in a resize event)
 - imgBG.js: sets image in minipage to be the background of that minipage (uses class .mp-bg)
+- initSlick.js: simple init function for a slick slider (requires global slick css and js)
+- loginBundle.js: compiled js for login page only, includes ADA, axis-base, and login page-specific functionality
 - navOffcanvas.js: js for a nav that slides in from offcanvas on mobile
 - navSplash.js: js for a nav that splashes on to the screen for mobile
+- navSplash-es5.js: navSplash.js for non es6 compliant browswers
 - override-palb.js: overrides axis photoAlbum plugin js
+- parallax.js: simple parallax function for image backgrounds
 - resizeSiteWrap.js: a resize sitewrap function
 - responsiveCarousel.js: resizes carousels to attach to events
 - sidemenu.js: creates an arrow to activate a sub-menu in a sidebar navigation
-- smoothScrool.js: a click event to activate smoother scrolling to an anchor link
+- smoothScrool.js: [UPDATE 1/8/20] script creates a smooth scrolling effect for links with specified class and decode Axis hyperlink URLs to allow anchor links via the ulMenu
 - tabsSizer.js: sets the size of tabs and toggles a message for more scrolling on smaller views
 - weatherTxtFormatter: just a starter file to modify string inside of weather plugin
 
