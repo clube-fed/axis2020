@@ -1,0 +1,256 @@
+$nucleo-icon-edit-item: '\ed19';
+$filterBarBgColor: $greenDark;
+$switchbg-color: $greenDark;
+$settings-btn-bg: $greenDark;
+$settings-btn-bg-hover: $greenLight;
+
+.styles-box{ position: absolute; bottom: 0; right: 0; z-index: 99; padding: 10px 15px; background: #eee; line-height: 1; text-align: center; }
+.styles-box:before{ content: 'Extensions'; font-size: 1.2rem; font-weight: 700; line-height: 2; text-transform: uppercase; }
+#updatingListings ~ br {display:none;}
+
+.axis-filter {
+    padding-bottom:50px;
+    position:relative;
+    & #relListingsWrapper #adminBar {
+        padding:0;
+    }
+    & #relListings.list .relSingleListing .editLink{
+        display: inline-block !important;
+        border: 1px solid #f2f2f2 !important;
+        border-radius: 4px;
+        height: 30px; 
+        font-size:0;
+        width: 30px; 
+        padding: 7px;
+        background: #FFF;
+        color: #444 !important;
+        top: 30px;
+        left: 30px; 
+        z-index: 2;
+        transition: 0.3s ease-in-out;
+        &:hover, &:active{
+            background: #F2f2f2; 
+            color: #444;
+        }
+        &:before{
+            display: inline-block;
+            font: normal normal normal 15px/1 'Nucleo Outline';
+            speak: none;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-feature-settings: "liga";
+            -moz-font-feature-settings: "liga=1";
+            -moz-font-feature-settings: "liga";
+            -ms-font-feature-settings: "liga" 1;
+            -o-font-feature-settings: "liga";
+            font-feature-settings: "liga";
+            content:$nucleo-icon-edit-item;
+        }
+    }
+    & #relListings .photoCount{ 
+        display: none !important; 
+    }
+    & #relListings.list{ 
+        border: none; 
+    }
+    //BIG BLOCK
+    & #relListingsWrapper{ 
+        overflow: 
+        auto; 
+        margin: 0; 
+        & #relListingViewSwitch ul { 
+            border: none !important; 
+            height: auto !important;
+            & li    {
+                display: inline-block !important;
+                width: auto !important; height: auto !important;
+                color: #fff !important;
+                cursor: pointer !important;
+                padding: 8px 20px !important;
+                font-size: 12px !important;
+                font-family: 'Raleway', sans-serif !important;
+                font-weight: 400 !important;
+                letter-spacing: 1px !important;
+                text-transform: uppercase !important;
+                background: $switchbg-color !important;
+                border: none !important;
+                transition: 0.3s ease-in-out;
+                text-shadow: none !important;
+            }
+        } 
+        & #relListingActions{ 
+            display: none !important; 
+        }
+    }
+    //BIG BLOCK
+    & #relListingWrap{ 
+        width: 100% !important; 
+        overflow: hidden;
+        padding-left:30px;
+        padding-right:30px; 
+    }
+    //BIG BLOCK
+    & #relListings{ 
+        margin: 0 -10px;
+        display:flex;
+        flex-wrap:wrap;
+        & .relSingleListing { 
+            border: none !important; 
+            padding:20px 10px !important;
+            @media (min-width:$breakpoint-md) {
+                flex: 0 0 33.33333333%;
+            }
+        }
+    }
+    //BIG BLOCK
+    & #relSortWrapper{ 
+        display: none; 
+    }
+    
+    & #showSettings,
+    & #addNewListing {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        color: #fff;
+        cursor: pointer;
+        padding: 8px 20px;
+        font-size: 0;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+        background: $settings-btn-bg;
+        transition: 0.3s ease-in-out;
+        &:hover, &:active {
+            background:$settings-btn-bg-hover;
+        }
+        & span {
+            display:none;
+        }
+    }
+    & #addNewListing {
+        left:130px;
+        &:before {
+            content: 'Add New'; 
+            @include rem-size(13);
+        }
+    }
+    & #showSettings:before{ 
+        content: 'Settings'; 
+        @include rem-size(13);
+    }
+    & #relFilterWrapper {
+        background: $filterBarBgColor;
+        border: none !important;
+        overflow: hidden;
+        & ul {
+            display: block; 
+            padding: 0 20px !important; 
+            margin: 0 !important; 
+            border: none !important;
+            max-height:none;
+            text-align:center;
+        }
+        & li {
+            border:0 !important;
+            float:none !important;
+            height: auto !important;
+            margin: 0 auto !important;
+            width:100% !important;
+            padding:10px 40px !important;
+            display:block;
+        }
+        & li#filterItemAttributes {
+            padding:0 !important;
+        }
+        & .filterLabel, & #attributeSelectionLink {
+            display:none;
+        }
+        & #attributeSelector {
+            display:block !important;
+            position:relative;
+            width:100%;
+            background:none;
+            border:0;
+            box-shadow:none;
+            @include rem-size(15);
+            font-family: $montserrat;
+            text-transform:uppercase;
+            color:#fff;
+            & .updateIt {
+                display:none;
+            }
+            & li {
+                width: auto !important;
+                margin: 0 5px;
+                display:inline-block;
+                transition:.3s ease-out;
+                cursor:pointer;
+                &.hover, &:hover {
+                    background:$brownBlack;
+                    color:$canary;
+                }
+                &.selected {
+                    background:$brownFaded;
+                }
+            }
+        }
+    }
+}
+
+//item
+.staff-item .inner {
+    padding:2em;
+}
+.staff-img {
+    & > div {
+        width:100% !important;
+        height:auto !important;
+    }
+    & img {
+        width:100%;
+    }
+}
+
+.staff-name {
+    font-family:$montserrat;
+    @include rem-size(24);
+    letter-spacing: 2px;
+    color:#3f3f3f;
+    text-transform:uppercase;
+    font-weight:400;
+    margin-bottom:10px;
+}
+
+.staff-title {
+    font-family:$montserrat;
+    @include rem-size(18);
+    color:#3f3f3f;
+    font-weight:300;
+    font-style:italic;
+    margin-bottom:10px;
+}
+
+.staff-desc {
+    margin-bottom:20px;
+}
+
+.staff-item .ul-basic {
+    font-family:$montserrat;
+    font-weight:500;
+    @include rem-size(14);
+    & a {
+        color:$greenDark;
+        &:hover {
+            color:$greenLight;
+        }
+    }
+    & em {
+        margin-right:7px;
+    }
+    & li {
+        margin-bottom:10px;
+    }
+}
+
