@@ -3,6 +3,7 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: [
+                    './public/js/src/components/iePolyfills.js',
                     './public/js/src/components/axis-base.js',
                     './public/js/src/components/navOffcanvas.js',
                     './public/js/src/components/imgBG.js',
@@ -16,7 +17,7 @@ module.exports = function (grunt) {
                     './public/js/src/components/responsiveCarousel.js',
                     './public/js/src/components/weatherTxtFormatter.js',
                     './public/js/src/components/override-palb.js',
-                    './public/js/src/components/ada'
+                    './public/js/src/components/ada.js'
                 ],
                 dest: './public/js/axisbundle.js'
             }
