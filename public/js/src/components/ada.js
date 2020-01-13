@@ -40,10 +40,11 @@ $j('[id^="masterPageUC_MPCA"] [id$="_tblTop"], [id^="masterPageUC_MPCA"] [id$="_
 '#PageSecurityDiv table, #PageSecurityDiv td, #PageSecurityDiv img, #PageSecurityDiv iframe,'+
 '#logoutDiv table, #logoutDiv td, #logoutDiv img, #logoutDiv iframe,'+
 '[id^="editReg"] table, [id^="editReg"] td, [id^="editReg"] iframe,'+
-'.sploder iframe[id^="editEvent"], #ReserverPickerMgrDiv table, #ReserverPickerMgrDiv td, #ReserverPickerMgrDiv iframe,'+
+'#ReserverPickerMgrDiv table, #ReserverPickerMgrDiv td, #ReserverPickerMgrDiv iframe,'+
 '#rbm_HelpMEDiv table, #rbm_HelpMEDiv td, #rbm_HelpMEDiv iframe,'+
 '.rbm_Content > table, .rbm_Content > table td,'+ 
 '.rbm_bookingTimeSelectorFilterTable tr, [id$="Booking_LoadingPanelUno"] table, [id$="Booking_LoadingPanelUno"] td').removeAttr('scrolling frameborder border height width cellspacing cellpadding align valign');
+$j('.sploder iframe[id^="editEvent"]').removeAttr('scrolling frameborder border cellspacing cellpadding align valign');
 $j('.sploder[id^="editEvent"]').each(function(){var editEventString = $j(this).attr('id');var editEventID = editEventString.slice(9, 13);$j(this).attr('role', 'complementary').attr('aria-labelledby', $j(this).attr('id'));$j(this).find('iframe').attr('title', 'Add Event '+$j(this).attr('id')+' Iframe');$j(this).find('span[id^="editEvent"]').append(' '+editEventID);});
 $j('.sploder[id^="editReg"]').each(function(){var editRegString = $j(this).attr('id');var editRegID = editRegString.slice(9, 13);$j(this).attr('role', 'complementary').attr('aria-labelledby', $j(this).attr('id'));$j(this).find('iframe').attr('title', 'Add Event '+$j(this).attr('id')+' Iframe');$j(this).find('span[id^="editEvent"]').append(' '+editRegID);});
 $j('[onclick*="navigationProperties"]').each(function(){var navString = $j(this).attr('onclick');var cutNavPropertiesID = navString.slice(37, 43);if($j(this).parent().parent().parent().attr('id') == "mNav"){cutNavPropertiesID = "Click Here to Edit Mobile Nav ID " + cutNavPropertiesID;}else if($j(this).parent().parent().parent().attr('class') == "subNav"){cutNavPropertiesID = "Click Here to Edit Sidebar Nav ID";}else{cutNavPropertiesID = "Click Here to Edit Nav ID " + cutNavPropertiesID;}$j(this).children('img').attr('alt', cutNavPropertiesID);});
