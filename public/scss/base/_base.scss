@@ -4,6 +4,10 @@ $overlay-bg-color: rgba(0,0,0,.3);
 $content-max-width:1170px;
 $content-max-width-sm:870px;
 
+iframe {
+  border:0;
+}
+
 .overlay {
 	position:absolute;
 	width:100%;
