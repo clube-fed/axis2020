@@ -9,9 +9,14 @@
     "bundle": "grunt concat",
     "ui": "browser-sync start --port '7777' --proxy 'localhost:3030' --files 'public' 'views' 'server.js'",
     "dev": "concurrently \"nodemon server.js\" \"npm run scss\" \"npm run bundle\" \"npm run ui\"",
-    "build": "node-sass public/scss/style.scss public/css/SITENAME.css --output-style compressed && npm run bundle",
+    "build-css": "node-sass public/scss/style.scss public/css/STYLESHEET.css --output-style compressed",
     "scss": "node-sass --watch public/scss -o public/css",
-    "scss-deploy": "node-sass --watch public/scss/style.scss public/css/SITENAME.css --output-style compressed"
+    "watch-scss": "node-sass --watch public/scss/style.scss public/css/STYLESHEET.css --output-style compressed",
+    "deploy": "node s3-upload",
+    "deploy-css": "node s3-upload css",
+    "deploy-js": "node s3-upload axisbundle",
+    "deploy-login": "node s3-upload loginbundle",
+    "deploy-axis": "node s3-upload axis"
   },
   "keywords": [],
   "author": "",
