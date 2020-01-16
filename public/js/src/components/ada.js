@@ -129,7 +129,7 @@ function ariasForModules() {
 ariasForModules();
 $j('.module.container #calendarLinkBar a, .module.co	ntainer table[id$="_tblProfilePage"] a, #updatePhotoiframe a, .module .adminBar input[type="button"], .module .adminbar input[type="button"], .module .adminBar input[type="submit"], .module .adminbar input[type="submit"], #printLink a').attr({tabindex:'0',role:'button'});
 function accessibleDialogs() {	
-		$j('<img src="https://members.hasentreecountryclub.com/A_Master/library/css/rhClub_css/ADA/altAltClose.png" alt="click to close">').prependTo('.axisDialogBox .dialogActions ul li.close a');
+		$j('<img class="sr-only" src="https://members.hasentreecountryclub.com/A_Master/library/css/rhClub_css/ADA/altAltClose.png" alt="click to close">').prependTo('.axisDialogBox .dialogActions ul li.close a');
 	$j('.axisDialogBox').find('a, input, button').attr({tabindex:'0',role:'button'});	
 			var tabSetOuter = $j('.axisDialogBox').find('select, input, textarea, button, a, #ctl00_memberpicker_imgLetterChooser');
 			var tabbableOuter = $j(tabSetOuter).filter(':visible');	
