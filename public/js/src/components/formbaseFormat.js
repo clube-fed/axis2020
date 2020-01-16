@@ -3,8 +3,8 @@ $j('.formBaseFormFooter').before('<div class="new-form row"></div><div class="fo
 //ACCOUNT FOR DIFF IN MOSV AND DESK
 var formWrap = $j('.formQuestionWrapper');
 
-function formEl(el, label, gridsize) {
-	var html = $j('<div class="form-element col-sm-' + gridsize + '"></div>');
+function formEl(el, label, elType) {
+	var html = $j('<div class="form-element form-'+elType+'"></div>');
 	if (el.is('span')) {
 		$j(el).prepend(label);
 		$j(html).append(el);
@@ -38,7 +38,6 @@ $j(formWrap).each(function () {
 
 	if (el.is('table')) {
         var contents = $j(el).find("td, th").contents().detach();
-        console.log(contents);
         $j(el).remove();
         el = $j('<div class="radio-chk"></div>');
         $j(el).append(contents);
@@ -52,16 +51,21 @@ $j(formWrap).each(function () {
 		labelTxt = labelTxt.substring(0, labelTxt.length - 1);
 	}
 
-	// if (el.is('input') || el.is('textarea')) {
-	// 	$j(el).attr('placeholder',labelTxt);
-	// }
+	if (el.is('input') || el.is('textarea')) {
+		$j(el).attr('placeholder',labelTxt);
+	}
+	console.log(el);
 	var newEl;
 	if (el.is('input') || el.is('span')) {
-		newEl = formEl(el, label, '6');
-	} else {
-		newEl = formEl(el, label, '12');
+		newEl = formEl(el, label, 'input');
+	} else if (el.is('select')) {
+		newEl = formEl(el, label, 'select');
+	} else if (el.is('textarea')) {
+		newEl = formEl(el, label, 'textarea');
+	}  else {
+		newEl = formEl(el, label, 'radio-chk');
 	}
-	console.log(newEl);
+	//console.log(newEl);
 	$j('.new-form').append(newEl);
 });
 

@@ -3,33 +3,96 @@
 }
 
 .new-form input,
-.new-form textarea {
-	border:1px solid $black;
+.new-form textarea,
+.new-form select {
+	border:1px solid #d8d8d8;
 	width:100%;
 	@include prefix(transition, all .3s ease-in-out, webkit ms moz);
+	font-weight:300;
+	color:#777;
+	letter-spacing: .5px;
 	&:focus {
-		border-color:$green;
+		border-color:$black23;
+	}
+}
+
+.new-form textarea {
+	padding:10px;
+}
+
+.new-form input,
+.new-form textarea {
+	&::placeholder {
+		font-weight:300;
+		color:#777;
+		letter-spacing: .5px;
 	}
 }
 
 .new-form label {
-	font-weight:400;
+	font-weight:300;
+	color:#777;
+	letter-spacing: .5px;
+	display:none;
+}
+
+.new-form .form-select label,
+.new-form .form-radio-chk label {
+	display:inline-block;
+}
+
+@media (min-width:$breakpoint-sm) {
+	.new-form .col-sm-6:nth-child(n+3) {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 }
 
 .new-form .form-element {
 	margin-bottom:20px;
 }
 
-.new-form input {
-	height:40px;
-	line-height:40px;
+.new-form input,
+.new-form select {
+	height:50px;
+	line-height:50px;
 	text-indent:10px;
 }
 
 .new-form textarea {
-	height:160px;
+	height:210px;
 }
 
+.new-form select {
+	background:#fff;
+}
+
+.new-form input[type="radio"],
+.new-form input[type="checkbox"] {
+	width:auto;
+	height:auto;
+	display:inline-block;
+}
+
+.radio-chk {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.formbase-radio-chk-item {
+	padding:10px;
+	& label {
+		margin:0;
+	}	
+} 
 .formBaseForm + .smallerfont {
 	display:none;
+}
+
+
+.new-form ~ [align="left"] {
+	text-align:center;
+	& [class*="recaptcha"] {
+		display:inline-block;
+	}
 }
