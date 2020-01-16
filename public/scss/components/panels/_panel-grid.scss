@@ -14,7 +14,7 @@ $panelImgOpacity: 1;
     &.mp-bg > .mpContent {
       opacity: $panelImgOpacity;
     }
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$breakpoint-md) {
       height:$panelImgHeightMd;
     }
     & > table {
@@ -45,7 +45,7 @@ $panelImgOpacity: 1;
     & p {
       line-height: 1.5;
     }
-    @media screen and (min-width:992px) {
+    @media screen and (min-width:$breakpoint-md) {
       height:$panelImgHeightMd;
       padding:60px 30px;
       & .v-align {
