@@ -21,3 +21,7 @@ body[style="background-image: none; background-color: rgb(255, 255, 255); color:
 td.dialogContent > iframe {
   min-height: 0;
 }
+
+#adminDashboardMenu li a, #adminDashboardCETab li a {
+  display:inline-block;
+}
