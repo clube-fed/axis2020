@@ -15,7 +15,7 @@ npm run dev
 ```
 Launch your local environment. Happy coding!
 
-## Deploy your code
+## Setup a local environment
 ```
 npm run build
 ```
@@ -62,7 +62,7 @@ The Javascript is broken down into components (located in the src/components fol
 - resizeSiteWrap.js: a resize sitewrap function
 - responsiveCarousel.js: resizes carousels to attach to events
 - sidemenu.js: creates an arrow to activate a sub-menu in a sidebar navigation
-- smoothScrool.js: [UPDATE 1/8/20] script creates a smooth scrolling effect for links with specified class and decode Axis hyperlink URLs to allow anchor links via the ulMenu
+- smoothScroll.js: [UPDATE 1/8/20] script creates a smooth scrolling effect for links with specified class and decode Axis hyperlink URLs to allow anchor links via the ulMenu
 - tabsSizer.js: sets the size of tabs and toggles a message for more scrolling on smaller views
 - weatherTxtFormatter: just a starter file to modify string inside of weather plugin
 
@@ -99,7 +99,7 @@ The minipage and photoAlbumPlugin partials allow you to create custom content in
 In the root of the package is a server file set up to run an express server with the handlebars templating engine out of the box. You can configure your navigation for the site by modifying the navigation variable. You can also configure your routes to each page for the build. The routes all take an object with the variable navigation set to the navigation variable configured in the variable above. There is a Handlebars template that will replicate a CE menu, complete with subnav items.
 
 ### AWS-SDK
-This package has been updated to include boilerplate code for a simple node utility to upload files to Clubessential's s3 server. See details here: https://github.com/clube-fed/aws-upload-utility
+This package has been updated to include boilerplate code for a simple node utility to upload files to Clubessential's s3 server running npm scripts from the Command Line. See details here: https://github.com/clube-fed/aws-upload-utility
 
 ### Task Runners
 The package includes the following utilies to help optimize build:
@@ -110,4 +110,3 @@ The package includes the following utilies to help optimize build:
 
 ## Other Notes
 - The assets folder is meant to house design files. The imagemin task will look for any .jpg or .png files in assets/Images and will create a batch of new files in a compressed folder (assets/Images/compressed)
-- The raw folder is just a collection of HTML that likely will need to be pulled in as .hbs files - as of now this is just a resource of HTML collected since initial Github project
