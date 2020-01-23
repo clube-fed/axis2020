@@ -12,6 +12,9 @@ $tabs-content-border-color: #f1f1f1;
 
 table[id*="tblTop"] {
 	display:block;
+	& td {
+		padding:0;
+	}
 }
 
 //override for new inline style
