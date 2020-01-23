@@ -8,6 +8,7 @@
 //12.4.19: updating path to telerik grid gif to point to A_Master folder on s3 [global image is there]
 //12.10.19: updating conflict with MOSV injectContent height
 //1.6.20: updating random modules not covered
+//1.23.20: fixing spacing issue on .plgHeaderBar for globalNotifications
 
 $btnColor: $green;
 $btnColorHover: $greenDark;
@@ -360,7 +361,8 @@ table#profilePhoto{margin:0 auto 1.42857rem}
 .EventManager [id$="_rapEvents"]{padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
 .GlobalNotifications #content hr{display:none}
 .GlobalNotifications #content .plgHeaderBar{padding:0 0 10px}
-.GlobalNotifications #content table{margin:80px 0 40px;padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
+.GlobalNotifications #content .plgHeaderBar + p {padding:3rem;}
+.GlobalNotifications #content table{margin:0;padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
 .GlobalNotifications #content table td{padding:15px}
 .NETBizDBReport [id$="_tblContent"]{margin:0 0 40px;padding:3rem!important;background:#FFF;border:1px solid #EEE;width:100%;box-shadow:0 3px 30px 3px rgba(0,0,0,.05)}
 .NETBizDBReport [id$="_tblContent"]>*>*>td:first-child{padding:0 0 0 30px}
