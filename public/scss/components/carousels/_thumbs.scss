@@ -69,8 +69,11 @@ $carousel-img-height: 180px;
   }
 }
 
-.lightBoxDiv > img.lightBoxImg {
-    max-width: 100%;
+.lightBoxDiv {
+  height:auto !important;
+  & > img.lightBoxImg {
+      max-width: 100%;
+  }
 }
 
 //super custom-y
