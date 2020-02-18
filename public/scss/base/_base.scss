@@ -132,3 +132,7 @@ input[type=checkbox] {
 
 //bootstrap fixes for Axis :(
 .RadEditor.reWrapper > table[id*="_dpEditor"] {padding-top:30px;}
+#buddyListDiv_opener {
+  position: fixed !important;
+  top: 100px !important;
+}
