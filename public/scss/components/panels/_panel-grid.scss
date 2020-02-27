@@ -1,11 +1,12 @@
 $panelImgHeightSm: 350px;
-$panelImgHeightMd: 550px;
-$panelTxtBGColor: #fff;
+$panelImgHeightMd: 500px;
+$panelTxtBGColor: $silver;
 $panelImgOpacity: 1;
 
 .panel-grid {
+  padding-top:45px;
   & .panel-item {
-    //margin-bottom:50px;
+    padding-bottom:45px;
   }
   & .panel-img {
     height:$panelImgHeightSm;
@@ -36,30 +37,31 @@ $panelImgOpacity: 1;
     padding:30px 15px;
     background:$panelTxtBGColor;
     border:1px solid $silver;
-    border-left:0;
     text-align: left;
-    &[class$="-first"] {
-      border-right:0;
-      border-left:1px solid $silver;
-    }
     & p {
       line-height: 1.5;
     }
+    & a {
+      font-weight:700;
+      text-transform: uppercase;
+      letter-spacing: 1.88px;
+    }
     @media screen and (min-width:$breakpoint-md) {
-      height:$panelImgHeightMd;
       padding:60px 30px;
-      & .v-align {
-        position:absolute;
-        top:50%;
-        @include prefix(transform, translateY(-50%), ms webkit moz);
-        width: calc(100% - 60px);
-      }
+      // 🔥 deprecating this to use flexbox
+      // & .v-align {
+      //   position:absolute;
+      //   top:50%;
+      //   @include prefix(transform, translateY(-50%), ms webkit moz);
+      //   width: calc(100% - 60px);
+      // }
     }
-    @media screen and (min-width: $breakpoint-md) {
-      padding:60px;
-      & .v-align {
-        width: calc(100% - 120px);
-      }
-    }
+    // 🔥 deprecating this to use flexbox
+    // @media screen and (min-width: $breakpoint-md) {
+    //   padding:60px;
+    //   & .v-align {
+    //     width: calc(100% - 120px);
+    //   }
+    // }
   }
 }
